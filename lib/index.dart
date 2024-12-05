@@ -22,3 +22,13 @@ export '/pages/test/test_widget.dart' show TestWidget;
 export '/pages/orders/orders_widget.dart' show OrdersWidget;
 export '/pages/other_profiles/other_profiles_widget.dart'
     show OtherProfilesWidget;
+export '/listing/listing_widget.dart' show ListingWidget;
+export '/home2/home2_widget.dart' show Home2Widget;
+export '/service_offered/service_offered_widget.dart' show ServiceOfferedWidget;
+export '/ai_persona/ai_persona_widget.dart' show AiPersonaWidget;
+export '/navigation/navigation_widget.dart' show NavigationWidget;
+export '/games_casino/games_casino_widget.dart' show GamesCasinoWidget;
+export '/panyero_academy/panyero_academy_widget.dart' show PanyeroAcademyWidget;
+export '/panyero_careers/panyero_careers_widget.dart' show PanyeroCareersWidget;
+export '/applicants_details/applicants_details_widget.dart'
+    show ApplicantsDetailsWidget;

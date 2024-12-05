@@ -36,78 +36,57 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-        body: Column(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              width: MediaQuery.sizeOf(context).width * 1.0,
-              height: MediaQuery.sizeOf(context).height * 1.0,
-              decoration: BoxDecoration(
-                color: FlutterFlowTheme.of(context).primaryBackground,
-              ),
-              child: Column(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Stack(
+        body: Align(
+          alignment: const AlignmentDirectional(0.0, 0.0),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  width: MediaQuery.sizeOf(context).width * 1.0,
+                  height: MediaQuery.sizeOf(context).height * 1.0,
+                  decoration: BoxDecoration(
+                    color: FlutterFlowTheme.of(context).primaryBackground,
+                  ),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Align(
-                        alignment: const AlignmentDirectional(0.0, 1.0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Image.asset(
-                              'assets/images/Ellipse_66_(1).png',
-                              width: MediaQuery.sizeOf(context).width * 0.5,
-                              height: 244.0,
-                              fit: BoxFit.cover,
+                      Expanded(
+                        child: Align(
+                          alignment: const AlignmentDirectional(0.0, -0.95),
+                          child: SizedBox(
+                            width: MediaQuery.sizeOf(context).width * 1.219,
+                            height: MediaQuery.sizeOf(context).height * 1.0,
+                            child: Stack(
+                              children: [
+                                Align(
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  child: Container(
+                                    width: 350.0,
+                                    height: 350.0,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: const BoxDecoration(
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Image.asset(
+                                      'assets/images/panyero.gif',
+                                      fit: BoxFit.contain,
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
-                            Image.asset(
-                              'assets/images/Ellipse_69.png',
-                              width: MediaQuery.sizeOf(context).width * 0.5,
-                              height: 244.0,
-                              fit: BoxFit.cover,
-                            ),
-                          ],
+                          ),
                         ),
                       ),
                     ],
                   ),
-                  Expanded(
-                    child: Align(
-                      alignment: const AlignmentDirectional(0.0, -0.95),
-                      child: SizedBox(
-                        width: MediaQuery.sizeOf(context).width * 1.219,
-                        height: MediaQuery.sizeOf(context).height * 1.0,
-                        child: Stack(
-                          children: [
-                            Align(
-                              alignment: const AlignmentDirectional(0.0, -1.94),
-                              child: Container(
-                                width: 350.0,
-                                height: 350.0,
-                                clipBehavior: Clip.antiAlias,
-                                decoration: const BoxDecoration(
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Image.asset(
-                                  'assets/images/panyero.gif',
-                                  fit: BoxFit.contain,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );

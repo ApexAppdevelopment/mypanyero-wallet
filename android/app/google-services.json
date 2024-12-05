@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "800005686862",
+    "project_id": "home-alligned-services-v2tq7s",
+    "storage_bucket": "home-alligned-services-v2tq7s.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:800005686862:android:cd8ab46f3436245f42e51f",
+        "android_client_info": {
+          "package_name": "com.mypanyerowallet.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdbzXUr35gY2zLqywhyDDO1STNDsDrJUQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

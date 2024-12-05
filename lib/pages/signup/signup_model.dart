@@ -22,11 +22,6 @@ class SignupModel extends FlutterFlowModel<SignupWidget> {
     return null;
   }
 
-  // State field(s) for TextField-signup-certificate widget.
-  FocusNode? textFieldSignupCertificateFocusNode;
-  TextEditingController? textFieldSignupCertificateTextController;
-  String? Function(BuildContext, String?)?
-      textFieldSignupCertificateTextControllerValidator;
   // State field(s) for TextField-signup-email widget.
   FocusNode? textFieldSignupEmailFocusNode;
   TextEditingController? textFieldSignupEmailTextController;
@@ -138,9 +133,6 @@ class SignupModel extends FlutterFlowModel<SignupWidget> {
   void dispose() {
     textFieldSignupFullNameFocusNode?.dispose();
     textFieldSignupFullNameTextController?.dispose();
-
-    textFieldSignupCertificateFocusNode?.dispose();
-    textFieldSignupCertificateTextController?.dispose();
 
     textFieldSignupEmailFocusNode?.dispose();
     textFieldSignupEmailTextController?.dispose();

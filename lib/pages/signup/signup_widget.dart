@@ -1,3 +1,4 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -28,9 +29,6 @@ class _SignupWidgetState extends State<SignupWidget> {
 
     _model.textFieldSignupFullNameTextController ??= TextEditingController();
     _model.textFieldSignupFullNameFocusNode ??= FocusNode();
-
-    _model.textFieldSignupCertificateTextController ??= TextEditingController();
-    _model.textFieldSignupCertificateFocusNode ??= FocusNode();
 
     _model.textFieldSignupEmailTextController ??= TextEditingController();
     _model.textFieldSignupEmailFocusNode ??= FocusNode();
@@ -312,119 +310,6 @@ class _SignupWidgetState extends State<SignupWidget> {
                                                       0.0, 18.0, 0.0, 0.0),
                                               child: TextFormField(
                                                 controller: _model
-                                                    .textFieldSignupCertificateTextController,
-                                                focusNode: _model
-                                                    .textFieldSignupCertificateFocusNode,
-                                                autofocus: false,
-                                                obscureText: false,
-                                                decoration: InputDecoration(
-                                                  isDense: true,
-                                                  hintText:
-                                                      'Speciality/certificate',
-                                                  hintStyle: FlutterFlowTheme
-                                                          .of(context)
-                                                      .bodySmall
-                                                      .override(
-                                                        fontFamily:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodySmallFamily,
-                                                        fontSize: 14.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.normal,
-                                                        useGoogleFonts: GoogleFonts
-                                                                .asMap()
-                                                            .containsKey(
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodySmallFamily),
-                                                      ),
-                                                  enabledBorder:
-                                                      OutlineInputBorder(
-                                                    borderSide: const BorderSide(
-                                                      color: Color(0xFF04B974),
-                                                      width: 1.0,
-                                                    ),
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            12.0),
-                                                  ),
-                                                  focusedBorder:
-                                                      OutlineInputBorder(
-                                                    borderSide: BorderSide(
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .info,
-                                                      width: 1.0,
-                                                    ),
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            12.0),
-                                                  ),
-                                                  errorBorder:
-                                                      OutlineInputBorder(
-                                                    borderSide: BorderSide(
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .error,
-                                                      width: 1.0,
-                                                    ),
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            12.0),
-                                                  ),
-                                                  focusedErrorBorder:
-                                                      OutlineInputBorder(
-                                                    borderSide: BorderSide(
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .error,
-                                                      width: 1.0,
-                                                    ),
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            12.0),
-                                                  ),
-                                                  prefixIcon: Icon(
-                                                    Icons.chat_bubble_outline,
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .secondaryText,
-                                                  ),
-                                                ),
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .titleSmall
-                                                        .override(
-                                                          fontFamily:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .titleSmallFamily,
-                                                          fontSize: 14.0,
-                                                          letterSpacing: 0.0,
-                                                          useGoogleFonts: GoogleFonts
-                                                                  .asMap()
-                                                              .containsKey(
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .titleSmallFamily),
-                                                        ),
-                                                maxLines: null,
-                                                validator: _model
-                                                    .textFieldSignupCertificateTextControllerValidator
-                                                    .asValidator(context),
-                                              ),
-                                            ),
-                                            Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      0.0, 18.0, 0.0, 0.0),
-                                              child: TextFormField(
-                                                controller: _model
                                                     .textFieldSignupEmailTextController,
                                                 focusNode: _model
                                                     .textFieldSignupEmailFocusNode,
@@ -659,8 +544,13 @@ class _SignupWidgetState extends State<SignupWidget> {
                                                 controller: _model
                                                         .dropDownValueController ??=
                                                     FormFieldController<String>(
-                                                        null),
-                                                options: const ['Buyer', 'Seller'],
+                                                  _model.dropDownValue ??=
+                                                      valueOrDefault<String>(
+                                                    currentPhoneNumber,
+                                                    '090123456789',
+                                                  ),
+                                                ),
+                                                options: const ['Buyer'],
                                                 onChanged: (val) =>
                                                     safeSetState(() => _model
                                                         .dropDownValue = val),
@@ -689,7 +579,7 @@ class _SignupWidgetState extends State<SignupWidget> {
                                                                       .bodySmallFamily),
                                                         ),
                                                 hintText:
-                                                    'Please select your account role',
+                                                    'Please select your sponsor id',
                                                 fillColor:
                                                     FlutterFlowTheme.of(context)
                                                         .primaryBackground,
