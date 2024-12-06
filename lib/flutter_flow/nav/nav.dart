@@ -199,14 +199,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const ChatPageWidget(),
         ),
         FFRoute(
-          name: 'Messages',
-          path: '/messages',
-          requireAuth: true,
-          builder: (context, params) => params.isEmpty
-              ? const NavBarPage(initialPage: 'Messages')
-              : const MessagesWidget(),
-        ),
-        FFRoute(
           name: 'AllUsers',
           path: '/allUsers',
           requireAuth: true,
@@ -233,11 +225,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'OtherProfiles',
           path: '/otherProfiles',
           builder: (context, params) => const OtherProfilesWidget(),
-        ),
-        FFRoute(
-          name: 'Listing',
-          path: '/listing',
-          builder: (context, params) => const ListingWidget(),
         ),
         FFRoute(
           name: 'Home2',
@@ -278,6 +265,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'ApplicantsDetails',
           path: '/applicantsDetails',
           builder: (context, params) => const ApplicantsDetailsWidget(),
+        ),
+        FFRoute(
+          name: 'BannersList',
+          path: '/bannersList',
+          builder: (context, params) => const BannersListWidget(),
+        ),
+        FFRoute(
+          name: 'Messages',
+          path: '/messages',
+          builder: (context, params) => const MessagesWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

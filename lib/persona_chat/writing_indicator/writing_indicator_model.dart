@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'listing_widget.dart' show ListingWidget;
+import 'writing_indicator_widget.dart' show WritingIndicatorWidget;
 import 'package:flutter/material.dart';
 
-class ListingModel extends FlutterFlowModel<ListingWidget> {
+class WritingIndicatorModel extends FlutterFlowModel<WritingIndicatorWidget> {
   @override
   void initState(BuildContext context) {}
 

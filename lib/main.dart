@@ -135,7 +135,6 @@ class _NavBarPageState extends State<NavBarPage> {
     final tabs = {
       'Profile': const ProfileWidget(),
       'DashboardPage': const DashboardPageWidget(),
-      'Messages': const MessagesWidget(),
       'AllUsers': const AllUsersWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
@@ -224,44 +223,18 @@ class _NavBarPageState extends State<NavBarPage> {
               children: [
                 Icon(
                   currentIndex == 2
-                      ? Icons.chat_bubble_rounded
-                      : Icons.chat_bubble_outline,
+                      ? Icons.person_add
+                      : Icons.person_add_outlined,
                   color: currentIndex == 2
                       ? const Color(0xFF04B974)
                       : FlutterFlowTheme.of(context).primaryText,
                   size: currentIndex == 2 ? 24.0 : 24.0,
                 ),
                 Text(
-                  'Messages',
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    color: currentIndex == 2
-                        ? const Color(0xFF04B974)
-                        : FlutterFlowTheme.of(context).primaryText,
-                    fontSize: 11.0,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          FloatingNavbarItem(
-            customWidget: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  currentIndex == 3
-                      ? Icons.person_add
-                      : Icons.person_add_outlined,
-                  color: currentIndex == 3
-                      ? const Color(0xFF04B974)
-                      : FlutterFlowTheme.of(context).primaryText,
-                  size: currentIndex == 3 ? 24.0 : 24.0,
-                ),
-                Text(
                   'All Users',
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
-                    color: currentIndex == 3
+                    color: currentIndex == 2
                         ? const Color(0xFF04B974)
                         : FlutterFlowTheme.of(context).primaryText,
                     fontSize: 11.0,
