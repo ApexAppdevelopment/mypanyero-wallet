@@ -1,10 +1,12 @@
 import '/auth/firebase_auth/auth_util.dart';
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'signup_model.dart';
@@ -539,60 +541,105 @@ class _SignupWidgetState extends State<SignupWidget> {
                                               padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 18.0, 0.0, 0.0),
-                                              child:
-                                                  FlutterFlowDropDown<String>(
-                                                controller: _model
-                                                        .dropDownValueController ??=
-                                                    FormFieldController<String>(
-                                                  _model.dropDownValue ??=
-                                                      valueOrDefault<String>(
-                                                    currentPhoneNumber,
-                                                    '090123456789',
+                                              child: AuthUserStreamWidget(
+                                                builder: (context) =>
+                                                    StreamBuilder<
+                                                        List<UsersRecord>>(
+                                                  stream: queryUsersRecord(
+                                                    queryBuilder:
+                                                        (usersRecord) =>
+                                                            usersRecord.where(
+                                                      'phone_number',
+                                                      isEqualTo:
+                                                          _model.dropDownValue,
+                                                    ),
                                                   ),
-                                                ),
-                                                options: const ['Buyer'],
-                                                onChanged: (val) =>
-                                                    safeSetState(() => _model
-                                                        .dropDownValue = val),
-                                                width:
-                                                    MediaQuery.sizeOf(context)
-                                                            .width *
-                                                        1.0,
-                                                height: 45.0,
-                                                textStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodySmall
-                                                        .override(
-                                                          fontFamily:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodySmallFamily,
-                                                          fontSize: 14.0,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.normal,
-                                                          useGoogleFonts: GoogleFonts
-                                                                  .asMap()
-                                                              .containsKey(
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodySmallFamily),
+                                                  builder: (context, snapshot) {
+                                                    // Customize what your widget looks like when it's loading.
+                                                    if (!snapshot.hasData) {
+                                                      return const Center(
+                                                        child: SizedBox(
+                                                          width: 100.0,
+                                                          height: 100.0,
+                                                          child: SpinKitRipple(
+                                                            color: Color(
+                                                                0xFF5AEF39),
+                                                            size: 100.0,
+                                                          ),
                                                         ),
-                                                hintText:
-                                                    'Please select your sponsor id',
-                                                fillColor:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryBackground,
-                                                elevation: 4.0,
-                                                borderColor: const Color(0xFF04B974),
-                                                borderWidth: 1.0,
-                                                borderRadius: 12.0,
-                                                margin: const EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        12.0, 4.0, 12.0, 4.0),
-                                                hidesUnderline: true,
-                                                isSearchable: false,
-                                                isMultiSelect: false,
+                                                      );
+                                                    }
+                                                    List<UsersRecord>
+                                                        dropDownUsersRecordList =
+                                                        snapshot.data!;
+
+                                                    return FlutterFlowDropDown<
+                                                        String>(
+                                                      controller: _model
+                                                              .dropDownValueController ??=
+                                                          FormFieldController<
+                                                              String>(
+                                                        _model.dropDownValue ??=
+                                                            valueOrDefault<
+                                                                String>(
+                                                          currentPhoneNumber,
+                                                          '090123456789',
+                                                        ),
+                                                      ),
+                                                      options: const ['Buyer'],
+                                                      onChanged: (val) =>
+                                                          safeSetState(() =>
+                                                              _model.dropDownValue =
+                                                                  val),
+                                                      width: MediaQuery.sizeOf(
+                                                                  context)
+                                                              .width *
+                                                          1.0,
+                                                      height: 45.0,
+                                                      textStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .override(
+                                                                fontFamily: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodySmallFamily,
+                                                                fontSize: 14.0,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .normal,
+                                                                useGoogleFonts: GoogleFonts
+                                                                        .asMap()
+                                                                    .containsKey(
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .bodySmallFamily),
+                                                              ),
+                                                      hintText:
+                                                          'Please select your sponsor id',
+                                                      fillColor:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primaryBackground,
+                                                      elevation: 4.0,
+                                                      borderColor:
+                                                          const Color(0xFF04B974),
+                                                      borderWidth: 1.0,
+                                                      borderRadius: 12.0,
+                                                      margin:
+                                                          const EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  12.0,
+                                                                  4.0,
+                                                                  12.0,
+                                                                  4.0),
+                                                      hidesUnderline: true,
+                                                      isSearchable: false,
+                                                      isMultiSelect: false,
+                                                    );
+                                                  },
+                                                ),
                                               ),
                                             ),
                                             Padding(
