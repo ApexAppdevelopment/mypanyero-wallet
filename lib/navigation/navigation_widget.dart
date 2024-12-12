@@ -1,9 +1,14 @@
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'navigation_model.dart';
 export 'navigation_model.dart';
 
@@ -42,15 +47,15 @@ class _NavigationWidgetState extends State<NavigationWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.698, 0),
-            end: const Offset(0, 0),
+            begin: Offset(0.698, 0),
+            end: Offset(0, 0),
           ),
           MoveEffect(
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 50.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 50.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -88,15 +93,15 @@ class _NavigationWidgetState extends State<NavigationWidget>
             children: [
               Flexible(
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 44.0, 0.0, 0.0),
-                  child: SizedBox(
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 44.0, 0.0, 0.0),
+                  child: Container(
                     height: MediaQuery.sizeOf(context).height * 1.0,
                     child: Stack(
                       children: [
                         Align(
-                          alignment: const AlignmentDirectional(0.0, -1.0),
+                          alignment: AlignmentDirectional(0.0, -1.0),
                           child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: EdgeInsets.all(8.0),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(12.0),
                               child: Image.network(
@@ -109,7 +114,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               8.0, 8.0, 8.0, 0.0),
                           child: Container(
                             width: double.infinity,
@@ -121,16 +126,16 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                       .secondaryBackground,
                                   FlutterFlowTheme.of(context).accent4
                                 ],
-                                stops: const [0.0, 1.0],
-                                begin: const AlignmentDirectional(0.0, -1.0),
-                                end: const AlignmentDirectional(0, 1.0),
+                                stops: [0.0, 1.0],
+                                begin: AlignmentDirectional(0.0, -1.0),
+                                end: AlignmentDirectional(0, 1.0),
                               ),
                               borderRadius: BorderRadius.circular(12.0),
                             ),
                             child: Align(
-                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                              alignment: AlignmentDirectional(-1.0, 0.0),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     12.0, 32.0, 0.0, 0.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -152,7 +157,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                           ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 4.0, 0.0, 0.0),
                                       child: Text(
                                         'Albert Manovich',
@@ -177,7 +182,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                       children: [
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 4.0, 0.0, 0.0),
                                           child: Text(
                                             '45°',
@@ -203,7 +208,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   12.0, 0.0, 0.0, 0.0),
                                           child: Icon(
                                             Icons.cloud_queue_sharp,
@@ -221,9 +226,9 @@ class _NavigationWidgetState extends State<NavigationWidget>
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 1.0),
+                          alignment: AlignmentDirectional(0.0, 1.0),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 16.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
@@ -231,7 +236,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 8.0),
                                   child: Text(
                                     'Next Trip',
@@ -254,7 +259,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryBackground,
-                                    boxShadow: const [
+                                    boxShadow: [
                                       BoxShadow(
                                         blurRadius: 8.0,
                                         color: Color(0x230F1113),
@@ -270,7 +275,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             16.0, 12.0, 16.0, 12.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -283,7 +288,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 0.0, 8.0),
                                                   child: Text(
@@ -326,7 +331,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                                       ),
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 4.0, 0.0, 0.0),
                                                   child: Text(
@@ -364,7 +369,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                                   CrossAxisAlignment.end,
                                               children: [
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 0.0, 8.0),
                                                   child: Text(
@@ -407,7 +412,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                                       ),
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           8.0, 4.0, 0.0, 0.0),
                                                   child: Text(
@@ -440,7 +445,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                         decoration: BoxDecoration(
                                           color: FlutterFlowTheme.of(context)
                                               .alternate,
-                                          borderRadius: const BorderRadius.only(
+                                          borderRadius: BorderRadius.only(
                                             bottomLeft: Radius.circular(8.0),
                                             bottomRight: Radius.circular(8.0),
                                             topLeft: Radius.circular(0.0),
@@ -458,7 +463,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                               MainAxisAlignment.spaceBetween,
                                           children: [
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       16.0, 12.0, 16.0, 12.0),
                                               child: Row(
@@ -466,7 +471,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 4.0, 0.0),
                                                     child: Text(
@@ -517,7 +522,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                               ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       16.0, 12.0, 16.0, 12.0),
                                               child: Row(
@@ -525,7 +530,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 4.0, 0.0),
                                                     child: Text(
@@ -583,7 +588,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                 ).animateOnPageLoad(animationsMap[
                                     'containerOnPageLoadAnimation']!),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 16.0, 0.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -591,7 +596,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 8.0, 0.0),
                                           child: Container(
                                             width: MediaQuery.sizeOf(context)
@@ -601,7 +606,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .primary,
-                                              boxShadow: const [
+                                              boxShadow: [
                                                 BoxShadow(
                                                   blurRadius: 4.0,
                                                   color: Color(0x33000000),
@@ -615,7 +620,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                                   BorderRadius.circular(12.0),
                                             ),
                                             child: Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 12.0, 0.0, 12.0),
                                               child: Column(
@@ -627,7 +632,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(12.0, 0.0,
                                                                 0.0, 0.0),
                                                     child: Text(
@@ -638,7 +643,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                                           .override(
                                                             fontFamily:
                                                                 'Lexend Deca',
-                                                            color: const Color(
+                                                            color: Color(
                                                                 0x98FFFFFF),
                                                             fontSize: 12.0,
                                                             letterSpacing: 0.0,
@@ -655,7 +660,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(12.0, 4.0,
                                                                 0.0, 0.0),
                                                     child: Text(
@@ -683,7 +688,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(12.0,
                                                                 12.0, 0.0, 0.0),
                                                     child: Text(
@@ -694,7 +699,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                                           .override(
                                                             fontFamily:
                                                                 'Lexend Deca',
-                                                            color: const Color(
+                                                            color: Color(
                                                                 0x98FFFFFF),
                                                             fontSize: 12.0,
                                                             letterSpacing: 0.0,
@@ -711,7 +716,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(12.0, 4.0,
                                                                 0.0, 0.0),
                                                     child: Text(
@@ -739,7 +744,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(12.0,
                                                                 12.0, 0.0, 0.0),
                                                     child: Text(
@@ -774,7 +779,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   8.0, 0.0, 0.0, 0.0),
                                           child: Container(
                                             width: MediaQuery.sizeOf(context)
@@ -784,7 +789,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryBackground,
-                                              boxShadow: const [
+                                              boxShadow: [
                                                 BoxShadow(
                                                   blurRadius: 3.0,
                                                   color: Color(0x33000000),
@@ -798,7 +803,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                                   BorderRadius.circular(12.0),
                                             ),
                                             child: Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 12.0, 0.0, 12.0),
                                               child: Column(
@@ -810,7 +815,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(12.0, 0.0,
                                                                 0.0, 0.0),
                                                     child: Text(
@@ -835,7 +840,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(12.0, 4.0,
                                                                 0.0, 0.0),
                                                     child: Text(
@@ -860,7 +865,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(12.0, 4.0,
                                                                 0.0, 0.0),
                                                     child: Text(
@@ -885,7 +890,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(12.0,
                                                                 12.0, 0.0, 0.0),
                                                     child: Text(
@@ -910,7 +915,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(12.0, 4.0,
                                                                 0.0, 0.0),
                                                     child: Text(
@@ -939,7 +944,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                           ),
                                         ),
                                       ),
-                                    ].divide(const SizedBox(width: 16.0)),
+                                    ].divide(SizedBox(width: 16.0)),
                                   ),
                                 ),
                               ],

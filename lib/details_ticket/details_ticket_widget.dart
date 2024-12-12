@@ -2,12 +2,17 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:barcode_widget/barcode_widget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'details_ticket_model.dart';
 export 'details_ticket_model.dart';
 
@@ -47,8 +52,8 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 50.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 50.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -67,8 +72,8 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
             curve: Curves.easeInOut,
             delay: 120.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 40.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 40.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -87,8 +92,8 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
             curve: Curves.easeInOut,
             delay: 240.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 70.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 70.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -107,8 +112,8 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
             curve: Curves.bounceOut,
             delay: 600.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.7, 0.7),
-            end: const Offset(1.0, 1.0),
+            begin: Offset(0.7, 0.7),
+            end: Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -157,7 +162,7 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
               context.pop();
             },
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -174,7 +179,7 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
                       height: 400.0,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
-                        boxShadow: const [
+                        boxShadow: [
                           BoxShadow(
                             blurRadius: 3.0,
                             color: Color(0x33000000),
@@ -186,7 +191,7 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
                         ],
                       ),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 0.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -207,7 +212,7 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
                                   ),
                             ),
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 12.0, 0.0, 0.0),
                               child: Text(
                                 'Address',
@@ -225,7 +230,7 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 4.0, 0.0, 0.0),
                               child: Text(
                                 '56292 West Hollywood Blvd. Brooklyn NY 12405',
@@ -262,7 +267,7 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
                                   ),
                             ),
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 8.0, 0.0, 0.0),
                               child: Text(
                                 'Don\'t miss the upcoming FlutterFlow Meetup, where enthusiasts and professionals alike will gather to exchange ideas, showcase groundbreaking projects, and experience the thrill of creating cutting-edge applications using this powerful and versatile framework.',
@@ -285,15 +290,15 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 260.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 260.0, 0.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   16.0, 16.0, 16.0, 44.0),
                               child: Material(
                                 color: Colors.transparent,
@@ -306,7 +311,7 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryBackground,
-                                    boxShadow: const [
+                                    boxShadow: [
                                       BoxShadow(
                                         blurRadius: 12.0,
                                         color: Color(0x33000000),
@@ -326,14 +331,14 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
                                         CrossAxisAlignment.stretch,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 16.0),
                                         child: Container(
                                           width: 100.0,
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .primary,
-                                            borderRadius: const BorderRadius.only(
+                                            borderRadius: BorderRadius.only(
                                               bottomLeft: Radius.circular(0.0),
                                               bottomRight: Radius.circular(0.0),
                                               topLeft: Radius.circular(16.0),
@@ -342,7 +347,7 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
                                           ),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 20.0, 0.0, 16.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.min,
@@ -352,7 +357,7 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           20.0, 0.0, 16.0, 4.0),
                                                   child: Row(
@@ -386,7 +391,7 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
                                                       Expanded(
                                                         child: Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       4.0,
                                                                       0.0,
@@ -429,11 +434,11 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
                                                         child:
                                                             CachedNetworkImage(
                                                           fadeInDuration:
-                                                              const Duration(
+                                                              Duration(
                                                                   milliseconds:
                                                                       500),
                                                           fadeOutDuration:
-                                                              const Duration(
+                                                              Duration(
                                                                   milliseconds:
                                                                       500),
                                                           imageUrl:
@@ -447,7 +452,7 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           20.0, 0.0, 20.0, 0.0),
                                                   child: AutoSizeText(
@@ -475,7 +480,7 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           20.0, 32.0, 0.0, 0.0),
                                                   child: AutoSizeText(
@@ -506,7 +511,7 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           20.0, 4.0, 20.0, 0.0),
                                                   child: AutoSizeText(
@@ -552,12 +557,12 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
                                               Align(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     -0.85, -0.15),
                                                 child: Material(
                                                   color: Colors.transparent,
                                                   elevation: 0.0,
-                                                  shape: const RoundedRectangleBorder(
+                                                  shape: RoundedRectangleBorder(
                                                     borderRadius:
                                                         BorderRadius.only(
                                                       bottomLeft:
@@ -578,7 +583,7 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
                                                               .of(context)
                                                           .primaryBackground,
                                                       borderRadius:
-                                                          const BorderRadius.only(
+                                                          BorderRadius.only(
                                                         bottomLeft:
                                                             Radius.circular(
                                                                 0.0),
@@ -664,12 +669,12 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
                                                 ),
                                               ),
                                               Align(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.85, -0.15),
                                                 child: Material(
                                                   color: Colors.transparent,
                                                   elevation: 0.0,
-                                                  shape: const RoundedRectangleBorder(
+                                                  shape: RoundedRectangleBorder(
                                                     borderRadius:
                                                         BorderRadius.only(
                                                       bottomLeft:
@@ -690,7 +695,7 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
                                                               .of(context)
                                                           .primaryBackground,
                                                       borderRadius:
-                                                          const BorderRadius.only(
+                                                          BorderRadius.only(
                                                         bottomLeft:
                                                             Radius.circular(
                                                                 50.0),
@@ -713,7 +718,7 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
                                           ),
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     20.0, 12.0, 20.0, 0.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -742,7 +747,7 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
                                                       ),
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 12.0, 0.0, 0.0),
                                                   child: Row(
@@ -751,7 +756,7 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -799,7 +804,7 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 12.0, 0.0, 0.0),
                                                   child: Row(
@@ -808,7 +813,7 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -856,7 +861,7 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 12.0, 0.0, 0.0),
                                                   child: Row(
@@ -868,7 +873,7 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -916,7 +921,7 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 8.0, 12.0, 0.0),
                                                   child: Text(
@@ -945,18 +950,18 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
                                           ),
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 24.0, 0.0, 12.0),
                                             child: Container(
                                               width: MediaQuery.sizeOf(context)
                                                       .width *
                                                   1.0,
                                               height: 90.0,
-                                              decoration: const BoxDecoration(
+                                              decoration: BoxDecoration(
                                                 color: Color(0x00FFFFFF),
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         16.0, 0.0, 16.0, 0.0),
                                                 child: BarcodeWidget(
@@ -970,8 +975,8 @@ class _DetailsTicketWidgetState extends State<DetailsTicketWidget>
                                                   backgroundColor:
                                                       Colors.transparent,
                                                   errorBuilder:
-                                                      (context, error) =>
-                                                          const SizedBox(
+                                                      (_context, _error) =>
+                                                          SizedBox(
                                                     width: 100.0,
                                                     height: 50.0,
                                                   ),

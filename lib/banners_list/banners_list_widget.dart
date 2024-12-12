@@ -1,7 +1,10 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'banners_list_model.dart';
 export 'banners_list_model.dart';
 
@@ -65,18 +68,18 @@ class _BannersListWidgetState extends State<BannersListWidget> {
                 child: Container(
                   width: 100.0,
                   height: 170.0,
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     color: Color(0x9A1D2428),
                   ),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(16.0, 64.0, 16.0, 12.0),
+                        EdgeInsetsDirectional.fromSTEB(16.0, 64.0, 16.0, 12.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 8.0),
                           child: Text(
                             'Panyero Best Deals',
@@ -100,7 +103,7 @@ class _BannersListWidgetState extends State<BannersListWidget> {
                               .override(
                                 fontFamily: FlutterFlowTheme.of(context)
                                     .labelMediumFamily,
-                                color: const Color(0xBEFFFFFF),
+                                color: Color(0xBEFFFFFF),
                                 letterSpacing: 0.0,
                                 useGoogleFonts: GoogleFonts.asMap().containsKey(
                                     FlutterFlowTheme.of(context)
@@ -108,15 +111,15 @@ class _BannersListWidgetState extends State<BannersListWidget> {
                               ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 16.0, 0.0, 0.0),
-                          child: SizedBox(
+                          child: Container(
                             width: double.infinity,
                             child: TextFormField(
                               controller: _model.emailAddressTextController,
                               focusNode: _model.emailAddressFocusNode,
                               autofocus: true,
-                              autofillHints: const [AutofillHints.email],
+                              autofillHints: [AutofillHints.email],
                               obscureText: false,
                               decoration: InputDecoration(
                                 labelText: 'Search ...',
@@ -165,7 +168,7 @@ class _BannersListWidgetState extends State<BannersListWidget> {
                                 filled: true,
                                 fillColor: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
-                                contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                                contentPadding: EdgeInsetsDirectional.fromSTEB(
                                     24.0, 24.0, 0.0, 24.0),
                                 prefixIcon: Icon(
                                   Icons.search_rounded,
@@ -198,7 +201,7 @@ class _BannersListWidgetState extends State<BannersListWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 0.0, 0.0),
                 child: Text(
                   'Avail Discounted Promotions with Cashback!',
                   style: FlutterFlowTheme.of(context).labelLarge.override(
@@ -211,19 +214,19 @@ class _BannersListWidgetState extends State<BannersListWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 52.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 52.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
+                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
                       child: Container(
                         width: double.infinity,
                         decoration: BoxDecoration(
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
-                          boxShadow: const [
+                          boxShadow: [
                             BoxShadow(
                               blurRadius: 3.0,
                               color: Color(0x411D2429),
@@ -236,13 +239,13 @@ class _BannersListWidgetState extends State<BannersListWidget> {
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.all(4.0),
+                          padding: EdgeInsets.all(4.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 1.0, 1.0, 1.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(6.0),
@@ -260,7 +263,7 @@ class _BannersListWidgetState extends State<BannersListWidget> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       'Popular Bookings',
                                       style: FlutterFlowTheme.of(context)

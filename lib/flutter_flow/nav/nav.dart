@@ -1,14 +1,21 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:go_router/go_router.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
+import '/backend/backend.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
 import '/main.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/lat_lng.dart';
+import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import 'serialization_util.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -73,31 +80,31 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const NavBarPage() : const SplashScreenWidget(),
+          appStateNotifier.loggedIn ? NavBarPage() : SplashScreenWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? const NavBarPage() : const SplashScreenWidget(),
+              appStateNotifier.loggedIn ? NavBarPage() : SplashScreenWidget(),
         ),
         FFRoute(
           name: 'SplashScreen',
           path: '/splashScreen',
-          builder: (context, params) => const SplashScreenWidget(),
+          builder: (context, params) => SplashScreenWidget(),
         ),
         FFRoute(
           name: 'Signup',
           path: '/signup',
-          builder: (context, params) => const SignupWidget(),
+          builder: (context, params) => SignupWidget(),
         ),
         FFRoute(
           name: 'CategoryPage',
           path: '/categoryPage',
           requireAuth: true,
           builder: (context, params) => params.isEmpty
-              ? const NavBarPage(initialPage: 'CategoryPage')
-              : const NavBarPage(
+              ? NavBarPage(initialPage: 'CategoryPage')
+              : NavBarPage(
                   initialPage: 'CategoryPage',
                   page: CategoryPageWidget(),
                 ),
@@ -107,7 +114,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           path: '/scanQR',
           requireAuth: true,
           builder: (context, params) => params.isEmpty
-              ? const NavBarPage(initialPage: 'ScanQR')
+              ? NavBarPage(initialPage: 'ScanQR')
               : NavBarPage(
                   initialPage: 'ScanQR',
                   page: ScanQRWidget(
@@ -121,87 +128,92 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'ServiceOffered',
           path: '/serviceOffered',
-          builder: (context, params) => const ServiceOfferedWidget(),
+          builder: (context, params) => ServiceOfferedWidget(),
         ),
         FFRoute(
           name: 'aiPersona',
           path: '/aiPersona',
-          builder: (context, params) => const AiPersonaWidget(),
+          builder: (context, params) => AiPersonaWidget(),
         ),
         FFRoute(
           name: 'Navigation',
           path: '/navigation',
-          builder: (context, params) => const NavigationWidget(),
+          builder: (context, params) => NavigationWidget(),
         ),
         FFRoute(
           name: 'GamesCasino',
           path: '/gamesCasino',
           builder: (context, params) => params.isEmpty
-              ? const NavBarPage(initialPage: 'GamesCasino')
-              : const GamesCasinoWidget(),
+              ? NavBarPage(initialPage: 'GamesCasino')
+              : GamesCasinoWidget(),
         ),
         FFRoute(
           name: 'PanyeroAcademy',
           path: '/panyeroAcademy',
-          builder: (context, params) => const PanyeroAcademyWidget(),
+          builder: (context, params) => PanyeroAcademyWidget(),
         ),
         FFRoute(
           name: 'PanyeroCareers',
           path: '/panyeroCareers',
-          builder: (context, params) => const PanyeroCareersWidget(),
+          builder: (context, params) => PanyeroCareersWidget(),
         ),
         FFRoute(
           name: 'ApplicantsDetails',
           path: '/applicantsDetails',
-          builder: (context, params) => const ApplicantsDetailsWidget(),
+          builder: (context, params) => ApplicantsDetailsWidget(),
         ),
         FFRoute(
           name: 'BannersList',
           path: '/bannersList',
-          builder: (context, params) => const BannersListWidget(),
+          builder: (context, params) => BannersListWidget(),
         ),
         FFRoute(
           name: 'Messages',
           path: '/messages',
-          builder: (context, params) => const MessagesWidget(),
+          builder: (context, params) => MessagesWidget(),
         ),
         FFRoute(
           name: 'TransferResponsive',
           path: '/transferResponsive',
-          builder: (context, params) => const TransferResponsiveWidget(),
+          builder: (context, params) => TransferResponsiveWidget(),
         ),
         FFRoute(
           name: 'HomeDashboard',
           path: '/homeDashboard',
           builder: (context, params) => params.isEmpty
-              ? const NavBarPage(initialPage: 'HomeDashboard')
-              : const HomeDashboardWidget(),
+              ? NavBarPage(initialPage: 'HomeDashboard')
+              : HomeDashboardWidget(),
         ),
         FFRoute(
           name: 'DetailsTicket',
           path: '/detailsTicket',
-          builder: (context, params) => const DetailsTicketWidget(),
+          builder: (context, params) => DetailsTicketWidget(),
         ),
         FFRoute(
           name: 'SimpleProfile',
           path: '/simpleProfile',
-          builder: (context, params) => const SimpleProfileWidget(),
+          builder: (context, params) => SimpleProfileWidget(),
         ),
         FFRoute(
           name: 'Lotto',
           path: '/lotto',
           builder: (context, params) =>
-              params.isEmpty ? const NavBarPage(initialPage: 'Lotto') : const LottoWidget(),
+              params.isEmpty ? NavBarPage(initialPage: 'Lotto') : LottoWidget(),
         ),
         FFRoute(
           name: 'Details23BookingHouse',
           path: '/details23BookingHouse',
-          builder: (context, params) => const Details23BookingHouseWidget(),
+          builder: (context, params) => Details23BookingHouseWidget(),
         ),
         FFRoute(
           name: 'Onboarrd',
           path: '/onboarrd',
-          builder: (context, params) => const OnboarrdWidget(),
+          builder: (context, params) => OnboarrdWidget(),
+        ),
+        FFRoute(
+          name: 'Login1',
+          path: '/login1',
+          builder: (context, params) => Login1Widget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -439,7 +451,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {

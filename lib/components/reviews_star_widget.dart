@@ -2,6 +2,9 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'reviews_star_model.dart';
 export 'reviews_star_model.dart';
 
@@ -51,7 +54,7 @@ class _ReviewsStarWidgetState extends State<ReviewsStarWidget> {
         color: FlutterFlowTheme.of(context).tertiary,
       ),
       direction: Axis.horizontal,
-      initialRating: _model.ratingBarValue ??= widget.rating!,
+      initialRating: _model.ratingBarValue ??= widget!.rating!,
       unratedColor: FlutterFlowTheme.of(context).accent3,
       itemCount: 5,
       itemSize: 10.0,

@@ -4,8 +4,10 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'eidt_services_model.dart';
 export 'eidt_services_model.dart';
 
@@ -50,7 +52,7 @@ class _EidtServicesWidgetState extends State<EidtServicesWidget> {
         borderRadius: BorderRadius.circular(10.0),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(10.0),
+        padding: EdgeInsets.all(10.0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
@@ -66,7 +68,7 @@ class _EidtServicesWidgetState extends State<EidtServicesWidget> {
                   ),
             ),
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -86,7 +88,7 @@ class _EidtServicesWidgetState extends State<EidtServicesWidget> {
                   FlutterFlowDropDown<String>(
                     controller: _model.dropDownValueController ??=
                         FormFieldController<String>(null),
-                    options: const ['Active', 'In Active', 'Pause'],
+                    options: ['Active', 'In Active', 'Pause'],
                     onChanged: (val) =>
                         safeSetState(() => _model.dropDownValue = val),
                     width: 150.0,
@@ -111,7 +113,7 @@ class _EidtServicesWidgetState extends State<EidtServicesWidget> {
                     borderWidth: 2.0,
                     borderRadius: 8.0,
                     margin:
-                        const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                        EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                     hidesUnderline: true,
                     isSearchable: false,
                     isMultiSelect: false,
@@ -120,7 +122,7 @@ class _EidtServicesWidgetState extends State<EidtServicesWidget> {
               ),
             ),
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 5.0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 5.0),
               child: FFButtonWidget(
                 onPressed: () async {
                   Navigator.pop(context);
@@ -129,9 +131,9 @@ class _EidtServicesWidgetState extends State<EidtServicesWidget> {
                 options: FFButtonOptions(
                   width: 120.0,
                   height: 35.0,
-                  padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                   iconPadding:
-                      const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   color: FlutterFlowTheme.of(context).customColor1,
                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                         fontFamily:
@@ -143,7 +145,7 @@ class _EidtServicesWidgetState extends State<EidtServicesWidget> {
                             FlutterFlowTheme.of(context).titleSmallFamily),
                       ),
                   elevation: 3.0,
-                  borderSide: const BorderSide(
+                  borderSide: BorderSide(
                     color: Colors.transparent,
                     width: 1.0,
                   ),
@@ -152,7 +154,7 @@ class _EidtServicesWidgetState extends State<EidtServicesWidget> {
               ),
             ),
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
               child: Text(
                 'OR',
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -164,9 +166,9 @@ class _EidtServicesWidgetState extends State<EidtServicesWidget> {
                     ),
               ),
             ),
-            const Spacer(),
+            Spacer(),
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -191,7 +193,7 @@ class _EidtServicesWidgetState extends State<EidtServicesWidget> {
                 ],
               ),
             ),
-            const Spacer(),
+            Spacer(),
           ],
         ),
       ),

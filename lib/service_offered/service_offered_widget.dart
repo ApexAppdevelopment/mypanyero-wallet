@@ -1,8 +1,11 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:sticky_headers/sticky_headers.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'service_offered_model.dart';
 export 'service_offered_model.dart';
 
@@ -55,7 +58,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                       FlutterFlowTheme.of(context).headlineLargeFamily),
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -70,19 +73,19 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                   header: Container(
                     width: double.infinity,
                     height: 50.0,
-                    constraints: const BoxConstraints(
+                    constraints: BoxConstraints(
                       maxWidth: 430.0,
                     ),
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).primaryBackground,
                       borderRadius: BorderRadius.circular(0.0),
                     ),
-                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                    alignment: AlignmentDirectional(-1.0, 0.0),
                     child: Align(
-                      alignment: const AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.0, 0.0),
                       child: Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                         child: Text(
                           'Sticky Header One',
                           style: FlutterFlowTheme.of(context)
@@ -101,7 +104,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                   ),
                   content: Container(
                     width: double.infinity,
-                    constraints: const BoxConstraints(
+                    constraints: BoxConstraints(
                       maxWidth: 430.0,
                     ),
                     decoration: BoxDecoration(
@@ -115,9 +118,9 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                       scrollDirection: Axis.vertical,
                       children: [
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
@@ -129,7 +132,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                     blurRadius: 0.0,
                                     color: FlutterFlowTheme.of(context)
                                         .primaryBackground,
-                                    offset: const Offset(
+                                    offset: Offset(
                                       0.0,
                                       1.0,
                                     ),
@@ -143,7 +146,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                 ),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -151,7 +154,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 0.0, 0.0, 0.0),
                                       child: Container(
                                         width: 44.0,
@@ -162,7 +165,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                           shape: BoxShape.circle,
                                         ),
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.0, 0.0),
                                         child: Text(
                                           'A',
                                           style: FlutterFlowTheme.of(context)
@@ -185,7 +188,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'List Item',
@@ -219,9 +222,9 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
@@ -233,7 +236,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                     blurRadius: 0.0,
                                     color: FlutterFlowTheme.of(context)
                                         .primaryBackground,
-                                    offset: const Offset(
+                                    offset: Offset(
                                       0.0,
                                       1.0,
                                     ),
@@ -247,7 +250,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                 ),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -255,7 +258,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 0.0, 0.0, 0.0),
                                       child: Container(
                                         width: 44.0,
@@ -266,7 +269,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                           shape: BoxShape.circle,
                                         ),
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.0, 0.0),
                                         child: Text(
                                           'A',
                                           style: FlutterFlowTheme.of(context)
@@ -289,7 +292,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'List Item',
@@ -323,9 +326,9 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
@@ -337,7 +340,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                     blurRadius: 0.0,
                                     color: FlutterFlowTheme.of(context)
                                         .primaryBackground,
-                                    offset: const Offset(
+                                    offset: Offset(
                                       0.0,
                                       1.0,
                                     ),
@@ -351,7 +354,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                 ),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -359,7 +362,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 0.0, 0.0, 0.0),
                                       child: Container(
                                         width: 44.0,
@@ -370,7 +373,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                           shape: BoxShape.circle,
                                         ),
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.0, 0.0),
                                         child: Text(
                                           'A',
                                           style: FlutterFlowTheme.of(context)
@@ -393,7 +396,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'List Item',
@@ -427,9 +430,9 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
@@ -441,7 +444,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                     blurRadius: 0.0,
                                     color: FlutterFlowTheme.of(context)
                                         .primaryBackground,
-                                    offset: const Offset(
+                                    offset: Offset(
                                       0.0,
                                       1.0,
                                     ),
@@ -455,7 +458,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                 ),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -463,7 +466,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 0.0, 0.0, 0.0),
                                       child: Container(
                                         width: 44.0,
@@ -474,7 +477,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                           shape: BoxShape.circle,
                                         ),
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.0, 0.0),
                                         child: Text(
                                           'A',
                                           style: FlutterFlowTheme.of(context)
@@ -497,7 +500,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'List Item',
@@ -531,9 +534,9 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
@@ -545,7 +548,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                     blurRadius: 0.0,
                                     color: FlutterFlowTheme.of(context)
                                         .primaryBackground,
-                                    offset: const Offset(
+                                    offset: Offset(
                                       0.0,
                                       1.0,
                                     ),
@@ -559,7 +562,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                 ),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -567,7 +570,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 0.0, 0.0, 0.0),
                                       child: Container(
                                         width: 44.0,
@@ -578,7 +581,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                           shape: BoxShape.circle,
                                         ),
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.0, 0.0),
                                         child: Text(
                                           'A',
                                           style: FlutterFlowTheme.of(context)
@@ -601,7 +604,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'List Item',
@@ -643,19 +646,19 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                   header: Container(
                     width: double.infinity,
                     height: 50.0,
-                    constraints: const BoxConstraints(
+                    constraints: BoxConstraints(
                       maxWidth: 430.0,
                     ),
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).primaryBackground,
                       borderRadius: BorderRadius.circular(0.0),
                     ),
-                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                    alignment: AlignmentDirectional(-1.0, 0.0),
                     child: Align(
-                      alignment: const AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.0, 0.0),
                       child: Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                         child: Text(
                           'Sticky Header Two',
                           style: FlutterFlowTheme.of(context)
@@ -674,7 +677,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                   ),
                   content: Container(
                     width: double.infinity,
-                    constraints: const BoxConstraints(
+                    constraints: BoxConstraints(
                       maxWidth: 430.0,
                     ),
                     decoration: BoxDecoration(
@@ -688,9 +691,9 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                       scrollDirection: Axis.vertical,
                       children: [
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
@@ -702,7 +705,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                     blurRadius: 0.0,
                                     color: FlutterFlowTheme.of(context)
                                         .primaryBackground,
-                                    offset: const Offset(
+                                    offset: Offset(
                                       0.0,
                                       1.0,
                                     ),
@@ -716,7 +719,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                 ),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -724,7 +727,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 0.0, 0.0, 0.0),
                                       child: Container(
                                         width: 44.0,
@@ -735,7 +738,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                           shape: BoxShape.circle,
                                         ),
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.0, 0.0),
                                         child: Text(
                                           'A',
                                           style: FlutterFlowTheme.of(context)
@@ -758,7 +761,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'List Item',
@@ -792,9 +795,9 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
@@ -806,7 +809,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                     blurRadius: 0.0,
                                     color: FlutterFlowTheme.of(context)
                                         .primaryBackground,
-                                    offset: const Offset(
+                                    offset: Offset(
                                       0.0,
                                       1.0,
                                     ),
@@ -820,7 +823,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                 ),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -828,7 +831,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 0.0, 0.0, 0.0),
                                       child: Container(
                                         width: 44.0,
@@ -839,7 +842,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                           shape: BoxShape.circle,
                                         ),
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.0, 0.0),
                                         child: Text(
                                           'A',
                                           style: FlutterFlowTheme.of(context)
@@ -862,7 +865,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'List Item',
@@ -896,9 +899,9 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
@@ -910,7 +913,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                     blurRadius: 0.0,
                                     color: FlutterFlowTheme.of(context)
                                         .primaryBackground,
-                                    offset: const Offset(
+                                    offset: Offset(
                                       0.0,
                                       1.0,
                                     ),
@@ -924,7 +927,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                 ),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -932,7 +935,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 0.0, 0.0, 0.0),
                                       child: Container(
                                         width: 44.0,
@@ -943,7 +946,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                           shape: BoxShape.circle,
                                         ),
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.0, 0.0),
                                         child: Text(
                                           'A',
                                           style: FlutterFlowTheme.of(context)
@@ -966,7 +969,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'List Item',
@@ -1000,9 +1003,9 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
@@ -1014,7 +1017,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                     blurRadius: 0.0,
                                     color: FlutterFlowTheme.of(context)
                                         .primaryBackground,
-                                    offset: const Offset(
+                                    offset: Offset(
                                       0.0,
                                       1.0,
                                     ),
@@ -1028,7 +1031,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                 ),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -1036,7 +1039,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 0.0, 0.0, 0.0),
                                       child: Container(
                                         width: 44.0,
@@ -1047,7 +1050,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                           shape: BoxShape.circle,
                                         ),
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.0, 0.0),
                                         child: Text(
                                           'A',
                                           style: FlutterFlowTheme.of(context)
@@ -1070,7 +1073,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'List Item',
@@ -1104,9 +1107,9 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
@@ -1118,7 +1121,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                     blurRadius: 0.0,
                                     color: FlutterFlowTheme.of(context)
                                         .primaryBackground,
-                                    offset: const Offset(
+                                    offset: Offset(
                                       0.0,
                                       1.0,
                                     ),
@@ -1132,7 +1135,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                 ),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -1140,7 +1143,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 0.0, 0.0, 0.0),
                                       child: Container(
                                         width: 44.0,
@@ -1151,7 +1154,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                           shape: BoxShape.circle,
                                         ),
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.0, 0.0),
                                         child: Text(
                                           'A',
                                           style: FlutterFlowTheme.of(context)
@@ -1174,7 +1177,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'List Item',
@@ -1216,19 +1219,19 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                   header: Container(
                     width: double.infinity,
                     height: 50.0,
-                    constraints: const BoxConstraints(
+                    constraints: BoxConstraints(
                       maxWidth: 430.0,
                     ),
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).primaryBackground,
                       borderRadius: BorderRadius.circular(0.0),
                     ),
-                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                    alignment: AlignmentDirectional(-1.0, 0.0),
                     child: Align(
-                      alignment: const AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.0, 0.0),
                       child: Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                         child: Text(
                           'Sticky Header Three',
                           style: FlutterFlowTheme.of(context)
@@ -1247,7 +1250,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                   ),
                   content: Container(
                     width: double.infinity,
-                    constraints: const BoxConstraints(
+                    constraints: BoxConstraints(
                       maxWidth: 430.0,
                     ),
                     decoration: BoxDecoration(
@@ -1261,9 +1264,9 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                       scrollDirection: Axis.vertical,
                       children: [
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
@@ -1275,7 +1278,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                     blurRadius: 0.0,
                                     color: FlutterFlowTheme.of(context)
                                         .primaryBackground,
-                                    offset: const Offset(
+                                    offset: Offset(
                                       0.0,
                                       1.0,
                                     ),
@@ -1289,7 +1292,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                 ),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -1297,7 +1300,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 0.0, 0.0, 0.0),
                                       child: Container(
                                         width: 44.0,
@@ -1308,7 +1311,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                           shape: BoxShape.circle,
                                         ),
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.0, 0.0),
                                         child: Text(
                                           'A',
                                           style: FlutterFlowTheme.of(context)
@@ -1331,7 +1334,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'List Item',
@@ -1365,9 +1368,9 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
@@ -1379,7 +1382,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                     blurRadius: 0.0,
                                     color: FlutterFlowTheme.of(context)
                                         .primaryBackground,
-                                    offset: const Offset(
+                                    offset: Offset(
                                       0.0,
                                       1.0,
                                     ),
@@ -1393,7 +1396,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                 ),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -1401,7 +1404,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 0.0, 0.0, 0.0),
                                       child: Container(
                                         width: 44.0,
@@ -1412,7 +1415,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                           shape: BoxShape.circle,
                                         ),
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.0, 0.0),
                                         child: Text(
                                           'A',
                                           style: FlutterFlowTheme.of(context)
@@ -1435,7 +1438,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'List Item',
@@ -1469,9 +1472,9 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
@@ -1483,7 +1486,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                     blurRadius: 0.0,
                                     color: FlutterFlowTheme.of(context)
                                         .primaryBackground,
-                                    offset: const Offset(
+                                    offset: Offset(
                                       0.0,
                                       1.0,
                                     ),
@@ -1497,7 +1500,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                 ),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -1505,7 +1508,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 0.0, 0.0, 0.0),
                                       child: Container(
                                         width: 44.0,
@@ -1516,7 +1519,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                           shape: BoxShape.circle,
                                         ),
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.0, 0.0),
                                         child: Text(
                                           'A',
                                           style: FlutterFlowTheme.of(context)
@@ -1539,7 +1542,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'List Item',
@@ -1573,9 +1576,9 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
@@ -1587,7 +1590,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                     blurRadius: 0.0,
                                     color: FlutterFlowTheme.of(context)
                                         .primaryBackground,
-                                    offset: const Offset(
+                                    offset: Offset(
                                       0.0,
                                       1.0,
                                     ),
@@ -1601,7 +1604,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                 ),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -1609,7 +1612,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 0.0, 0.0, 0.0),
                                       child: Container(
                                         width: 44.0,
@@ -1620,7 +1623,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                           shape: BoxShape.circle,
                                         ),
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.0, 0.0),
                                         child: Text(
                                           'A',
                                           style: FlutterFlowTheme.of(context)
@@ -1643,7 +1646,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'List Item',
@@ -1677,9 +1680,9 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
@@ -1691,7 +1694,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                     blurRadius: 0.0,
                                     color: FlutterFlowTheme.of(context)
                                         .primaryBackground,
-                                    offset: const Offset(
+                                    offset: Offset(
                                       0.0,
                                       1.0,
                                     ),
@@ -1705,7 +1708,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                 ),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -1713,7 +1716,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 0.0, 0.0, 0.0),
                                       child: Container(
                                         width: 44.0,
@@ -1724,7 +1727,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                           shape: BoxShape.circle,
                                         ),
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.0, 0.0),
                                         child: Text(
                                           'A',
                                           style: FlutterFlowTheme.of(context)
@@ -1747,7 +1750,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'List Item',
@@ -1785,24 +1788,24 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 400.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 400.0),
                   child: StickyHeader(
                     overlapHeaders: false,
                     header: Container(
                       width: double.infinity,
                       height: 50.0,
-                      constraints: const BoxConstraints(
+                      constraints: BoxConstraints(
                         maxWidth: 430.0,
                       ),
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).primaryBackground,
                         borderRadius: BorderRadius.circular(0.0),
                       ),
-                      alignment: const AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.0, 0.0),
                       child: Align(
-                        alignment: const AlignmentDirectional(-1.0, 0.0),
+                        alignment: AlignmentDirectional(-1.0, 0.0),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 0.0, 0.0),
                           child: Text(
                             'Sticky Header Four',
@@ -1822,7 +1825,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                     ),
                     content: Container(
                       width: double.infinity,
-                      constraints: const BoxConstraints(
+                      constraints: BoxConstraints(
                         maxWidth: 430.0,
                       ),
                       decoration: BoxDecoration(
@@ -1836,9 +1839,9 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                         scrollDirection: Axis.vertical,
                         children: [
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 1.0),
                               child: Container(
                                 width: double.infinity,
@@ -1850,7 +1853,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                       blurRadius: 0.0,
                                       color: FlutterFlowTheme.of(context)
                                           .primaryBackground,
-                                      offset: const Offset(
+                                      offset: Offset(
                                         0.0,
                                         1.0,
                                       ),
@@ -1864,7 +1867,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                   ),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 12.0, 16.0, 12.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -1872,7 +1875,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             16.0, 0.0, 0.0, 0.0),
                                         child: Container(
                                           width: 44.0,
@@ -1883,7 +1886,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                             shape: BoxShape.circle,
                                           ),
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Text(
                                             'A',
                                             style: FlutterFlowTheme.of(context)
@@ -1908,7 +1911,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   12.0, 0.0, 12.0, 0.0),
                                           child: Text(
                                             'List Item',
@@ -1943,9 +1946,9 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 1.0),
                               child: Container(
                                 width: double.infinity,
@@ -1957,7 +1960,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                       blurRadius: 0.0,
                                       color: FlutterFlowTheme.of(context)
                                           .primaryBackground,
-                                      offset: const Offset(
+                                      offset: Offset(
                                         0.0,
                                         1.0,
                                       ),
@@ -1971,7 +1974,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                   ),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 12.0, 16.0, 12.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -1979,7 +1982,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             16.0, 0.0, 0.0, 0.0),
                                         child: Container(
                                           width: 44.0,
@@ -1990,7 +1993,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                             shape: BoxShape.circle,
                                           ),
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Text(
                                             'A',
                                             style: FlutterFlowTheme.of(context)
@@ -2015,7 +2018,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   12.0, 0.0, 12.0, 0.0),
                                           child: Text(
                                             'List Item',
@@ -2050,9 +2053,9 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 1.0),
                               child: Container(
                                 width: double.infinity,
@@ -2064,7 +2067,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                       blurRadius: 0.0,
                                       color: FlutterFlowTheme.of(context)
                                           .primaryBackground,
-                                      offset: const Offset(
+                                      offset: Offset(
                                         0.0,
                                         1.0,
                                       ),
@@ -2078,7 +2081,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                   ),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 12.0, 16.0, 12.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -2086,7 +2089,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             16.0, 0.0, 0.0, 0.0),
                                         child: Container(
                                           width: 44.0,
@@ -2097,7 +2100,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                             shape: BoxShape.circle,
                                           ),
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Text(
                                             'A',
                                             style: FlutterFlowTheme.of(context)
@@ -2122,7 +2125,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   12.0, 0.0, 12.0, 0.0),
                                           child: Text(
                                             'List Item',
@@ -2157,9 +2160,9 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 1.0),
                               child: Container(
                                 width: double.infinity,
@@ -2171,7 +2174,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                       blurRadius: 0.0,
                                       color: FlutterFlowTheme.of(context)
                                           .primaryBackground,
-                                      offset: const Offset(
+                                      offset: Offset(
                                         0.0,
                                         1.0,
                                       ),
@@ -2185,7 +2188,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                   ),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 12.0, 16.0, 12.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -2193,7 +2196,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             16.0, 0.0, 0.0, 0.0),
                                         child: Container(
                                           width: 44.0,
@@ -2204,7 +2207,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                             shape: BoxShape.circle,
                                           ),
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Text(
                                             'A',
                                             style: FlutterFlowTheme.of(context)
@@ -2229,7 +2232,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   12.0, 0.0, 12.0, 0.0),
                                           child: Text(
                                             'List Item',
@@ -2264,9 +2267,9 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 1.0),
                               child: Container(
                                 width: double.infinity,
@@ -2278,7 +2281,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                       blurRadius: 0.0,
                                       color: FlutterFlowTheme.of(context)
                                           .primaryBackground,
-                                      offset: const Offset(
+                                      offset: Offset(
                                         0.0,
                                         1.0,
                                       ),
@@ -2292,7 +2295,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                   ),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 12.0, 16.0, 12.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -2300,7 +2303,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             16.0, 0.0, 0.0, 0.0),
                                         child: Container(
                                           width: 44.0,
@@ -2311,7 +2314,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                             shape: BoxShape.circle,
                                           ),
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Text(
                                             'A',
                                             style: FlutterFlowTheme.of(context)
@@ -2336,7 +2339,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   12.0, 0.0, 12.0, 0.0),
                                           child: Text(
                                             'List Item',
@@ -2371,9 +2374,9 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 1.0),
                               child: Container(
                                 width: double.infinity,
@@ -2385,7 +2388,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                       blurRadius: 0.0,
                                       color: FlutterFlowTheme.of(context)
                                           .primaryBackground,
-                                      offset: const Offset(
+                                      offset: Offset(
                                         0.0,
                                         1.0,
                                       ),
@@ -2399,7 +2402,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                   ),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 12.0, 16.0, 12.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -2407,7 +2410,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             16.0, 0.0, 0.0, 0.0),
                                         child: Container(
                                           width: 44.0,
@@ -2418,7 +2421,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                             shape: BoxShape.circle,
                                           ),
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Text(
                                             'A',
                                             style: FlutterFlowTheme.of(context)
@@ -2443,7 +2446,7 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   12.0, 0.0, 12.0, 0.0),
                                           child: Text(
                                             'List Item',

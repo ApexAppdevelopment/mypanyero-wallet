@@ -22,3 +22,4 @@ export '/lotto/lotto_widget.dart' show LottoWidget;
 export '/details23_booking_house/details23_booking_house_widget.dart'
     show Details23BookingHouseWidget;
 export '/onboarrd/onboarrd_widget.dart' show OnboarrdWidget;
+export '/login1/login1_widget.dart' show Login1Widget;

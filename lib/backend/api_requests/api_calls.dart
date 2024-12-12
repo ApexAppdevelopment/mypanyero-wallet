@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:typed_data';
 import 'package:flutter/foundation.dart';
 
 import '/flutter_flow/flutter_flow_util.dart';
@@ -21,12 +22,12 @@ class EmilioChatLLMGroup {
 class SendFullPromptCall {
   Future<ApiCallResponse> call({
     String? apiKey = '',
-    dynamic promptJson,
+    dynamic? promptJson,
   }) async {
     final baseUrl = EmilioChatLLMGroup.getBaseUrl();
 
     final prompt = _serializeJson(promptJson);
-    const ffApiRequestBody = '''
+    final ffApiRequestBody = '''
 {
     "model": "meta-llama/Llama-Vision-Free",
     "messages": [
@@ -64,7 +65,7 @@ class SendFullPromptCall {
   }''';
     return ApiManager.instance.makeApiCall(
       callName: 'Send Full Prompt',
-      apiUrl: '$baseUrl/chat/completions',
+      apiUrl: '${baseUrl}/chat/completions',
       callType: ApiCallType.POST,
       headers: {
         'Content-Type': 'application/json',
