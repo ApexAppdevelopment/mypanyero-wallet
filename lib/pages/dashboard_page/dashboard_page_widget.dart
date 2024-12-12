@@ -26,6 +26,8 @@ class _DashboardPageWidgetState extends State<DashboardPageWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => DashboardPageModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -40,7 +42,10 @@ class _DashboardPageWidgetState extends State<DashboardPageWidget> {
     context.watch<FFAppState>();
 
     return GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,

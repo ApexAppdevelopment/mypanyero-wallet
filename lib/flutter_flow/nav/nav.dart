@@ -275,6 +275,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Messages',
           path: '/messages',
           builder: (context, params) => const MessagesWidget(),
+        ),
+        FFRoute(
+          name: 'TransferResponsive',
+          path: '/transferResponsive',
+          builder: (context, params) => const TransferResponsiveWidget(),
+        ),
+        FFRoute(
+          name: 'HomeDashboard',
+          path: '/homeDashboard',
+          builder: (context, params) => const HomeDashboardWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -460,12 +470,13 @@ class FFRoute {
               : builder(context, ffParams);
           final child = appStateNotifier.loading
               ? Container(
-                  color: FlutterFlowTheme.of(context).primaryBackground,
+                  color: FlutterFlowTheme.of(context).primaryText,
                   child: Center(
                     child: Image.asset(
-                      'assets/images/panyero.gif',
-                      width: 300.0,
-                      fit: BoxFit.cover,
+                      'assets/images/images.png',
+                      width: double.infinity,
+                      height: double.infinity,
+                      fit: BoxFit.contain,
                     ),
                   ),
                 )

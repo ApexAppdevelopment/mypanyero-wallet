@@ -162,6 +162,8 @@ class _WritingIndicatorWidgetState extends State<WritingIndicatorWidget>
         ],
       ),
     });
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

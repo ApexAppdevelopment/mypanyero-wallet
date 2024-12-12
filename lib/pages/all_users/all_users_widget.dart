@@ -25,6 +25,8 @@ class _AllUsersWidgetState extends State<AllUsersWidget> {
     _model = createModel(context, () => AllUsersModel());
 
     _model.textController ??= TextEditingController();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

@@ -34,6 +34,8 @@ class _PremuimPlanWidgetState extends State<PremuimPlanWidget> {
 
     _model.textFieldPriceTextController ??= TextEditingController();
     _model.textFieldPriceFocusNode ??= FocusNode();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -46,7 +48,10 @@ class _PremuimPlanWidgetState extends State<PremuimPlanWidget> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,

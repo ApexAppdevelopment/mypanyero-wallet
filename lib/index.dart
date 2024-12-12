@@ -32,3 +32,6 @@ export '/applicants_details/applicants_details_widget.dart'
     show ApplicantsDetailsWidget;
 export '/banners_list/banners_list_widget.dart' show BannersListWidget;
 export '/persona_chat/messages/messages_widget.dart' show MessagesWidget;
+export '/transfer_responsive/transfer_responsive_widget.dart'
+    show TransferResponsiveWidget;
+export '/home_dashboard/home_dashboard_widget.dart' show HomeDashboardWidget;

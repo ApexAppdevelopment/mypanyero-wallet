@@ -47,6 +47,8 @@ class _DeleteConfirmationWidgetState extends State<DeleteConfirmationWidget>
         ],
       ),
     });
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

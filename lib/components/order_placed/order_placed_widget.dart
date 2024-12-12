@@ -26,6 +26,8 @@ class _OrderPlacedWidgetState extends State<OrderPlacedWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => OrderPlacedModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

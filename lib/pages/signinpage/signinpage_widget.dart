@@ -43,6 +43,7 @@ class _SigninpageWidgetState extends State<SigninpageWidget> {
     _model.textFieldSigninPasswordFocusNode ??= FocusNode();
 
     _model.switchValue = true;
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -57,7 +58,10 @@ class _SigninpageWidgetState extends State<SigninpageWidget> {
     context.watch<FFAppState>();
 
     return GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
