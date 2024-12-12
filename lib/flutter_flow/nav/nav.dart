@@ -73,13 +73,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const NavBarPage() : const SigninpageWidget(),
+          appStateNotifier.loggedIn ? const NavBarPage() : const SplashScreenWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? const NavBarPage() : const SigninpageWidget(),
+              appStateNotifier.loggedIn ? const NavBarPage() : const SplashScreenWidget(),
         ),
         FFRoute(
           name: 'SplashScreen',
@@ -87,149 +87,36 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const SplashScreenWidget(),
         ),
         FFRoute(
-          name: 'homepage',
-          path: '/homepage',
-          builder: (context, params) => const HomepageWidget(),
-        ),
-        FFRoute(
-          name: 'Signinpage',
-          path: '/signinpage',
-          builder: (context, params) => const SigninpageWidget(),
-        ),
-        FFRoute(
           name: 'Signup',
           path: '/signup',
           builder: (context, params) => const SignupWidget(),
         ),
         FFRoute(
-          name: 'Verification',
-          path: '/verification',
-          builder: (context, params) => const VerificationWidget(),
-        ),
-        FFRoute(
-          name: 'DashboardPage',
-          path: '/dashboardPage',
-          requireAuth: true,
-          builder: (context, params) => params.isEmpty
-              ? const NavBarPage(initialPage: 'DashboardPage')
-              : const DashboardPageWidget(),
-        ),
-        FFRoute(
-          name: 'Profile',
-          path: '/profile',
-          builder: (context, params) => params.isEmpty
-              ? const NavBarPage(initialPage: 'Profile')
-              : const ProfileWidget(),
-        ),
-        FFRoute(
-          name: 'Editprofile',
-          path: '/editprofile',
-          requireAuth: true,
-          builder: (context, params) => const EditprofileWidget(),
-        ),
-        FFRoute(
-          name: 'DetailPage',
-          path: '/detailPage',
-          requireAuth: true,
-          builder: (context, params) => const DetailPageWidget(),
-        ),
-        FFRoute(
           name: 'CategoryPage',
           path: '/categoryPage',
           requireAuth: true,
-          builder: (context, params) => const NavBarPage(
-            initialPage: '',
-            page: CategoryPageWidget(),
-          ),
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'CategoryPage')
+              : const NavBarPage(
+                  initialPage: 'CategoryPage',
+                  page: CategoryPageWidget(),
+                ),
         ),
         FFRoute(
-          name: 'form',
-          path: '/form',
-          requireAuth: true,
-          builder: (context, params) => NavBarPage(
-            initialPage: '',
-            page: FormWidget(
-              trackOfUpdating: params.getParam(
-                'trackOfUpdating',
-                ParamType.int,
-              ),
-            ),
-          ),
-        ),
-        FFRoute(
-          name: 'BasicPlan',
-          path: '/basicPlan',
-          requireAuth: true,
-          builder: (context, params) => const NavBarPage(
-            initialPage: '',
-            page: BasicPlanWidget(),
-          ),
-        ),
-        FFRoute(
-          name: 'StandardPlan',
-          path: '/standardPlan',
-          requireAuth: true,
-          builder: (context, params) => const NavBarPage(
-            initialPage: '',
-            page: StandardPlanWidget(),
-          ),
-        ),
-        FFRoute(
-          name: 'PremuimPlan',
-          path: '/premuimPlan',
-          requireAuth: true,
-          builder: (context, params) => const NavBarPage(
-            initialPage: '',
-            page: PremuimPlanWidget(),
-          ),
-        ),
-        FFRoute(
-          name: 'review',
-          path: '/review',
-          requireAuth: true,
-          builder: (context, params) => const NavBarPage(
-            initialPage: '',
-            page: ReviewWidget(),
-          ),
-        ),
-        FFRoute(
-          name: 'ChatPage',
-          path: '/chatPage',
-          requireAuth: true,
-          builder: (context, params) => const ChatPageWidget(),
-        ),
-        FFRoute(
-          name: 'AllUsers',
-          path: '/allUsers',
+          name: 'ScanQR',
+          path: '/scanQR',
           requireAuth: true,
           builder: (context, params) => params.isEmpty
-              ? const NavBarPage(initialPage: 'AllUsers')
-              : const AllUsersWidget(),
-        ),
-        FFRoute(
-          name: 'test',
-          path: '/test',
-          requireAuth: true,
-          builder: (context, params) => const TestWidget(),
-        ),
-        FFRoute(
-          name: 'Orders',
-          path: '/orders',
-          requireAuth: true,
-          builder: (context, params) => const NavBarPage(
-            initialPage: '',
-            page: OrdersWidget(),
-          ),
-        ),
-        FFRoute(
-          name: 'OtherProfiles',
-          path: '/otherProfiles',
-          builder: (context, params) => const OtherProfilesWidget(),
-        ),
-        FFRoute(
-          name: 'Home2',
-          path: '/home2',
-          builder: (context, params) => const Home2Widget(),
+              ? const NavBarPage(initialPage: 'ScanQR')
+              : NavBarPage(
+                  initialPage: 'ScanQR',
+                  page: ScanQRWidget(
+                    trackOfUpdating: params.getParam(
+                      'trackOfUpdating',
+                      ParamType.int,
+                    ),
+                  ),
+                ),
         ),
         FFRoute(
           name: 'ServiceOffered',
@@ -249,7 +136,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'GamesCasino',
           path: '/gamesCasino',
-          builder: (context, params) => const GamesCasinoWidget(),
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'GamesCasino')
+              : const GamesCasinoWidget(),
         ),
         FFRoute(
           name: 'PanyeroAcademy',
@@ -284,7 +173,30 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'HomeDashboard',
           path: '/homeDashboard',
-          builder: (context, params) => const HomeDashboardWidget(),
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'HomeDashboard')
+              : const HomeDashboardWidget(),
+        ),
+        FFRoute(
+          name: 'DetailsTicket',
+          path: '/detailsTicket',
+          builder: (context, params) => const DetailsTicketWidget(),
+        ),
+        FFRoute(
+          name: 'SimpleProfile',
+          path: '/simpleProfile',
+          builder: (context, params) => const SimpleProfileWidget(),
+        ),
+        FFRoute(
+          name: 'Lotto',
+          path: '/lotto',
+          builder: (context, params) =>
+              params.isEmpty ? const NavBarPage(initialPage: 'Lotto') : const LottoWidget(),
+        ),
+        FFRoute(
+          name: 'Details23BookingHouse',
+          path: '/details23BookingHouse',
+          builder: (context, params) => const Details23BookingHouseWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -455,7 +367,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.uri.toString());
-            return '/signinpage';
+            return '/splashScreen';
           }
           return null;
         },

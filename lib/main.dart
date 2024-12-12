@@ -10,7 +10,6 @@ import 'backend/firebase/firebase_config.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 import 'flutter_flow/internationalization.dart';
-import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'index.dart';
 
 void main() async {
@@ -129,7 +128,7 @@ class NavBarPage extends StatefulWidget {
 
 /// This is the private State class that goes with NavBarPage.
 class _NavBarPageState extends State<NavBarPage> {
-  String _currentPageName = 'DashboardPage';
+  String _currentPageName = 'HomeDashboard';
   late Widget? _currentPage;
 
   @override
@@ -142,22 +141,17 @@ class _NavBarPageState extends State<NavBarPage> {
   @override
   Widget build(BuildContext context) {
     final tabs = {
-      'Profile': const ProfileWidget(),
-      'DashboardPage': const DashboardPageWidget(),
-      'AllUsers': const AllUsersWidget(),
+      'HomeDashboard': const HomeDashboardWidget(),
+      'CategoryPage': const CategoryPageWidget(),
+      'ScanQR': const ScanQRWidget(),
+      'GamesCasino': const GamesCasinoWidget(),
+      'Lotto': const LottoWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
-    final MediaQueryData queryData = MediaQuery.of(context);
-
     return Scaffold(
-      body: MediaQuery(
-          data: queryData
-              .removeViewInsets(removeBottom: true)
-              .removeViewPadding(removeBottom: true),
-          child: _currentPage ?? tabs[_currentPageName]!),
-      extendBody: true,
-      bottomNavigationBar: FloatingNavbar(
+      body: _currentPage ?? tabs[_currentPageName],
+      bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
         onTap: (i) => safeSetState(() {
           _currentPage = null;
@@ -166,91 +160,53 @@ class _NavBarPageState extends State<NavBarPage> {
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         selectedItemColor: const Color(0xFF04B974),
         unselectedItemColor: FlutterFlowTheme.of(context).primaryText,
-        selectedBackgroundColor: Colors.transparent,
-        borderRadius: 8.0,
-        itemBorderRadius: 8.0,
-        margin: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-        width: double.infinity,
-        elevation: 1.0,
-        items: [
-          FloatingNavbarItem(
-            customWidget: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  currentIndex == 0
-                      ? Icons.person_rounded
-                      : Icons.person_outlined,
-                  color: currentIndex == 0
-                      ? const Color(0xFF04B974)
-                      : FlutterFlowTheme.of(context).primaryText,
-                  size: currentIndex == 0 ? 24.0 : 24.0,
-                ),
-                Text(
-                  'Profile',
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    color: currentIndex == 0
-                        ? const Color(0xFF04B974)
-                        : FlutterFlowTheme.of(context).primaryText,
-                    fontSize: 11.0,
-                  ),
-                ),
-              ],
+        showSelectedLabels: true,
+        showUnselectedLabels: false,
+        type: BottomNavigationBarType.fixed,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.anchor_sharp,
+              size: 24.0,
             ),
+            label: '',
+            tooltip: '',
           ),
-          FloatingNavbarItem(
-            customWidget: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  currentIndex == 1
-                      ? Icons.dashboard
-                      : Icons.dashboard_outlined,
-                  color: currentIndex == 1
-                      ? const Color(0xFF04B974)
-                      : FlutterFlowTheme.of(context).primaryText,
-                  size: currentIndex == 1 ? 24.0 : 24.0,
-                ),
-                Text(
-                  'Dashboard',
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    color: currentIndex == 1
-                        ? const Color(0xFF04B974)
-                        : FlutterFlowTheme.of(context).primaryText,
-                    fontSize: 11.0,
-                  ),
-                ),
-              ],
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.room_service_rounded,
+              size: 24.0,
             ),
+            label: '',
+            tooltip: '',
           ),
-          FloatingNavbarItem(
-            customWidget: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  currentIndex == 2
-                      ? Icons.person_add
-                      : Icons.person_add_outlined,
-                  color: currentIndex == 2
-                      ? const Color(0xFF04B974)
-                      : FlutterFlowTheme.of(context).primaryText,
-                  size: currentIndex == 2 ? 24.0 : 24.0,
-                ),
-                Text(
-                  'All Users',
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    color: currentIndex == 2
-                        ? const Color(0xFF04B974)
-                        : FlutterFlowTheme.of(context).primaryText,
-                    fontSize: 11.0,
-                  ),
-                ),
-              ],
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.qr_code_scanner,
+              size: 48.0,
             ),
+            label: '',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.wallet,
+              size: 24.0,
+            ),
+            label: '',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.local_activity,
+              size: 24.0,
+            ),
+            activeIcon: Icon(
+              Icons.local_activity,
+              size: 24.0,
+            ),
+            label: '',
+            tooltip: '',
           )
         ],
       ),

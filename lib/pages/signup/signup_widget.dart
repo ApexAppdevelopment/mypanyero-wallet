@@ -125,32 +125,11 @@ class _SignupWidgetState extends State<SignupWidget> {
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 5.0, 0.0, 0.0),
-                                        child: InkWell(
-                                          splashColor: Colors.transparent,
-                                          focusColor: Colors.transparent,
-                                          hoverColor: Colors.transparent,
-                                          highlightColor: Colors.transparent,
-                                          onTap: () async {
-                                            context.pushNamed(
-                                              'Signinpage',
-                                              extra: <String, dynamic>{
-                                                kTransitionInfoKey:
-                                                    const TransitionInfo(
-                                                  hasTransition: true,
-                                                  transitionType:
-                                                      PageTransitionType.fade,
-                                                  duration:
-                                                      Duration(milliseconds: 0),
-                                                ),
-                                              },
-                                            );
-                                          },
-                                          child: FaIcon(
-                                            FontAwesomeIcons.arrowLeft,
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryText,
-                                            size: 22.0,
-                                          ),
+                                        child: FaIcon(
+                                          FontAwesomeIcons.arrowLeft,
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryText,
+                                          size: 22.0,
                                         ),
                                       ),
                                     ),
@@ -930,24 +909,9 @@ class _SignupWidgetState extends State<SignupWidget> {
                                                   .fromSTEB(
                                                       0.0, 30.0, 0.0, 0.0),
                                               child: FFButtonWidget(
-                                                onPressed: () async {
-                                                  context.pushNamed(
-                                                    'DashboardPage',
-                                                    extra: <String, dynamic>{
-                                                      kTransitionInfoKey:
-                                                          const TransitionInfo(
-                                                        hasTransition: true,
-                                                        transitionType:
-                                                            PageTransitionType
-                                                                .fade,
-                                                        duration: Duration(
-                                                            milliseconds: 0),
-                                                      ),
-                                                    },
-                                                  );
-
-                                                  FFAppState().isBuyer = true;
-                                                  safeSetState(() {});
+                                                onPressed: () {
+                                                  print(
+                                                      'Button-signup pressed ...');
                                                 },
                                                 text: 'Signup',
                                                 options: FFButtonOptions(
@@ -1023,55 +987,27 @@ class _SignupWidgetState extends State<SignupWidget> {
                                                               ),
                                                     ),
                                                   ),
-                                                  InkWell(
-                                                    splashColor:
-                                                        Colors.transparent,
-                                                    focusColor:
-                                                        Colors.transparent,
-                                                    hoverColor:
-                                                        Colors.transparent,
-                                                    highlightColor:
-                                                        Colors.transparent,
-                                                    onTap: () async {
-                                                      context.goNamed(
-                                                        'Signinpage',
-                                                        extra: <String,
-                                                            dynamic>{
-                                                          kTransitionInfoKey:
-                                                              const TransitionInfo(
-                                                            hasTransition: true,
-                                                            transitionType:
-                                                                PageTransitionType
-                                                                    .fade,
-                                                            duration: Duration(
-                                                                milliseconds:
-                                                                    0),
-                                                          ),
-                                                        },
-                                                      );
-                                                    },
-                                                    child: Text(
-                                                      'Signin',
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                fontFamily: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMediumFamily,
-                                                                color: const Color(
-                                                                    0xFF04B974),
-                                                                fontSize: 12.0,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                useGoogleFonts: GoogleFonts
-                                                                        .asMap()
-                                                                    .containsKey(
-                                                                        FlutterFlowTheme.of(context)
-                                                                            .bodyMediumFamily),
-                                                              ),
-                                                    ),
+                                                  Text(
+                                                    'Signin',
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMediumFamily,
+                                                          color:
+                                                              const Color(0xFF04B974),
+                                                          fontSize: 12.0,
+                                                          letterSpacing: 0.0,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMediumFamily),
+                                                        ),
                                                   ),
                                                 ],
                                               ),
