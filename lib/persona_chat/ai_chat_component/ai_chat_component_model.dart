@@ -1,6 +1,6 @@
 import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/persona_chat/writing_indicator/writing_indicator_widget.dart';
+import '/pages/writing_indicator/writing_indicator_widget.dart';
 import 'ai_chat_component_widget.dart' show AiChatComponentWidget;
 import 'package:flutter/material.dart';
 

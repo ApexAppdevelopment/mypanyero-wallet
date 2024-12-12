@@ -197,6 +197,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Details23BookingHouse',
           path: '/details23BookingHouse',
           builder: (context, params) => const Details23BookingHouseWidget(),
+        ),
+        FFRoute(
+          name: 'Onboarrd',
+          path: '/onboarrd',
+          builder: (context, params) => const OnboarrdWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

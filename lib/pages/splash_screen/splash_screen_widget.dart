@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'splash_screen_model.dart';
 export 'splash_screen_model.dart';
 
@@ -20,6 +21,13 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => SplashScreenModel());
+
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      await Future.delayed(const Duration(milliseconds: 3000));
+
+      context.pushNamed('Signup');
+    });
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
@@ -69,8 +77,8 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget> {
                                 Align(
                                   alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: Container(
-                                    width: 350.0,
-                                    height: 350.0,
+                                    width: 300.0,
+                                    height: 300.0,
                                     clipBehavior: Clip.antiAlias,
                                     decoration: const BoxDecoration(
                                       shape: BoxShape.circle,

@@ -1,5 +1,4 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/form_field_controller.dart';
 import 'signup_widget.dart' show SignupWidget;
 import 'package:flutter/material.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
@@ -39,14 +38,13 @@ class SignupModel extends FlutterFlowModel<SignupWidget> {
     return null;
   }
 
-  // State field(s) for TextField-signup-mobile-number widget.
-  FocusNode? textFieldSignupMobileNumberFocusNode;
-  TextEditingController? textFieldSignupMobileNumberTextController;
-  final textFieldSignupMobileNumberMask =
-      MaskTextInputFormatter(mask: '####-#######');
+  // State field(s) for sponsor-mobile-number widget.
+  FocusNode? sponsorMobileNumberFocusNode;
+  TextEditingController? sponsorMobileNumberTextController;
+  final sponsorMobileNumberMask = MaskTextInputFormatter(mask: '####-#######');
   String? Function(BuildContext, String?)?
-      textFieldSignupMobileNumberTextControllerValidator;
-  String? _textFieldSignupMobileNumberTextControllerValidator(
+      sponsorMobileNumberTextControllerValidator;
+  String? _sponsorMobileNumberTextControllerValidator(
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return 'Field is required';
@@ -62,9 +60,13 @@ class SignupModel extends FlutterFlowModel<SignupWidget> {
     return null;
   }
 
-  // State field(s) for DropDown widget.
-  String? dropDownValue;
-  FormFieldController<String>? dropDownValueController;
+  // State field(s) for TextField-signup-mobile-number widget.
+  FocusNode? textFieldSignupMobileNumberFocusNode;
+  TextEditingController? textFieldSignupMobileNumberTextController;
+  final textFieldSignupMobileNumberMask =
+      MaskTextInputFormatter(mask: '####-#######');
+  String? Function(BuildContext, String?)?
+      textFieldSignupMobileNumberTextControllerValidator;
   // State field(s) for TextField-signup-password widget.
   FocusNode? textFieldSignupPasswordFocusNode;
   TextEditingController? textFieldSignupPasswordTextController;
@@ -119,8 +121,8 @@ class SignupModel extends FlutterFlowModel<SignupWidget> {
         _textFieldSignupFullNameTextControllerValidator;
     textFieldSignupEmailTextControllerValidator =
         _textFieldSignupEmailTextControllerValidator;
-    textFieldSignupMobileNumberTextControllerValidator =
-        _textFieldSignupMobileNumberTextControllerValidator;
+    sponsorMobileNumberTextControllerValidator =
+        _sponsorMobileNumberTextControllerValidator;
     textFieldSignupPasswordVisibility = false;
     textFieldSignupPasswordTextControllerValidator =
         _textFieldSignupPasswordTextControllerValidator;
@@ -136,6 +138,9 @@ class SignupModel extends FlutterFlowModel<SignupWidget> {
 
     textFieldSignupEmailFocusNode?.dispose();
     textFieldSignupEmailTextController?.dispose();
+
+    sponsorMobileNumberFocusNode?.dispose();
+    sponsorMobileNumberTextController?.dispose();
 
     textFieldSignupMobileNumberFocusNode?.dispose();
     textFieldSignupMobileNumberTextController?.dispose();
