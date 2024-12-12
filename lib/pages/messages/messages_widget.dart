@@ -1,13 +1,10 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/persona_chat/ai_chat_component/ai_chat_component_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'messages_model.dart';
 export 'messages_model.dart';
 
@@ -69,7 +66,7 @@ class _MessagesWidgetState extends State<MessagesWidget> {
           ),
           actions: [
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 16.0, 8.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 16.0, 8.0),
               child: FlutterFlowIconButton(
                 borderColor: FlutterFlowTheme.of(context).primary,
                 borderRadius: 12.0,
@@ -85,7 +82,7 @@ class _MessagesWidgetState extends State<MessagesWidget> {
                   context.pushNamed(
                     'Messages',
                     extra: <String, dynamic>{
-                      kTransitionInfoKey: TransitionInfo(
+                      kTransitionInfoKey: const TransitionInfo(
                         hasTransition: true,
                         transitionType: PageTransitionType.fade,
                       ),
@@ -113,12 +110,12 @@ class _MessagesWidgetState extends State<MessagesWidget> {
               ),
             ),
             child: Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: const AlignmentDirectional(0.0, 0.0),
               child: wrapWithModel(
                 model: _model.aiChatComponentModel,
                 updateCallback: () => safeSetState(() {}),
                 updateOnChange: true,
-                child: AiChatComponentWidget(),
+                child: const AiChatComponentWidget(),
               ),
             ),
           ),

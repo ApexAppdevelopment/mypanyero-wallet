@@ -1,13 +1,10 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'home_dashboard_model.dart';
 export 'home_dashboard_model.dart';
 
@@ -49,7 +46,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(64.0),
+          preferredSize: const Size.fromHeight(64.0),
           child: AppBar(
             backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
             automaticallyImplyLeading: false,
@@ -58,7 +55,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  decoration: BoxDecoration(),
+                  decoration: const BoxDecoration(),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
                     child: Image.asset(
@@ -75,19 +72,19 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
             ),
             actions: [
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: Container(
-                  decoration: BoxDecoration(),
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  decoration: const BoxDecoration(),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
                     child: AuthUserStreamWidget(
                       builder: (context) => Container(
                         width: 35.0,
                         height: 35.0,
                         clipBehavior: Clip.antiAlias,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           shape: BoxShape.circle,
                         ),
                         child: Image.network(
@@ -116,25 +113,25 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  constraints: BoxConstraints(
+                  constraints: const BoxConstraints(
                     maxWidth: 470.0,
                   ),
-                  decoration: BoxDecoration(),
+                  decoration: const BoxDecoration(),
                   child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 8.0, 0.0, 0.0),
-                          child: Container(
+                          child: SizedBox(
                             width: double.infinity,
                             height: 204.0,
                             child: CarouselSlider(
                               items: [
                                 Padding(
-                                  padding: EdgeInsets.all(4.0),
+                                  padding: const EdgeInsets.all(4.0),
                                   child: Material(
                                     color: Colors.transparent,
                                     elevation: 4.0,
@@ -145,7 +142,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                       width: 370.0,
                                       height: 218.0,
                                       decoration: BoxDecoration(
-                                        boxShadow: [
+                                        boxShadow: const [
                                           BoxShadow(
                                             blurRadius: 6.0,
                                             color: Color(0x4B1A1F24),
@@ -162,10 +159,10 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                             FlutterFlowTheme.of(context)
                                                 .primaryText
                                           ],
-                                          stops: [0.0, 1.0],
+                                          stops: const [0.0, 1.0],
                                           begin:
-                                              AlignmentDirectional(0.94, -1.0),
-                                          end: AlignmentDirectional(-0.94, 1.0),
+                                              const AlignmentDirectional(0.94, -1.0),
+                                          end: const AlignmentDirectional(-0.94, 1.0),
                                         ),
                                         borderRadius:
                                             BorderRadius.circular(16.0),
@@ -177,7 +174,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                         ),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsets.all(16.0),
+                                        padding: const EdgeInsets.all(16.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           mainAxisAlignment:
@@ -224,7 +221,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   8.0,
@@ -266,7 +263,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                               ],
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 12.0, 0.0, 4.0),
                                               child: Row(
@@ -346,7 +343,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                 ),
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0.0),
+                      const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
@@ -355,7 +352,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 12.0),
                               child: Material(
                                 color: Colors.transparent,
@@ -369,7 +366,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryBackground,
-                                    boxShadow: [
+                                    boxShadow: const [
                                       BoxShadow(
                                         blurRadius: 3.0,
                                         color: Color(0x33000000),
@@ -387,7 +384,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                     ),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsets.all(4.0),
+                                    padding: const EdgeInsets.all(4.0),
                                     child: Icon(
                                       Icons.trending_up_rounded,
                                       color: FlutterFlowTheme.of(context)
@@ -422,7 +419,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 12.0),
                               child: Material(
                                 color: Colors.transparent,
@@ -436,7 +433,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryBackground,
-                                    boxShadow: [
+                                    boxShadow: const [
                                       BoxShadow(
                                         blurRadius: 3.0,
                                         color: Color(0x33000000),
@@ -454,7 +451,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                     ),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsets.all(4.0),
+                                    padding: const EdgeInsets.all(4.0),
                                     child: Icon(
                                       Icons.trending_down_rounded,
                                       color: FlutterFlowTheme.of(context)
@@ -489,7 +486,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 12.0),
                               child: Material(
                                 color: Colors.transparent,
@@ -503,7 +500,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryBackground,
-                                    boxShadow: [
+                                    boxShadow: const [
                                       BoxShadow(
                                         blurRadius: 3.0,
                                         color: Color(0x33000000),
@@ -521,7 +518,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                     ),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsets.all(4.0),
+                                    padding: const EdgeInsets.all(4.0),
                                     child: Icon(
                                       Icons.add_card_rounded,
                                       color: FlutterFlowTheme.of(context)
@@ -556,7 +553,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 12.0),
                               child: Material(
                                 color: Colors.transparent,
@@ -570,7 +567,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryBackground,
-                                    boxShadow: [
+                                    boxShadow: const [
                                       BoxShadow(
                                         blurRadius: 3.0,
                                         color: Color(0x33000000),
@@ -588,7 +585,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                     ),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsets.all(4.0),
+                                    padding: const EdgeInsets.all(4.0),
                                     child: Icon(
                                       Icons.real_estate_agent,
                                       color: FlutterFlowTheme.of(context)
@@ -618,12 +615,12 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                           ],
                         ),
                       ),
-                    ].divide(SizedBox(width: 12.0)),
+                    ].divide(const SizedBox(width: 12.0)),
                   ),
                 ),
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0.0),
+                      const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
@@ -632,7 +629,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 12.0),
                               child: Material(
                                 color: Colors.transparent,
@@ -646,7 +643,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryBackground,
-                                    boxShadow: [
+                                    boxShadow: const [
                                       BoxShadow(
                                         blurRadius: 3.0,
                                         color: Color(0x33000000),
@@ -664,9 +661,9 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                     ),
                                   ),
                                   child: Align(
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Padding(
-                                      padding: EdgeInsets.all(4.0),
+                                      padding: const EdgeInsets.all(4.0),
                                       child: FaIcon(
                                         FontAwesomeIcons.bowlingBall,
                                         color: FlutterFlowTheme.of(context)
@@ -700,7 +697,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 12.0),
                               child: Material(
                                 color: Colors.transparent,
@@ -714,7 +711,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryBackground,
-                                    boxShadow: [
+                                    boxShadow: const [
                                       BoxShadow(
                                         blurRadius: 3.0,
                                         color: Color(0x33000000),
@@ -732,7 +729,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                     ),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsets.all(4.0),
+                                    padding: const EdgeInsets.all(4.0),
                                     child: Icon(
                                       Icons.games_outlined,
                                       color: FlutterFlowTheme.of(context)
@@ -765,7 +762,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 12.0),
                               child: Material(
                                 color: Colors.transparent,
@@ -779,7 +776,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryBackground,
-                                    boxShadow: [
+                                    boxShadow: const [
                                       BoxShadow(
                                         blurRadius: 3.0,
                                         color: Color(0x33000000),
@@ -797,7 +794,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                     ),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsets.all(4.0),
+                                    padding: const EdgeInsets.all(4.0),
                                     child: Icon(
                                       Icons.person_3,
                                       color: FlutterFlowTheme.of(context)
@@ -830,7 +827,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 12.0),
                               child: Material(
                                 color: Colors.transparent,
@@ -844,7 +841,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryBackground,
-                                    boxShadow: [
+                                    boxShadow: const [
                                       BoxShadow(
                                         blurRadius: 3.0,
                                         color: Color(0x33000000),
@@ -862,7 +859,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                     ),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsets.all(4.0),
+                                    padding: const EdgeInsets.all(4.0),
                                     child: Icon(
                                       Icons.grid_view_rounded,
                                       color: FlutterFlowTheme.of(context)
@@ -890,12 +887,12 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                           ],
                         ),
                       ),
-                    ].divide(SizedBox(width: 12.0)),
+                    ].divide(const SizedBox(width: 12.0)),
                   ),
                 ),
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(20.0, 16.0, 0.0, 12.0),
+                      const EdgeInsetsDirectional.fromSTEB(20.0, 16.0, 0.0, 12.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -920,7 +917,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                           .titleLargeFamily),
                                 ),
                           ),
-                        ].divide(SizedBox(height: 4.0)),
+                        ].divide(const SizedBox(height: 4.0)),
                       ),
                     ],
                   ),
@@ -930,7 +927,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                       child: Material(
                         color: Colors.transparent,
                         elevation: 4.0,
@@ -939,13 +936,13 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                         ),
                         child: Container(
                           width: 500.0,
-                          constraints: BoxConstraints(
+                          constraints: const BoxConstraints(
                             maxWidth: 570.0,
                           ),
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context)
                                 .secondaryBackground,
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                 blurRadius: 3.0,
                                 color: Color(0x33000000),
@@ -962,7 +959,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                             ),
                           ),
                           child: Padding(
-                            padding: EdgeInsets.all(12.0),
+                            padding: const EdgeInsets.all(12.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -973,7 +970,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                   color: FlutterFlowTheme.of(context).alternate,
                                 ),
                                 ListView(
-                                  padding: EdgeInsets.fromLTRB(
+                                  padding: const EdgeInsets.fromLTRB(
                                     0,
                                     12.0,
                                     0,
@@ -993,7 +990,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                             blurRadius: 0.0,
                                             color: FlutterFlowTheme.of(context)
                                                 .alternate,
-                                            offset: Offset(
+                                            offset: const Offset(
                                               0.0,
                                               1.0,
                                             ),
@@ -1001,7 +998,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                         ],
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -1022,7 +1019,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                                 ),
                                               ),
                                               child: Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: Icon(
                                                   Icons.attach_money_rounded,
@@ -1035,7 +1032,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                             ),
                                             Expanded(
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         12.0, 0.0, 0.0, 0.0),
                                                 child: Column(
@@ -1068,7 +1065,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   4.0,
@@ -1122,7 +1119,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                         ),
                                       ),
                                     ),
-                                  ].divide(SizedBox(height: 1.0)),
+                                  ].divide(const SizedBox(height: 1.0)),
                                 ),
                               ],
                             ),
@@ -1132,7 +1129,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                     ),
                   ],
                 ),
-              ].addToEnd(SizedBox(height: 44.0)),
+              ].addToEnd(const SizedBox(height: 44.0)),
             ),
           ),
         ),

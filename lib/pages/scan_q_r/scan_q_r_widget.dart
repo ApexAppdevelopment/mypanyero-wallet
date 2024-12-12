@@ -2,9 +2,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'scan_q_r_model.dart';
 export 'scan_q_r_model.dart';
 
@@ -12,7 +10,7 @@ class ScanQRWidget extends StatefulWidget {
   const ScanQRWidget({
     super.key,
     int? trackOfUpdating,
-  }) : this.trackOfUpdating = trackOfUpdating ?? 0;
+  }) : trackOfUpdating = trackOfUpdating ?? 0;
 
   final int trackOfUpdating;
 
@@ -59,7 +57,7 @@ class _ScanQRWidgetState extends State<ScanQRWidget> {
                 child: Container(
                   width: MediaQuery.sizeOf(context).width * 1.0,
                   height: MediaQuery.sizeOf(context).height * 0.9,
-                  decoration: BoxDecoration(),
+                  decoration: const BoxDecoration(),
                   child: SingleChildScrollView(
                     primary: false,
                     child: Column(
@@ -68,7 +66,7 @@ class _ScanQRWidgetState extends State<ScanQRWidget> {
                         Stack(
                           children: [
                             Align(
-                              alignment: AlignmentDirectional(0.0, 1.0),
+                              alignment: const AlignmentDirectional(0.0, 1.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment:
@@ -93,15 +91,15 @@ class _ScanQRWidgetState extends State<ScanQRWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 0.0, 20.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Align(
-                                    alignment: AlignmentDirectional(-1.0, 0.0),
+                                    alignment: const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 5.0, 0.0, 0.0),
                                       child: InkWell(
                                         splashColor: Colors.transparent,
@@ -122,11 +120,11 @@ class _ScanQRWidgetState extends State<ScanQRWidget> {
                                   ),
                                   Container(
                                     height: double.infinity,
-                                    constraints: BoxConstraints(
+                                    constraints: const BoxConstraints(
                                       maxWidth: 600.0,
                                       maxHeight: 600.0,
                                     ),
-                                    decoration: BoxDecoration(),
+                                    decoration: const BoxDecoration(),
                                     child: SingleChildScrollView(
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -134,11 +132,11 @@ class _ScanQRWidgetState extends State<ScanQRWidget> {
                                           Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
-                                              Divider(
+                                              const Divider(
                                                 thickness: 1.0,
                                               ),
                                               Padding(
-                                                padding: EdgeInsets.all(5.0),
+                                                padding: const EdgeInsets.all(5.0),
                                                 child: Hero(
                                                   tag: '',
                                                   transitionOnUserGestures:
@@ -157,7 +155,7 @@ class _ScanQRWidgetState extends State<ScanQRWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 20.0, 0.0, 0.0),
                                                 child: FFButtonWidget(
@@ -170,14 +168,14 @@ class _ScanQRWidgetState extends State<ScanQRWidget> {
                                                     width: 287.0,
                                                     height: 54.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
-                                                    color: Color(0xFF04B974),
+                                                    color: const Color(0xFF04B974),
                                                     textStyle: FlutterFlowTheme
                                                             .of(context)
                                                         .titleSmall
@@ -196,7 +194,7 @@ class _ScanQRWidgetState extends State<ScanQRWidget> {
                                                                       .titleSmallFamily),
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),

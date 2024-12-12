@@ -1,12 +1,9 @@
 import '/flutter_flow/flutter_flow_choice_chips.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'category_page_model.dart';
 export 'category_page_model.dart';
 
@@ -65,14 +62,14 @@ class _CategoryPageWidgetState extends State<CategoryPageWidget> {
                 ],
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 20.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 20.0),
                 child: Container(
                   width: MediaQuery.sizeOf(context).width * 1.0,
                   height: MediaQuery.sizeOf(context).height * 1.0,
-                  decoration: BoxDecoration(),
+                  decoration: const BoxDecoration(),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -80,9 +77,9 @@ class _CategoryPageWidgetState extends State<CategoryPageWidget> {
                         Container(
                           width: double.infinity,
                           height: 70.0,
-                          decoration: BoxDecoration(),
+                          decoration: const BoxDecoration(),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 5.0, 0.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -109,10 +106,10 @@ class _CategoryPageWidgetState extends State<CategoryPageWidget> {
                                     children: [
                                       Align(
                                         alignment:
-                                            AlignmentDirectional(-1.0, 0.0),
+                                            const AlignmentDirectional(-1.0, 0.0),
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 40.0, 0.0),
                                           child: Text(
                                             'Categories',
@@ -124,7 +121,7 @@ class _CategoryPageWidgetState extends State<CategoryPageWidget> {
                                                       FlutterFlowTheme.of(
                                                               context)
                                                           .headlineSmallFamily,
-                                                  color: Color(0xFF04B974),
+                                                  color: const Color(0xFF04B974),
                                                   letterSpacing: 0.0,
                                                   useGoogleFonts: GoogleFonts
                                                           .asMap()
@@ -142,7 +139,7 @@ class _CategoryPageWidgetState extends State<CategoryPageWidget> {
                             ),
                           ),
                         ),
-                        Padding(
+                        const Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 0.0),
                           child: SingleChildScrollView(
@@ -155,24 +152,24 @@ class _CategoryPageWidgetState extends State<CategoryPageWidget> {
                         ),
                         Expanded(
                           child: Align(
-                            alignment: AlignmentDirectional(0.0, -1.0),
+                            alignment: const AlignmentDirectional(0.0, -1.0),
                             child: Container(
-                              constraints: BoxConstraints(
+                              constraints: const BoxConstraints(
                                 maxWidth: 700.0,
                               ),
-                              decoration: BoxDecoration(),
+                              decoration: const BoxDecoration(),
                               child: SingleChildScrollView(
                                 primary: false,
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
-                                    Container(
+                                    SizedBox(
                                       width: 200.0,
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 2.0, 0.0, 2.0),
                                         child: FlutterFlowChoiceChips(
-                                          options: [
+                                          options: const [
                                             ChipData('All'),
                                             ChipData('Laundry'),
                                             ChipData('Cleaning'),
@@ -259,7 +256,7 @@ class _CategoryPageWidgetState extends State<CategoryPageWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 15.0, 0.0, 50.0),
                                       child: SingleChildScrollView(
                                         child: Column(
@@ -304,7 +301,7 @@ class _CategoryPageWidgetState extends State<CategoryPageWidget> {
                                                     flex: 5,
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   8.0,
                                                                   0.0,
@@ -345,7 +342,7 @@ class _CategoryPageWidgetState extends State<CategoryPageWidget> {
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -411,7 +408,7 @@ class _CategoryPageWidgetState extends State<CategoryPageWidget> {
                                                                           MainAxisSize
                                                                               .max,
                                                                       children: [
-                                                                        Icon(
+                                                                        const Icon(
                                                                           Icons
                                                                               .star_border,
                                                                           color:
@@ -431,7 +428,7 @@ class _CategoryPageWidgetState extends State<CategoryPageWidget> {
                                                                         ),
                                                                       ],
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           5.0)),
                                                                 ),
@@ -477,7 +474,7 @@ class _CategoryPageWidgetState extends State<CategoryPageWidget> {
                                                                                 GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                           ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           5.0)),
                                                                 ),
@@ -523,7 +520,7 @@ class _CategoryPageWidgetState extends State<CategoryPageWidget> {
                                                                                 GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                           ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           5.0)),
                                                                 ),
@@ -585,7 +582,7 @@ class _CategoryPageWidgetState extends State<CategoryPageWidget> {
                                                     flex: 5,
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   8.0,
                                                                   0.0,
@@ -626,7 +623,7 @@ class _CategoryPageWidgetState extends State<CategoryPageWidget> {
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -692,7 +689,7 @@ class _CategoryPageWidgetState extends State<CategoryPageWidget> {
                                                                           MainAxisSize
                                                                               .max,
                                                                       children: [
-                                                                        Icon(
+                                                                        const Icon(
                                                                           Icons
                                                                               .star_border,
                                                                           color:
@@ -712,7 +709,7 @@ class _CategoryPageWidgetState extends State<CategoryPageWidget> {
                                                                         ),
                                                                       ],
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           5.0)),
                                                                 ),
@@ -758,7 +755,7 @@ class _CategoryPageWidgetState extends State<CategoryPageWidget> {
                                                                                 GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                           ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           5.0)),
                                                                 ),
@@ -804,7 +801,7 @@ class _CategoryPageWidgetState extends State<CategoryPageWidget> {
                                                                                 GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                           ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           5.0)),
                                                                 ),
@@ -857,7 +854,7 @@ class _CategoryPageWidgetState extends State<CategoryPageWidget> {
                                                     flex: 5,
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   8.0,
                                                                   0.0,
@@ -898,7 +895,7 @@ class _CategoryPageWidgetState extends State<CategoryPageWidget> {
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -964,7 +961,7 @@ class _CategoryPageWidgetState extends State<CategoryPageWidget> {
                                                                           MainAxisSize
                                                                               .max,
                                                                       children: [
-                                                                        Icon(
+                                                                        const Icon(
                                                                           Icons
                                                                               .star_border,
                                                                           color:
@@ -984,7 +981,7 @@ class _CategoryPageWidgetState extends State<CategoryPageWidget> {
                                                                         ),
                                                                       ],
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           5.0)),
                                                                 ),
@@ -1030,7 +1027,7 @@ class _CategoryPageWidgetState extends State<CategoryPageWidget> {
                                                                                 GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                           ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           5.0)),
                                                                 ),
@@ -1076,7 +1073,7 @@ class _CategoryPageWidgetState extends State<CategoryPageWidget> {
                                                                                 GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                           ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           5.0)),
                                                                 ),
@@ -1090,7 +1087,7 @@ class _CategoryPageWidgetState extends State<CategoryPageWidget> {
                                                 ],
                                               ),
                                             ),
-                                          ].divide(SizedBox(height: 12.0)),
+                                          ].divide(const SizedBox(height: 12.0)),
                                         ),
                                       ),
                                     ),

@@ -4,9 +4,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'applicants_details_model.dart';
 export 'applicants_details_model.dart';
 
@@ -74,7 +72,7 @@ class _ApplicantsDetailsWidgetState extends State<ApplicantsDetailsWidget> {
                       FlutterFlowTheme.of(context).headlineMediumFamily),
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -84,7 +82,7 @@ class _ApplicantsDetailsWidgetState extends State<ApplicantsDetailsWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(8.0),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8.0),
                   child: Image.network(
@@ -96,7 +94,7 @@ class _ApplicantsDetailsWidgetState extends State<ApplicantsDetailsWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 8.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 8.0),
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
@@ -104,7 +102,7 @@ class _ApplicantsDetailsWidgetState extends State<ApplicantsDetailsWidget> {
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                   child: Padding(
-                    padding: EdgeInsets.all(12.0),
+                    padding: const EdgeInsets.all(12.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
@@ -122,7 +120,7 @@ class _ApplicantsDetailsWidgetState extends State<ApplicantsDetailsWidget> {
                               ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 8.0, 0.0, 8.0),
                           child: Text(
                             'Dr. Will Hobbiton',
@@ -152,7 +150,7 @@ class _ApplicantsDetailsWidgetState extends State<ApplicantsDetailsWidget> {
                               ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 12.0, 0.0, 0.0),
                           child: RatingBar.builder(
                             onRatingUpdate: (newValue) => safeSetState(
@@ -171,7 +169,7 @@ class _ApplicantsDetailsWidgetState extends State<ApplicantsDetailsWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 12.0, 0.0, 12.0),
                           child: Container(
                             width: double.infinity,
@@ -195,7 +193,7 @@ class _ApplicantsDetailsWidgetState extends State<ApplicantsDetailsWidget> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 12.0, 0.0, 12.0),
                                         child: Icon(
                                           Icons.chat_bubble_rounded,
@@ -205,7 +203,7 @@ class _ApplicantsDetailsWidgetState extends State<ApplicantsDetailsWidget> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             8.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'Chat',
@@ -247,7 +245,7 @@ class _ApplicantsDetailsWidgetState extends State<ApplicantsDetailsWidget> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 12.0, 0.0, 12.0),
                                         child: Icon(
                                           Icons.call_rounded,
@@ -257,7 +255,7 @@ class _ApplicantsDetailsWidgetState extends State<ApplicantsDetailsWidget> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             8.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'Call',
@@ -288,7 +286,7 @@ class _ApplicantsDetailsWidgetState extends State<ApplicantsDetailsWidget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(-1.0, 0.0),
+                          alignment: const AlignmentDirectional(-1.0, 0.0),
                           child: Text(
                             'Doctor Bio',
                             style: FlutterFlowTheme.of(context)
@@ -305,9 +303,9 @@ class _ApplicantsDetailsWidgetState extends State<ApplicantsDetailsWidget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(-1.0, 0.0),
+                          alignment: const AlignmentDirectional(-1.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 8.0, 0.0, 12.0),
                             child: Text(
                               'Dr. Will Hobbiton is a board-certified internal medicine specialist with over 15 years of experience treating patients in both hospital and private practice settings. She is passionate about preventive care and dedicated to providing her patients with the highest level of personalized medical attention, while staying updated on the latest advancements in her field.',
@@ -326,7 +324,7 @@ class _ApplicantsDetailsWidgetState extends State<ApplicantsDetailsWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 12.0),
                           child: FFButtonWidget(
                             onPressed: () {
@@ -336,9 +334,9 @@ class _ApplicantsDetailsWidgetState extends State<ApplicantsDetailsWidget> {
                             options: FFButtonOptions(
                               width: double.infinity,
                               height: 48.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               color: FlutterFlowTheme.of(context).primary,
                               textStyle: FlutterFlowTheme.of(context)
@@ -353,7 +351,7 @@ class _ApplicantsDetailsWidgetState extends State<ApplicantsDetailsWidget> {
                                             FlutterFlowTheme.of(context)
                                                 .titleSmallFamily),
                                   ),
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Colors.transparent,
                                 width: 1.0,
                               ),
@@ -362,7 +360,7 @@ class _ApplicantsDetailsWidgetState extends State<ApplicantsDetailsWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 12.0),
                           child: FFButtonWidget(
                             onPressed: () {
@@ -377,9 +375,9 @@ class _ApplicantsDetailsWidgetState extends State<ApplicantsDetailsWidget> {
                             options: FFButtonOptions(
                               width: double.infinity,
                               height: 48.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               color: FlutterFlowTheme.of(context)
                                   .secondaryBackground,

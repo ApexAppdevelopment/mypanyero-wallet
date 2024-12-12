@@ -3,9 +3,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'review_camp_model.dart';
 export 'review_camp_model.dart';
 
@@ -50,7 +48,7 @@ class _ReviewCampWidgetState extends State<ReviewCampWidget> {
       height: double.infinity,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
           bottomLeft: Radius.circular(0.0),
           bottomRight: Radius.circular(0.0),
           topLeft: Radius.circular(15.0),
@@ -58,13 +56,13 @@ class _ReviewCampWidgetState extends State<ReviewCampWidget> {
         ),
       ),
       child: Padding(
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Align(
-              alignment: AlignmentDirectional(1.0, 0.0),
+              alignment: const AlignmentDirectional(1.0, 0.0),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -82,14 +80,14 @@ class _ReviewCampWidgetState extends State<ReviewCampWidget> {
             ),
             Container(
               width: double.infinity,
-              decoration: BoxDecoration(),
+              decoration: const BoxDecoration(),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 35.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 35.0, 0.0, 0.0),
                     child: Text(
                       'Give review to user',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -105,7 +103,7 @@ class _ReviewCampWidgetState extends State<ReviewCampWidget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
                     child: Text(
                       'Tell us about your Experience with Seller.',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -121,7 +119,7 @@ class _ReviewCampWidgetState extends State<ReviewCampWidget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
                     child: TextFormField(
                       controller: _model.textController,
                       focusNode: _model.textFieldFocusNode,
@@ -154,14 +152,14 @@ class _ReviewCampWidgetState extends State<ReviewCampWidget> {
                           borderRadius: BorderRadius.circular(20.0),
                         ),
                         errorBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Color(0x00000000),
                             width: 1.0,
                           ),
                           borderRadius: BorderRadius.circular(20.0),
                         ),
                         focusedErrorBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Color(0x00000000),
                             width: 1.0,
                           ),
@@ -184,7 +182,7 @@ class _ReviewCampWidgetState extends State<ReviewCampWidget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
                     child: Text(
                       'Give Rating to Seller',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -199,7 +197,7 @@ class _ReviewCampWidgetState extends State<ReviewCampWidget> {
                     ),
                   ),
                   Align(
-                    alignment: AlignmentDirectional(-1.0, 0.0),
+                    alignment: const AlignmentDirectional(-1.0, 0.0),
                     child: RatingBar.builder(
                       onRatingUpdate: (newValue) =>
                           safeSetState(() => _model.ratingBarValue = newValue),
@@ -209,17 +207,17 @@ class _ReviewCampWidgetState extends State<ReviewCampWidget> {
                       ),
                       direction: Axis.horizontal,
                       initialRating: _model.ratingBarValue ??= 3.0,
-                      unratedColor: Color(0xFF9E9E9E),
+                      unratedColor: const Color(0xFF9E9E9E),
                       itemCount: 5,
                       itemSize: 20.0,
                       glowColor: FlutterFlowTheme.of(context).secondary,
                     ),
                   ),
                   Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: const AlignmentDirectional(0.0, 0.0),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 22.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 22.0, 0.0, 0.0),
                       child: FFButtonWidget(
                         onPressed: () async {
                           safeSetState(() {
@@ -231,9 +229,9 @@ class _ReviewCampWidgetState extends State<ReviewCampWidget> {
                         options: FFButtonOptions(
                           width: 130.0,
                           height: 40.0,
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: FlutterFlowTheme.of(context).customColor1,
                           textStyle: FlutterFlowTheme.of(context)
@@ -248,7 +246,7 @@ class _ReviewCampWidgetState extends State<ReviewCampWidget> {
                                         .titleSmallFamily),
                               ),
                           elevation: 2.0,
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Colors.transparent,
                             width: 1.0,
                           ),

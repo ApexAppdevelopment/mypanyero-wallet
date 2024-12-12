@@ -2,13 +2,9 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'delete_confirmation_model.dart';
 export 'delete_confirmation_model.dart';
 
@@ -72,7 +68,7 @@ class _DeleteConfirmationWidgetState extends State<DeleteConfirmationWidget>
         borderRadius: BorderRadius.circular(10.0),
       ),
       child: Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(10.0, 20.0, 10.0, 10.0),
+        padding: const EdgeInsetsDirectional.fromSTEB(10.0, 20.0, 10.0, 10.0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
@@ -91,7 +87,7 @@ class _DeleteConfirmationWidgetState extends State<DeleteConfirmationWidget>
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -105,9 +101,9 @@ class _DeleteConfirmationWidgetState extends State<DeleteConfirmationWidget>
                       width: 100.0,
                       height: 32.0,
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                       iconPadding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).customColor1,
                       textStyle: FlutterFlowTheme.of(context)
                           .titleSmall
@@ -122,7 +118,7 @@ class _DeleteConfirmationWidgetState extends State<DeleteConfirmationWidget>
                                 FlutterFlowTheme.of(context).titleSmallFamily),
                           ),
                       elevation: 3.0,
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Colors.transparent,
                         width: 1.0,
                       ),
@@ -138,9 +134,9 @@ class _DeleteConfirmationWidgetState extends State<DeleteConfirmationWidget>
                       width: 100.0,
                       height: 32.0,
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                       iconPadding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).customColor1,
                       textStyle: FlutterFlowTheme.of(context)
                           .titleSmall
@@ -155,7 +151,7 @@ class _DeleteConfirmationWidgetState extends State<DeleteConfirmationWidget>
                                 FlutterFlowTheme.of(context).titleSmallFamily),
                           ),
                       elevation: 3.0,
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Colors.transparent,
                         width: 1.0,
                       ),

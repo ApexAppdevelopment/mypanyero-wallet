@@ -2,12 +2,9 @@ import '/flutter_flow/flutter_flow_choice_chips.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'panyero_academy_model.dart';
 export 'panyero_academy_model.dart';
 
@@ -55,7 +52,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
           backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
           automaticallyImplyLeading: false,
           leading: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(12.0, 6.0, 0.0, 6.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(12.0, 6.0, 0.0, 6.0),
             child: Container(
               width: 44.0,
               height: 44.0,
@@ -68,7 +65,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                 ),
               ),
               child: Padding(
-                padding: EdgeInsets.all(2.0),
+                padding: const EdgeInsets.all(2.0),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(50.0),
                   child: Image.network(
@@ -92,7 +89,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
           ),
           actions: [
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 16.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 16.0, 0.0),
               child: FlutterFlowIconButton(
                 borderColor: Colors.transparent,
                 borderRadius: 20.0,
@@ -120,7 +117,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                   child: Text(
                     'Stay up to date with the latest news below.',
                     style: FlutterFlowTheme.of(context).labelMedium.override(
@@ -134,7 +131,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                 ),
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 8.0),
+                      const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 8.0),
                   child: TextFormField(
                     controller: _model.textController,
                     focusNode: _model.textFieldFocusNode,
@@ -189,7 +186,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                         borderRadius: BorderRadius.circular(12.0),
                       ),
                       contentPadding:
-                          EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
                       suffixIcon: Icon(
                         Icons.search_rounded,
                         color: FlutterFlowTheme.of(context).secondaryText,
@@ -214,9 +211,9 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                     children: [
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 8.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 8.0),
                         child: FlutterFlowChoiceChips(
-                          options: [
+                          options: const [
                             ChipData('For You'),
                             ChipData('Sci-Fi'),
                             ChipData('Fiction'),
@@ -284,8 +281,8 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                         ),
                       ),
                     ]
-                        .addToStart(SizedBox(width: 16.0))
-                        .addToEnd(SizedBox(width: 16.0)),
+                        .addToStart(const SizedBox(width: 16.0))
+                        .addToEnd(const SizedBox(width: 16.0)),
                   ),
                 ),
                 Divider(
@@ -293,7 +290,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                   color: FlutterFlowTheme.of(context).alternate,
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 0.0, 0.0),
                   child: Text(
                     'Popular Today',
                     style: FlutterFlowTheme.of(context).labelMedium.override(
@@ -306,7 +303,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                   ),
                 ),
                 ListView(
-                  padding: EdgeInsets.fromLTRB(
+                  padding: const EdgeInsets.fromLTRB(
                     0,
                     8.0,
                     0,
@@ -317,9 +314,9 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                   children: [
                     Container(
                       width: 100.0,
-                      decoration: BoxDecoration(),
+                      decoration: const BoxDecoration(),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 12.0, 16.0, 12.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -335,7 +332,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsets.all(2.0),
+                                padding: const EdgeInsets.all(2.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10.0),
                                   child: Image.network(
@@ -349,7 +346,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                             ),
                             Expanded(
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 0.0, 0.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -372,14 +369,14 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                                           ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 4.0, 0.0, 0.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 12.0, 0.0),
                                             child: Text(
                                               'Jackson Hewiit',
@@ -403,7 +400,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 4.0, 0.0),
                                             child: Icon(
                                               Icons.chat_bubble_outline_rounded,
@@ -415,7 +412,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 16.0, 0.0),
                                             child: Text(
                                               '24',
@@ -460,7 +457,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 4.0, 0.0),
                                             child: Icon(
                                               Icons.keyboard_control_rounded,
@@ -474,7 +471,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 8.0, 12.0, 0.0),
                                       child: Text(
                                         'Read Now',
@@ -497,7 +494,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                                             ),
                                       ),
                                     ),
-                                  ].divide(SizedBox(height: 4.0)),
+                                  ].divide(const SizedBox(height: 4.0)),
                                 ),
                               ),
                             ),
@@ -507,9 +504,9 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                     ),
                     Container(
                       width: 100.0,
-                      decoration: BoxDecoration(),
+                      decoration: const BoxDecoration(),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 12.0, 16.0, 12.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -525,7 +522,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsets.all(2.0),
+                                padding: const EdgeInsets.all(2.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10.0),
                                   child: Image.network(
@@ -539,7 +536,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                             ),
                             Expanded(
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 0.0, 0.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -562,14 +559,14 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                                           ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 4.0, 0.0, 0.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 12.0, 0.0),
                                             child: Text(
                                               'Jackson Hewiit',
@@ -593,7 +590,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 4.0, 0.0),
                                             child: Icon(
                                               Icons.chat_bubble_outline_rounded,
@@ -605,7 +602,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 16.0, 0.0),
                                             child: Text(
                                               '24',
@@ -650,7 +647,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 4.0, 0.0),
                                             child: Icon(
                                               Icons.keyboard_control_rounded,
@@ -664,7 +661,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 8.0, 12.0, 0.0),
                                       child: Text(
                                         'Read Now',
@@ -687,7 +684,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                                             ),
                                       ),
                                     ),
-                                  ].divide(SizedBox(height: 4.0)),
+                                  ].divide(const SizedBox(height: 4.0)),
                                 ),
                               ),
                             ),
@@ -697,9 +694,9 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                     ),
                     Container(
                       width: 100.0,
-                      decoration: BoxDecoration(),
+                      decoration: const BoxDecoration(),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 12.0, 16.0, 12.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -715,7 +712,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsets.all(2.0),
+                                padding: const EdgeInsets.all(2.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10.0),
                                   child: Image.network(
@@ -729,7 +726,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                             ),
                             Expanded(
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 0.0, 0.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -752,14 +749,14 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                                           ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 4.0, 0.0, 0.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 12.0, 0.0),
                                             child: Text(
                                               'Jackson Hewiit',
@@ -783,7 +780,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 4.0, 0.0),
                                             child: Icon(
                                               Icons.chat_bubble_outline_rounded,
@@ -795,7 +792,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 16.0, 0.0),
                                             child: Text(
                                               '24',
@@ -840,7 +837,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 4.0, 0.0),
                                             child: Icon(
                                               Icons.keyboard_control_rounded,
@@ -854,7 +851,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 8.0, 12.0, 0.0),
                                       child: Text(
                                         'Read Now',
@@ -877,7 +874,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                                             ),
                                       ),
                                     ),
-                                  ].divide(SizedBox(height: 4.0)),
+                                  ].divide(const SizedBox(height: 4.0)),
                                 ),
                               ),
                             ),
@@ -887,9 +884,9 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                     ),
                     Container(
                       width: 100.0,
-                      decoration: BoxDecoration(),
+                      decoration: const BoxDecoration(),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 12.0, 16.0, 12.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -905,7 +902,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsets.all(2.0),
+                                padding: const EdgeInsets.all(2.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10.0),
                                   child: Image.network(
@@ -919,7 +916,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                             ),
                             Expanded(
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 0.0, 0.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -942,14 +939,14 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                                           ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 4.0, 0.0, 0.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 12.0, 0.0),
                                             child: Text(
                                               'Jackson Hewiit',
@@ -973,7 +970,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 4.0, 0.0),
                                             child: Icon(
                                               Icons.chat_bubble_outline_rounded,
@@ -985,7 +982,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 16.0, 0.0),
                                             child: Text(
                                               '24',
@@ -1030,7 +1027,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 4.0, 0.0),
                                             child: Icon(
                                               Icons.keyboard_control_rounded,
@@ -1044,7 +1041,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 8.0, 12.0, 0.0),
                                       child: Text(
                                         'Read Now',
@@ -1067,7 +1064,7 @@ class _PanyeroAcademyWidgetState extends State<PanyeroAcademyWidget> {
                                             ),
                                       ),
                                     ),
-                                  ].divide(SizedBox(height: 4.0)),
+                                  ].divide(const SizedBox(height: 4.0)),
                                 ),
                               ),
                             ),
