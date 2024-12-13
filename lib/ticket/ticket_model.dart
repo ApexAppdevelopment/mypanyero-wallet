@@ -1,9 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'details23_booking_house_widget.dart' show Details23BookingHouseWidget;
+import 'ticket_widget.dart' show TicketWidget;
 import 'package:flutter/material.dart';
 
-class Details23BookingHouseModel
-    extends FlutterFlowModel<Details23BookingHouseWidget> {
+class TicketModel extends FlutterFlowModel<TicketWidget> {
   @override
   void initState(BuildContext context) {}
 

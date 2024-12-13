@@ -60,7 +60,7 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget> {
                   width: MediaQuery.sizeOf(context).width * 1.0,
                   height: MediaQuery.sizeOf(context).height * 1.0,
                   decoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).primaryBackground,
+                    color: FlutterFlowTheme.of(context).secondaryText,
                   ),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,

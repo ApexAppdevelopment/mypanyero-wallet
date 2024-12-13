@@ -6,20 +6,24 @@ export '/pages/scan_q_r/scan_q_r_widget.dart' show ScanQRWidget;
 export '/service_offered/service_offered_widget.dart' show ServiceOfferedWidget;
 export '/ai_persona/ai_persona_widget.dart' show AiPersonaWidget;
 export '/navigation/navigation_widget.dart' show NavigationWidget;
-export '/games_casino/games_casino_widget.dart' show GamesCasinoWidget;
+export '/pages/games_casino/games_casino_widget.dart' show GamesCasinoWidget;
 export '/panyero_academy/panyero_academy_widget.dart' show PanyeroAcademyWidget;
-export '/panyero_careers/panyero_careers_widget.dart' show PanyeroCareersWidget;
+export '/persona_chat/panyero_careers/panyero_careers_widget.dart'
+    show PanyeroCareersWidget;
 export '/applicants_details/applicants_details_widget.dart'
     show ApplicantsDetailsWidget;
 export '/banners_list/banners_list_widget.dart' show BannersListWidget;
 export '/pages/messages/messages_widget.dart' show MessagesWidget;
 export '/transfer_responsive/transfer_responsive_widget.dart'
     show TransferResponsiveWidget;
-export '/home_dashboard/home_dashboard_widget.dart' show HomeDashboardWidget;
-export '/details_ticket/details_ticket_widget.dart' show DetailsTicketWidget;
-export '/simple_profile/simple_profile_widget.dart' show SimpleProfileWidget;
-export '/lotto/lotto_widget.dart' show LottoWidget;
-export '/details23_booking_house/details23_booking_house_widget.dart'
-    show Details23BookingHouseWidget;
-export '/onboarrd/onboarrd_widget.dart' show OnboarrdWidget;
-export '/login1/login1_widget.dart' show Login1Widget;
+export '/pages/home_dashboard/home_dashboard_widget.dart'
+    show HomeDashboardWidget;
+export '/pages/onboarrd/onboarrd_widget.dart' show OnboarrdWidget;
+export '/pages/login1/login1_widget.dart' show Login1Widget;
+export '/home26_list_features/home26_list_features_widget.dart'
+    show Home26ListFeaturesWidget;
+export '/lottodraw/lottodraw_widget.dart' show LottodrawWidget;
+export '/ticket/ticket_widget.dart' show TicketWidget;
+export '/list06_user_search/list06_user_search_widget.dart'
+    show List06UserSearchWidget;
+export '/profile_user/profile_user_widget.dart' show ProfileUserWidget;

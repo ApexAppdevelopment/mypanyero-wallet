@@ -142,10 +142,10 @@ class _NavBarPageState extends State<NavBarPage> {
   Widget build(BuildContext context) {
     final tabs = {
       'HomeDashboard': const HomeDashboardWidget(),
-      'CategoryPage': const CategoryPageWidget(),
-      'ScanQR': const ScanQRWidget(),
       'GamesCasino': const GamesCasinoWidget(),
-      'Lotto': const LottoWidget(),
+      'ScanQR': const ScanQRWidget(),
+      'CategoryPage': const CategoryPageWidget(),
+      'ProfileUser': const ProfileUserWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -157,7 +157,7 @@ class _NavBarPageState extends State<NavBarPage> {
           _currentPage = null;
           _currentPageName = tabs.keys.toList()[i];
         }),
-        backgroundColor: const Color(0xFFF2F4E2),
+        backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
         selectedItemColor: const Color(0xFF04B974),
         unselectedItemColor: FlutterFlowTheme.of(context).primaryText,
         showSelectedLabels: true,
@@ -174,7 +174,7 @@ class _NavBarPageState extends State<NavBarPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.room_service_rounded,
+              Icons.wallet,
               size: 24.0,
             ),
             label: '',
@@ -190,7 +190,7 @@ class _NavBarPageState extends State<NavBarPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.wallet,
+              Icons.room_service_rounded,
               size: 24.0,
             ),
             label: '',
@@ -198,11 +198,7 @@ class _NavBarPageState extends State<NavBarPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.local_activity,
-              size: 24.0,
-            ),
-            activeIcon: Icon(
-              Icons.local_activity,
+              Icons.settings_sharp,
               size: 24.0,
             ),
             label: '',

@@ -178,27 +178,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               : const HomeDashboardWidget(),
         ),
         FFRoute(
-          name: 'DetailsTicket',
-          path: '/detailsTicket',
-          builder: (context, params) => const DetailsTicketWidget(),
-        ),
-        FFRoute(
-          name: 'SimpleProfile',
-          path: '/simpleProfile',
-          builder: (context, params) => const SimpleProfileWidget(),
-        ),
-        FFRoute(
-          name: 'Lotto',
-          path: '/lotto',
-          builder: (context, params) =>
-              params.isEmpty ? const NavBarPage(initialPage: 'Lotto') : const LottoWidget(),
-        ),
-        FFRoute(
-          name: 'Details23BookingHouse',
-          path: '/details23BookingHouse',
-          builder: (context, params) => const Details23BookingHouseWidget(),
-        ),
-        FFRoute(
           name: 'Onboarrd',
           path: '/onboarrd',
           builder: (context, params) => const OnboarrdWidget(),
@@ -207,8 +186,36 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Login1',
           path: '/login1',
           builder: (context, params) => const Login1Widget(),
+        ),
+        FFRoute(
+          name: 'Home26ListFeatures',
+          path: '/OtherCategory',
+          builder: (context, params) => const Home26ListFeaturesWidget(),
+        ),
+        FFRoute(
+          name: 'Lottodraw',
+          path: '/lottodraw',
+          builder: (context, params) => const LottodrawWidget(),
+        ),
+        FFRoute(
+          name: 'ticket',
+          path: '/ticket',
+          builder: (context, params) => const TicketWidget(),
+        ),
+        FFRoute(
+          name: 'List06UserSearch',
+          path: '/list06UserSearch',
+          builder: (context, params) => const List06UserSearchWidget(),
+        ),
+        FFRoute(
+          name: 'ProfileUser',
+          path: '/profileUser',
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'ProfileUser')
+              : const ProfileUserWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
+      observers: [routeObserver],
     );
 
 extension NavParamExtensions on Map<String, String?> {

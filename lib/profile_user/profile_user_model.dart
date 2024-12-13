@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'simple_profile_widget.dart' show SimpleProfileWidget;
+import 'profile_user_widget.dart' show ProfileUserWidget;
 import 'package:flutter/material.dart';
 
-class SimpleProfileModel extends FlutterFlowModel<SimpleProfileWidget> {
+class ProfileUserModel extends FlutterFlowModel<ProfileUserWidget> {
   @override
   void initState(BuildContext context) {}
 

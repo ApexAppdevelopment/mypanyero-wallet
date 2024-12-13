@@ -64,12 +64,12 @@ class _AiPersonaWidgetState extends State<AiPersonaWidget> {
                 borderWidth: 1.0,
                 buttonSize: 60.0,
                 icon: Icon(
-                  Icons.add_circle_outline_rounded,
+                  Icons.close,
                   color: FlutterFlowTheme.of(context).secondaryText,
                   size: 30.0,
                 ),
-                onPressed: () {
-                  print('IconButton pressed ...');
+                onPressed: () async {
+                  context.safePop();
                 },
               ),
             ),
@@ -107,7 +107,7 @@ class _AiPersonaWidgetState extends State<AiPersonaWidget> {
                         padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 0.0, 12.0),
                         child: Text(
-                          'Manage your team below.',
+                          'Talk to panyero persona below.',
                           style: FlutterFlowTheme.of(context)
                               .labelMedium
                               .override(
