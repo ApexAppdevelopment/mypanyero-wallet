@@ -106,7 +106,7 @@ class _TicketWidgetState extends State<TicketWidget>
             buttonSize: 60.0,
             icon: Icon(
               Icons.arrow_back_rounded,
-              color: FlutterFlowTheme.of(context).secondaryText,
+              color: FlutterFlowTheme.of(context).primaryText,
               size: 30.0,
             ),
             onPressed: () async {
@@ -114,7 +114,7 @@ class _TicketWidgetState extends State<TicketWidget>
             },
           ),
           title: Text(
-            'Page Title',
+            'Ticket',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: FlutterFlowTheme.of(context).headlineMediumFamily,
                   color: FlutterFlowTheme.of(context).secondaryText,

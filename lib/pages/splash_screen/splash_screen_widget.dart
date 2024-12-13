@@ -26,7 +26,7 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget> {
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       await Future.delayed(const Duration(milliseconds: 3000));
 
-      context.pushNamed('Signup');
+      context.pushNamed('Onboarding');
     });
   }
 

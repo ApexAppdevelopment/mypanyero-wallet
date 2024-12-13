@@ -18,8 +18,8 @@ export '/transfer_responsive/transfer_responsive_widget.dart'
     show TransferResponsiveWidget;
 export '/pages/home_dashboard/home_dashboard_widget.dart'
     show HomeDashboardWidget;
-export '/pages/onboarrd/onboarrd_widget.dart' show OnboarrdWidget;
-export '/pages/login1/login1_widget.dart' show Login1Widget;
+export '/pages/onboarding/onboarding_widget.dart' show OnboardingWidget;
+export '/pages/login/login_widget.dart' show LoginWidget;
 export '/home26_list_features/home26_list_features_widget.dart'
     show Home26ListFeaturesWidget;
 export '/lottodraw/lottodraw_widget.dart' show LottodrawWidget;

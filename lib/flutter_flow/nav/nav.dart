@@ -177,14 +177,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               : const HomeDashboardWidget(),
         ),
         FFRoute(
-          name: 'Onboarrd',
-          path: '/onboarrd',
-          builder: (context, params) => const OnboarrdWidget(),
+          name: 'Onboarding',
+          path: '/onboarding',
+          builder: (context, params) => const OnboardingWidget(),
         ),
         FFRoute(
-          name: 'Login1',
-          path: '/login1',
-          builder: (context, params) => const Login1Widget(),
+          name: 'Login',
+          path: '/login',
+          builder: (context, params) => const LoginWidget(),
         ),
         FFRoute(
           name: 'Home26ListFeatures',

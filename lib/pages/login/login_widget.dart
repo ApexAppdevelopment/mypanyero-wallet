@@ -4,25 +4,25 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'login1_model.dart';
-export 'login1_model.dart';
+import 'login_model.dart';
+export 'login_model.dart';
 
-class Login1Widget extends StatefulWidget {
-  const Login1Widget({super.key});
+class LoginWidget extends StatefulWidget {
+  const LoginWidget({super.key});
 
   @override
-  State<Login1Widget> createState() => _Login1WidgetState();
+  State<LoginWidget> createState() => _LoginWidgetState();
 }
 
-class _Login1WidgetState extends State<Login1Widget> {
-  late Login1Model _model;
+class _LoginWidgetState extends State<LoginWidget> {
+  late LoginModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => Login1Model());
+    _model = createModel(context, () => LoginModel());
 
     _model.emailAddressTextController ??= TextEditingController();
     _model.emailAddressFocusNode ??= FocusNode();

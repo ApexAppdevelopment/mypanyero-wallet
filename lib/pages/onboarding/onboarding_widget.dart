@@ -4,25 +4,25 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'onboarrd_model.dart';
-export 'onboarrd_model.dart';
+import 'onboarding_model.dart';
+export 'onboarding_model.dart';
 
-class OnboarrdWidget extends StatefulWidget {
-  const OnboarrdWidget({super.key});
+class OnboardingWidget extends StatefulWidget {
+  const OnboardingWidget({super.key});
 
   @override
-  State<OnboarrdWidget> createState() => _OnboarrdWidgetState();
+  State<OnboardingWidget> createState() => _OnboardingWidgetState();
 }
 
-class _OnboarrdWidgetState extends State<OnboarrdWidget> {
-  late OnboarrdModel _model;
+class _OnboardingWidgetState extends State<OnboardingWidget> {
+  late OnboardingModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => OnboarrdModel());
+    _model = createModel(context, () => OnboardingModel());
   }
 
   @override
@@ -78,7 +78,7 @@ class _OnboarrdWidgetState extends State<OnboarrdWidget> {
                                           borderRadius:
                                               BorderRadius.circular(12.0),
                                           child: Image.asset(
-                                            'assets/images/Screenshot_from_2024-12-02_14-22-50.png',
+                                            'assets/images/DALLE_2024-12-14_05.49.01_-_A_portrait_of_Captain_Letada,_a_45-year-old_Filipino_deck_officer,_standing_inside_a_ships_cabin._He_is_wearing_a_white_naval_officers_uniform_with_.webp',
                                             width: double.infinity,
                                             height: MediaQuery.sizeOf(context)
                                                     .height *
@@ -92,7 +92,7 @@ class _OnboarrdWidgetState extends State<OnboarrdWidget> {
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           12.0, 0.0, 0.0, 0.0),
                                       child: Text(
-                                        'Header One',
+                                        'Journey Begins ',
                                         style: FlutterFlowTheme.of(context)
                                             .headlineLarge
                                             .override(
@@ -113,13 +113,87 @@ class _OnboarrdWidgetState extends State<OnboarrdWidget> {
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           12.0, 4.0, 12.0, 0.0),
                                       child: Text(
-                                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+                                        'Unlock endless possibilities with Panyero—where convenience meets innovation.',
                                         style: FlutterFlowTheme.of(context)
                                             .labelLarge
                                             .override(
                                               fontFamily:
                                                   FlutterFlowTheme.of(context)
                                                       .labelLargeFamily,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryText,
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts: GoogleFonts
+                                                      .asMap()
+                                                  .containsKey(
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .labelLargeFamily),
+                                            ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(12.0),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Expanded(
+                                      child: Padding(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 0.0, 0.0, 12.0),
+                                        child: ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(12.0),
+                                          child: Image.asset(
+                                            'assets/images/Screenshot_from_2024-12-02_14-52-13.png',
+                                            width: double.infinity,
+                                            height: 300.0,
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          12.0, 0.0, 0.0, 0.0),
+                                      child: Text(
+                                        'Maritine',
+                                        style: FlutterFlowTheme.of(context)
+                                            .headlineLarge
+                                            .override(
+                                              fontFamily:
+                                                  FlutterFlowTheme.of(context)
+                                                      .headlineLargeFamily,
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts: GoogleFonts
+                                                      .asMap()
+                                                  .containsKey(
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .headlineLargeFamily),
+                                            ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          12.0, 4.0, 12.0, 0.0),
+                                      child: Text(
+                                        'Your trusted companion for seamless transactions, entertainment, and more. Let\'s get started!',
+                                        style: FlutterFlowTheme.of(context)
+                                            .labelLarge
+                                            .override(
+                                              fontFamily:
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelLargeFamily,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryText,
                                               letterSpacing: 0.0,
                                               useGoogleFonts: GoogleFonts
                                                       .asMap()
@@ -148,7 +222,7 @@ class _OnboarrdWidgetState extends State<OnboarrdWidget> {
                                           borderRadius:
                                               BorderRadius.circular(12.0),
                                           child: Image.network(
-                                            'https://images.unsplash.com/photo-1678115039222-662c78072a6b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60',
+                                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/home-alligned-services-app-pmoowx/assets/hmwboh9pfr9h/Screenshot_from_2024-12-02_14-53-50.png',
                                             width: double.infinity,
                                             height: 300.0,
                                             fit: BoxFit.cover,
@@ -160,7 +234,7 @@ class _OnboarrdWidgetState extends State<OnboarrdWidget> {
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           12.0, 0.0, 0.0, 0.0),
                                       child: Text(
-                                        'Header Two',
+                                        'Learn and Apply ',
                                         style: FlutterFlowTheme.of(context)
                                             .headlineLarge
                                             .override(
@@ -181,81 +255,16 @@ class _OnboarrdWidgetState extends State<OnboarrdWidget> {
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           12.0, 4.0, 12.0, 0.0),
                                       child: Text(
-                                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+                                        'Experience fast, secure, and reliable services tailored for seafarers and beyond.',
                                         style: FlutterFlowTheme.of(context)
                                             .labelLarge
                                             .override(
                                               fontFamily:
                                                   FlutterFlowTheme.of(context)
                                                       .labelLargeFamily,
-                                              letterSpacing: 0.0,
-                                              useGoogleFonts: GoogleFonts
-                                                      .asMap()
-                                                  .containsKey(
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelLargeFamily),
-                                            ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(12.0),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Expanded(
-                                      child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 12.0),
-                                        child: ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(12.0),
-                                          child: Image.network(
-                                            'https://images.unsplash.com/photo-1678132852119-c03c2e7d2740?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzNnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60',
-                                            width: double.infinity,
-                                            height: 300.0,
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          12.0, 0.0, 0.0, 0.0),
-                                      child: Text(
-                                        'Header Three',
-                                        style: FlutterFlowTheme.of(context)
-                                            .headlineLarge
-                                            .override(
-                                              fontFamily:
+                                              color:
                                                   FlutterFlowTheme.of(context)
-                                                      .headlineLargeFamily,
-                                              letterSpacing: 0.0,
-                                              useGoogleFonts: GoogleFonts
-                                                      .asMap()
-                                                  .containsKey(
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .headlineLargeFamily),
-                                            ),
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          12.0, 4.0, 12.0, 0.0),
-                                      child: Text(
-                                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
-                                        style: FlutterFlowTheme.of(context)
-                                            .labelLarge
-                                            .override(
-                                              fontFamily:
-                                                  FlutterFlowTheme.of(context)
-                                                      .labelLargeFamily,
+                                                      .secondaryText,
                                               letterSpacing: 0.0,
                                               useGoogleFonts: GoogleFonts
                                                       .asMap()
