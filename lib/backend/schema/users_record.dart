@@ -50,6 +50,26 @@ class UsersRecord extends FirestoreRecord {
   DocumentReference? get sponsor => _sponsor;
   bool hasSponsor() => _sponsor != null;
 
+  // "waletbalance" field.
+  int? _waletbalance;
+  int get waletbalance => _waletbalance ?? 0;
+  bool hasWaletbalance() => _waletbalance != null;
+
+  // "tokenbalance" field.
+  int? _tokenbalance;
+  int get tokenbalance => _tokenbalance ?? 0;
+  bool hasTokenbalance() => _tokenbalance != null;
+
+  // "usertype" field.
+  String? _usertype;
+  String get usertype => _usertype ?? '';
+  bool hasUsertype() => _usertype != null;
+
+  // "status" field.
+  String? _status;
+  String get status => _status ?? '';
+  bool hasStatus() => _status != null;
+
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
     _displayName = snapshotData['display_name'] as String?;
@@ -58,6 +78,10 @@ class UsersRecord extends FirestoreRecord {
     _createdTime = snapshotData['created_time'] as DateTime?;
     _phoneNumber = snapshotData['phone_number'] as String?;
     _sponsor = snapshotData['sponsor'] as DocumentReference?;
+    _waletbalance = castToType<int>(snapshotData['waletbalance']);
+    _tokenbalance = castToType<int>(snapshotData['tokenbalance']);
+    _usertype = snapshotData['usertype'] as String?;
+    _status = snapshotData['status'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -101,6 +125,10 @@ Map<String, dynamic> createUsersRecordData({
   DateTime? createdTime,
   String? phoneNumber,
   DocumentReference? sponsor,
+  int? waletbalance,
+  int? tokenbalance,
+  String? usertype,
+  String? status,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -111,6 +139,10 @@ Map<String, dynamic> createUsersRecordData({
       'created_time': createdTime,
       'phone_number': phoneNumber,
       'sponsor': sponsor,
+      'waletbalance': waletbalance,
+      'tokenbalance': tokenbalance,
+      'usertype': usertype,
+      'status': status,
     }.withoutNulls,
   );
 
@@ -128,7 +160,11 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e1?.uid == e2?.uid &&
         e1?.createdTime == e2?.createdTime &&
         e1?.phoneNumber == e2?.phoneNumber &&
-        e1?.sponsor == e2?.sponsor;
+        e1?.sponsor == e2?.sponsor &&
+        e1?.waletbalance == e2?.waletbalance &&
+        e1?.tokenbalance == e2?.tokenbalance &&
+        e1?.usertype == e2?.usertype &&
+        e1?.status == e2?.status;
   }
 
   @override
@@ -139,7 +175,11 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e?.uid,
         e?.createdTime,
         e?.phoneNumber,
-        e?.sponsor
+        e?.sponsor,
+        e?.waletbalance,
+        e?.tokenbalance,
+        e?.usertype,
+        e?.status
       ]);
 
   @override
