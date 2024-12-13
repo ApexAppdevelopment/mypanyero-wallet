@@ -28,8 +28,6 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget> {
 
       context.pushNamed('Signup');
     });
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

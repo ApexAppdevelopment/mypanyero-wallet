@@ -22,8 +22,6 @@ class _ServiceOfferedWidgetState extends State<ServiceOfferedWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => ServiceOfferedModel());
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

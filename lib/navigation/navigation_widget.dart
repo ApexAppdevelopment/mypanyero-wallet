@@ -61,8 +61,6 @@ class _NavigationWidgetState extends State<NavigationWidget>
           !anim.applyInitialState),
       this,
     );
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

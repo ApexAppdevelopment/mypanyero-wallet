@@ -25,8 +25,6 @@ class _TransferResponsiveWidgetState extends State<TransferResponsiveWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => TransferResponsiveModel());
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

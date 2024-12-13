@@ -45,8 +45,6 @@ class _SignupWidgetState extends State<SignupWidget> {
     _model.textFieldSignupConfirmPasswordTextController ??=
         TextEditingController();
     _model.textFieldSignupConfirmPasswordFocusNode ??= FocusNode();
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

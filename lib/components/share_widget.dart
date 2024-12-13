@@ -25,8 +25,6 @@ class _ShareWidgetState extends State<ShareWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => ShareModel());
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

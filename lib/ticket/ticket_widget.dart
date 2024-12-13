@@ -77,8 +77,6 @@ class _TicketWidgetState extends State<TicketWidget>
           !anim.applyInitialState),
       this,
     );
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

@@ -23,8 +23,6 @@ class _OnboarrdWidgetState extends State<OnboarrdWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => OnboarrdModel());
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

@@ -30,8 +30,6 @@ class _ReviewsStarWidgetState extends State<ReviewsStarWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => ReviewsStarModel());
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

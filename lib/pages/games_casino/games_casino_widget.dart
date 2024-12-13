@@ -29,7 +29,6 @@ class _GamesCasinoWidgetState extends State<GamesCasinoWidget>
       length: 3,
       initialIndex: 0,
     )..addListener(() => safeSetState(() {}));
-    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

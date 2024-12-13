@@ -22,8 +22,6 @@ class _AllTransactionsWidgetState extends State<AllTransactionsWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => AllTransactionsModel());
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

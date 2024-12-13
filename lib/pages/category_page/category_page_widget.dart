@@ -22,8 +22,6 @@ class _CategoryPageWidgetState extends State<CategoryPageWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => CategoryPageModel());
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

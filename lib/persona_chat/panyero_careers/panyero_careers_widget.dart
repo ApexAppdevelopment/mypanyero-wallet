@@ -24,8 +24,6 @@ class _PanyeroCareersWidgetState extends State<PanyeroCareersWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => PanyeroCareersModel());
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

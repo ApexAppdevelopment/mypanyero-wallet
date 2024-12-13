@@ -25,8 +25,6 @@ class _ApplicantsDetailsWidgetState extends State<ApplicantsDetailsWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => ApplicantsDetailsModel());
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

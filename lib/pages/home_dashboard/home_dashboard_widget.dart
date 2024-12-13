@@ -26,8 +26,6 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => HomeDashboardModel());
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -236,27 +234,47 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                                                     8.0,
                                                                     0.0,
                                                                     0.0),
-                                                        child: Text(
-                                                          '₱ 0.00',
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .displayMedium
-                                                              .override(
-                                                                fontFamily: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .displayMediumFamily,
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .primaryBackground,
-                                                                fontSize: 36.0,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                useGoogleFonts: GoogleFonts
-                                                                        .asMap()
-                                                                    .containsKey(
-                                                                        FlutterFlowTheme.of(context)
-                                                                            .displayMediumFamily),
+                                                        child:
+                                                            AuthUserStreamWidget(
+                                                          builder: (context) =>
+                                                              Text(
+                                                            '₱${valueOrDefault<String>(
+                                                              formatNumber(
+                                                                valueOrDefault(
+                                                                    currentUserDocument
+                                                                        ?.waletbalance,
+                                                                    0),
+                                                                formatType:
+                                                                    FormatType
+                                                                        .decimal,
+                                                                decimalType:
+                                                                    DecimalType
+                                                                        .automatic,
+                                                                currency: '₱',
                                                               ),
+                                                              '0.00',
+                                                            )}',
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .displayMedium
+                                                                .override(
+                                                                  fontFamily: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .displayMediumFamily,
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primaryBackground,
+                                                                  fontSize:
+                                                                      36.0,
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  useGoogleFonts: GoogleFonts
+                                                                          .asMap()
+                                                                      .containsKey(
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .displayMediumFamily),
+                                                                ),
+                                                          ),
                                                         ),
                                                       ),
                                                     ],
@@ -300,25 +318,35 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                                                         'Roboto Mono'),
                                                               ),
                                                     ),
-                                                    Text(
-                                                      'PTK 00',
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Roboto Mono',
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .primaryBackground,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                useGoogleFonts: GoogleFonts
-                                                                        .asMap()
-                                                                    .containsKey(
-                                                                        'Roboto Mono'),
-                                                              ),
+                                                    AuthUserStreamWidget(
+                                                      builder: (context) =>
+                                                          Text(
+                                                        'PTK${valueOrDefault<String>(
+                                                          valueOrDefault(
+                                                                  currentUserDocument
+                                                                      ?.tokenbalance,
+                                                                  0)
+                                                              .toString(),
+                                                          '0.00',
+                                                        )}',
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Roboto Mono',
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primaryBackground,
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  useGoogleFonts: GoogleFonts
+                                                                          .asMap()
+                                                                      .containsKey(
+                                                                          'Roboto Mono'),
+                                                                ),
+                                                      ),
                                                     ),
                                                   ],
                                                 ),

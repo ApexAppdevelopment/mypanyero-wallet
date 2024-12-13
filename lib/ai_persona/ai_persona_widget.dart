@@ -22,8 +22,6 @@ class _AiPersonaWidgetState extends State<AiPersonaWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => AiPersonaModel());
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

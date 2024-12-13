@@ -26,8 +26,6 @@ class _RoleNotSelectedWidgetState extends State<RoleNotSelectedWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => RoleNotSelectedModel());
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

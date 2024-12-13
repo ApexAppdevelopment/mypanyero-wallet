@@ -31,8 +31,6 @@ class _MessagesWidgetState extends State<MessagesWidget> {
       _model.aiResponding = false;
       safeSetState(() {});
     });
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

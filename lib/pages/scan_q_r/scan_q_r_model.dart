@@ -3,6 +3,10 @@ import 'scan_q_r_widget.dart' show ScanQRWidget;
 import 'package:flutter/material.dart';
 
 class ScanQRModel extends FlutterFlowModel<ScanQRWidget> {
+  ///  State fields for stateful widgets in this page.
+
+  var scannedAccount = '';
+
   @override
   void initState(BuildContext context) {}
 

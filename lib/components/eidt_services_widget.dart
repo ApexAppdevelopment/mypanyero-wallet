@@ -29,8 +29,6 @@ class _EidtServicesWidgetState extends State<EidtServicesWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => EidtServicesModel());
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
