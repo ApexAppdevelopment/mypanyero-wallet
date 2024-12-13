@@ -213,6 +213,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => params.isEmpty
               ? const NavBarPage(initialPage: 'ProfileUser')
               : const ProfileUserWidget(),
+        ),
+        FFRoute(
+          name: 'AllTransactions',
+          path: '/allTransactions',
+          builder: (context, params) => const AllTransactionsWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],

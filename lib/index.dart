@@ -27,3 +27,5 @@ export '/ticket/ticket_widget.dart' show TicketWidget;
 export '/list06_user_search/list06_user_search_widget.dart'
     show List06UserSearchWidget;
 export '/profile_user/profile_user_widget.dart' show ProfileUserWidget;
+export '/all_transactions/all_transactions_widget.dart'
+    show AllTransactionsWidget;
