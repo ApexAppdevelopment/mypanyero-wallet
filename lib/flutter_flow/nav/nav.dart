@@ -217,6 +217,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'AllTransactions',
           path: '/allTransactions',
           builder: (context, params) => const AllTransactionsWidget(),
+        ),
+        FFRoute(
+          name: 'SendBalance',
+          path: '/sendBalance',
+          builder: (context, params) => const SendBalanceWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],

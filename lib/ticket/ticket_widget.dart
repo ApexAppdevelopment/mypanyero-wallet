@@ -97,7 +97,7 @@ class _TicketWidgetState extends State<TicketWidget>
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: AppBar(
-          backgroundColor: const Color(0xFF04B974),
+          backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
@@ -106,7 +106,7 @@ class _TicketWidgetState extends State<TicketWidget>
             buttonSize: 60.0,
             icon: Icon(
               Icons.arrow_back_rounded,
-              color: FlutterFlowTheme.of(context).white,
+              color: FlutterFlowTheme.of(context).secondaryText,
               size: 30.0,
             ),
             onPressed: () async {
@@ -117,7 +117,7 @@ class _TicketWidgetState extends State<TicketWidget>
             'Page Title',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: FlutterFlowTheme.of(context).headlineMediumFamily,
-                  color: FlutterFlowTheme.of(context).white,
+                  color: FlutterFlowTheme.of(context).secondaryText,
                   fontSize: 22.0,
                   letterSpacing: 0.0,
                   useGoogleFonts: GoogleFonts.asMap().containsKey(
@@ -352,7 +352,8 @@ class _TicketWidgetState extends State<TicketWidget>
                                 barcode: Barcode.code128(),
                                 width: 100.0,
                                 height: 50.0,
-                                color: FlutterFlowTheme.of(context).primaryText,
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryText,
                                 backgroundColor: Colors.transparent,
                                 errorBuilder: (context, error) => const SizedBox(
                                   width: 100.0,

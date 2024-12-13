@@ -29,3 +29,4 @@ export '/list06_user_search/list06_user_search_widget.dart'
 export '/profile_user/profile_user_widget.dart' show ProfileUserWidget;
 export '/all_transactions/all_transactions_widget.dart'
     show AllTransactionsWidget;
+export '/send_balance/send_balance_widget.dart' show SendBalanceWidget;

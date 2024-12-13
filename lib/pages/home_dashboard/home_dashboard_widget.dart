@@ -238,7 +238,8 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                                             AuthUserStreamWidget(
                                                           builder: (context) =>
                                                               Text(
-                                                            '₱${valueOrDefault<String>(
+                                                            valueOrDefault<
+                                                                String>(
                                                               formatNumber(
                                                                 valueOrDefault(
                                                                     currentUserDocument
@@ -253,7 +254,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                                                 currency: '₱',
                                                               ),
                                                               '0.00',
-                                                            )}',
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .displayMedium
@@ -298,25 +299,28 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                                       MainAxisAlignment
                                                           .spaceBetween,
                                                   children: [
-                                                    Text(
-                                                      'ACCT 0905 *** 1316',
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Roboto Mono',
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .primaryBackground,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                useGoogleFonts: GoogleFonts
-                                                                        .asMap()
-                                                                    .containsKey(
-                                                                        'Roboto Mono'),
-                                                              ),
+                                                    AuthUserStreamWidget(
+                                                      builder: (context) =>
+                                                          Text(
+                                                        'ACCT $currentPhoneNumber',
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Roboto Mono',
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primaryBackground,
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  useGoogleFonts: GoogleFonts
+                                                                          .asMap()
+                                                                      .containsKey(
+                                                                          'Roboto Mono'),
+                                                                ),
+                                                      ),
                                                     ),
                                                     AuthUserStreamWidget(
                                                       builder: (context) =>

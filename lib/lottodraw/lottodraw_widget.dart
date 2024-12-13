@@ -198,7 +198,7 @@ class _LottodrawWidgetState extends State<LottodrawWidget> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                   child: Material(
                     color: Colors.transparent,
                     elevation: 2.0,
@@ -207,7 +207,7 @@ class _LottodrawWidgetState extends State<LottodrawWidget> {
                     ),
                     child: Container(
                       width: MediaQuery.sizeOf(context).width * 1.0,
-                      height: 219.0,
+                      height: 195.0,
                       decoration: BoxDecoration(
                         color: const Color(0xFF151111),
                         borderRadius: BorderRadius.circular(12.0),
@@ -215,35 +215,22 @@ class _LottodrawWidgetState extends State<LottodrawWidget> {
                           color: const Color(0x6C249689),
                         ),
                       ),
-                      child: Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(4.0, 4.0, 4.0, 4.0),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Expanded(
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
-                                      .primaryBackground,
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
-                                child: const Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
-                                  child: FlutterFlowYoutubePlayer(
-                                    url:
-                                        'https://www.youtube.com/watch?v=rNbxCqk6PCc',
-                                    autoPlay: false,
-                                    looping: true,
-                                    mute: true,
-                                    showControls: true,
-                                    showFullScreen: false,
-                                    strictRelatedVideos: false,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ].divide(const SizedBox(height: 8.0)),
+                      child: const Align(
+                        alignment: AlignmentDirectional(0.0, 0.0),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              4.0, 4.0, 4.0, 4.0),
+                          child: FlutterFlowYoutubePlayer(
+                            url: 'https://www.youtube.com/watch?v=rNbxCqk6PCc',
+                            width: double.infinity,
+                            height: double.infinity,
+                            autoPlay: false,
+                            looping: true,
+                            mute: true,
+                            showControls: true,
+                            showFullScreen: false,
+                            strictRelatedVideos: false,
+                          ),
                         ),
                       ),
                     ),
@@ -944,7 +931,8 @@ class _LottodrawWidgetState extends State<LottodrawWidget> {
                                       0.0, 0.0, 0.0, 0.0),
                                   iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  color: FlutterFlowTheme.of(context).info,
+                                  color: FlutterFlowTheme.of(context)
+                                      .secondaryText,
                                   textStyle: FlutterFlowTheme.of(context)
                                       .titleSmall
                                       .override(
