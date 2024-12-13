@@ -4,7 +4,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'signup_model.dart';
 export 'signup_model.dart';
@@ -97,19 +96,12 @@ class _SignupWidgetState extends State<SignupWidget> {
                                     height: 244.0,
                                     fit: BoxFit.cover,
                                   ),
-                                  Image.asset(
-                                    'assets/images/Ellipse_69.png',
-                                    width:
-                                        MediaQuery.sizeOf(context).width * 0.5,
-                                    height: 244.0,
-                                    fit: BoxFit.cover,
-                                  ),
                                 ],
                               ),
                             ),
                             Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
-                                  20.0, 0.0, 20.0, 20.0),
+                                  20.0, 35.0, 20.0, 20.0),
                               child: Container(
                                 width: MediaQuery.sizeOf(context).width * 1.0,
                                 decoration: const BoxDecoration(),
@@ -120,14 +112,27 @@ class _SignupWidgetState extends State<SignupWidget> {
                                     Align(
                                       alignment:
                                           const AlignmentDirectional(-1.0, 0.0),
-                                      child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 5.0, 0.0, 0.0),
-                                        child: FaIcon(
-                                          FontAwesomeIcons.arrowLeft,
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryText,
-                                          size: 22.0,
+                                      child: Container(
+                                        decoration: const BoxDecoration(),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Container(
+                                              width: 145.0,
+                                              height: 56.0,
+                                              decoration: const BoxDecoration(),
+                                              child: ClipRRect(
+                                                borderRadius:
+                                                    BorderRadius.circular(8.0),
+                                                child: Image.asset(
+                                                  'assets/images/dark.png',
+                                                  width: 209.0,
+                                                  height: 200.0,
+                                                  fit: BoxFit.contain,
+                                                ),
+                                              ),
+                                            ),
+                                          ],
                                         ),
                                       ),
                                     ),
@@ -160,6 +165,10 @@ class _SignupWidgetState extends State<SignupWidget> {
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .bodyMediumFamily,
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .secondaryText,
                                                         fontSize: 24.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
@@ -971,7 +980,7 @@ class _SignupWidgetState extends State<SignupWidget> {
                                                 text: 'Signup',
                                                 options: FFButtonOptions(
                                                   width: double.infinity,
-                                                  height: 40.0,
+                                                  height: 49.0,
                                                   padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 0.0, 0.0),
@@ -979,7 +988,9 @@ class _SignupWidgetState extends State<SignupWidget> {
                                                       const EdgeInsetsDirectional
                                                           .fromSTEB(0.0, 0.0,
                                                               0.0, 0.0),
-                                                  color: const Color(0xFF04B974),
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .secondaryText,
                                                   textStyle:
                                                       FlutterFlowTheme.of(
                                                               context)
@@ -1005,7 +1016,7 @@ class _SignupWidgetState extends State<SignupWidget> {
                                                   ),
                                                   borderRadius:
                                                       BorderRadius.circular(
-                                                          16.0),
+                                                          8.0),
                                                 ),
                                               ),
                                             ),
