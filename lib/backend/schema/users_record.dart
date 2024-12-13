@@ -45,11 +45,6 @@ class UsersRecord extends FirestoreRecord {
   String get phoneNumber => _phoneNumber ?? '';
   bool hasPhoneNumber() => _phoneNumber != null;
 
-  // "sponsor" field.
-  DocumentReference? _sponsor;
-  DocumentReference? get sponsor => _sponsor;
-  bool hasSponsor() => _sponsor != null;
-
   // "waletbalance" field.
   int? _waletbalance;
   int get waletbalance => _waletbalance ?? 0;
@@ -75,6 +70,11 @@ class UsersRecord extends FirestoreRecord {
   String get qrcodeImage => _qrcodeImage ?? '';
   bool hasQrcodeImage() => _qrcodeImage != null;
 
+  // "sponsorphone" field.
+  String? _sponsorphone;
+  String get sponsorphone => _sponsorphone ?? '';
+  bool hasSponsorphone() => _sponsorphone != null;
+
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
     _displayName = snapshotData['display_name'] as String?;
@@ -82,12 +82,12 @@ class UsersRecord extends FirestoreRecord {
     _uid = snapshotData['uid'] as String?;
     _createdTime = snapshotData['created_time'] as DateTime?;
     _phoneNumber = snapshotData['phone_number'] as String?;
-    _sponsor = snapshotData['sponsor'] as DocumentReference?;
     _waletbalance = castToType<int>(snapshotData['waletbalance']);
     _tokenbalance = castToType<int>(snapshotData['tokenbalance']);
     _usertype = snapshotData['usertype'] as String?;
     _status = snapshotData['status'] as String?;
     _qrcodeImage = snapshotData['qrcodeImage'] as String?;
+    _sponsorphone = snapshotData['sponsorphone'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -130,12 +130,12 @@ Map<String, dynamic> createUsersRecordData({
   String? uid,
   DateTime? createdTime,
   String? phoneNumber,
-  DocumentReference? sponsor,
   int? waletbalance,
   int? tokenbalance,
   String? usertype,
   String? status,
   String? qrcodeImage,
+  String? sponsorphone,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -145,12 +145,12 @@ Map<String, dynamic> createUsersRecordData({
       'uid': uid,
       'created_time': createdTime,
       'phone_number': phoneNumber,
-      'sponsor': sponsor,
       'waletbalance': waletbalance,
       'tokenbalance': tokenbalance,
       'usertype': usertype,
       'status': status,
       'qrcodeImage': qrcodeImage,
+      'sponsorphone': sponsorphone,
     }.withoutNulls,
   );
 
@@ -168,12 +168,12 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e1?.uid == e2?.uid &&
         e1?.createdTime == e2?.createdTime &&
         e1?.phoneNumber == e2?.phoneNumber &&
-        e1?.sponsor == e2?.sponsor &&
         e1?.waletbalance == e2?.waletbalance &&
         e1?.tokenbalance == e2?.tokenbalance &&
         e1?.usertype == e2?.usertype &&
         e1?.status == e2?.status &&
-        e1?.qrcodeImage == e2?.qrcodeImage;
+        e1?.qrcodeImage == e2?.qrcodeImage &&
+        e1?.sponsorphone == e2?.sponsorphone;
   }
 
   @override
@@ -184,12 +184,12 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e?.uid,
         e?.createdTime,
         e?.phoneNumber,
-        e?.sponsor,
         e?.waletbalance,
         e?.tokenbalance,
         e?.usertype,
         e?.status,
-        e?.qrcodeImage
+        e?.qrcodeImage,
+        e?.sponsorphone
       ]);
 
   @override

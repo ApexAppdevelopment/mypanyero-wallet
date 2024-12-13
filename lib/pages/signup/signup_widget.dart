@@ -969,8 +969,16 @@ class _SignupWidgetState extends State<SignupWidget> {
                                                       .update(
                                                           createUsersRecordData(
                                                         phoneNumber: _model
-                                                            .textFieldSignupMobileNumberTextController
+                                                            .sponsorMobileNumberTextController
                                                             .text,
+                                                        sponsorphone: _model
+                                                            .sponsorMobileNumberTextController
+                                                            .text,
+                                                        photoUrl:
+                                                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/home-alligned-services-app-pmoowx/assets/or8azqiuge1e/Screenshot_2024-12-05_at_9.17.02_PM.png',
+                                                        waletbalance: 000,
+                                                        tokenbalance: 0,
+                                                        status: 'pending',
                                                       ));
 
                                                   context.pushNamedAuth(
