@@ -66,6 +66,12 @@ class FFAppState extends ChangeNotifier {
   set isBuyer(bool value) {
     _isBuyer = value;
   }
+
+  String _scannedAccount = '';
+  String get scannedAccount => _scannedAccount;
+  set scannedAccount(String value) {
+    _scannedAccount = value;
+  }
 }
 
 void _safeInit(Function() initializeField) {

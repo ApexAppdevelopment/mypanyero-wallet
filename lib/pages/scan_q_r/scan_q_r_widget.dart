@@ -187,9 +187,17 @@ class _ScanQRWidgetState extends State<ScanQRWidget> {
                                                                     0.0,
                                                                     0.0),
                                                         child: FFButtonWidget(
-                                                          onPressed: () {
-                                                            print(
-                                                                'Button-form-seller pressed ...');
+                                                          onPressed: () async {
+                                                            _model.scanningqr =
+                                                                await FlutterBarcodeScanner
+                                                                    .scanBarcode(
+                                                              '#C62828', // scanning line color
+                                                              'Cancel', // cancel button text
+                                                              true, // whether to show the flash icon
+                                                              ScanMode.QR,
+                                                            );
+
+                                                            safeSetState(() {});
                                                           },
                                                           text: 'Scan QR',
                                                           options:
@@ -261,19 +269,9 @@ class _ScanQRWidgetState extends State<ScanQRWidget> {
                                                                   .center,
                                                           children: [
                                                             FFButtonWidget(
-                                                              onPressed:
-                                                                  () async {
-                                                                _model.scanned =
-                                                                    await FlutterBarcodeScanner
-                                                                        .scanBarcode(
-                                                                  '#C62828', // scanning line color
-                                                                  'Cancel', // cancel button text
-                                                                  true, // whether to show the flash icon
-                                                                  ScanMode.QR,
-                                                                );
-
-                                                                safeSetState(
-                                                                    () {});
+                                                              onPressed: () {
+                                                                print(
+                                                                    'Button pressed ...');
                                                               },
                                                               text:
                                                                   'Download QR',
