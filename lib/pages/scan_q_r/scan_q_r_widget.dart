@@ -152,11 +152,11 @@ class _ScanQRWidgetState extends State<ScanQRWidget> {
                                                             borderRadius:
                                                                 BorderRadius
                                                                     .circular(
-                                                                        4.0),
+                                                                        12.0),
                                                           ),
                                                           child: Container(
                                                             width: 292.0,
-                                                            height: 417.0,
+                                                            height: 300.0,
                                                             decoration:
                                                                 BoxDecoration(
                                                               color: FlutterFlowTheme
@@ -165,7 +165,7 @@ class _ScanQRWidgetState extends State<ScanQRWidget> {
                                                               borderRadius:
                                                                   BorderRadius
                                                                       .circular(
-                                                                          4.0),
+                                                                          12.0),
                                                             ),
                                                             child: Icon(
                                                               Icons
