@@ -56,15 +56,24 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
               children: [
                 Container(
                   decoration: const BoxDecoration(),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(8.0),
-                    child: Image.asset(
-                      Theme.of(context).brightness == Brightness.dark
-                          ? 'assets/images/Untitled_design_(1).png'
-                          : 'assets/images/dark.png',
-                      width: 152.0,
-                      height: 47.0,
-                      fit: BoxFit.cover,
+                  child: InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      context.pushNamed('HomeDashboard');
+                    },
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(8.0),
+                      child: Image.asset(
+                        Theme.of(context).brightness == Brightness.dark
+                            ? 'assets/images/Untitled_design_(1).png'
+                            : 'assets/images/dark.png',
+                        width: 152.0,
+                        height: 47.0,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ),
@@ -80,19 +89,28 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                     padding:
                         const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
                     child: AuthUserStreamWidget(
-                      builder: (context) => Container(
-                        width: 35.0,
-                        height: 35.0,
-                        clipBehavior: Clip.antiAlias,
-                        decoration: const BoxDecoration(
-                          shape: BoxShape.circle,
-                        ),
-                        child: Image.network(
-                          valueOrDefault<String>(
-                            currentUserPhoto,
-                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/exchange-crypto-app-template-u-i-kit-mj3gm6/assets/iliwit033043/Screenshot_2024-12-08_at_12.54.12_AM.png',
+                      builder: (context) => InkWell(
+                        splashColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
+                        onTap: () async {
+                          context.pushNamed('ProfileUser');
+                        },
+                        child: Container(
+                          width: 35.0,
+                          height: 35.0,
+                          clipBehavior: Clip.antiAlias,
+                          decoration: const BoxDecoration(
+                            shape: BoxShape.circle,
                           ),
-                          fit: BoxFit.cover,
+                          child: Image.network(
+                            valueOrDefault<String>(
+                              currentUserPhoto,
+                              'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/exchange-crypto-app-template-u-i-kit-mj3gm6/assets/iliwit033043/Screenshot_2024-12-08_at_12.54.12_AM.png',
+                            ),
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                     ),
