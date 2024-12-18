@@ -125,7 +125,11 @@ class _SignupWidgetState extends State<SignupWidget> {
                                                 borderRadius:
                                                     BorderRadius.circular(8.0),
                                                 child: Image.asset(
-                                                  'assets/images/dark.png',
+                                                  Theme.of(context)
+                                                              .brightness ==
+                                                          Brightness.dark
+                                                      ? 'assets/images/Untitled_design_(1).png'
+                                                      : 'assets/images/dark.png',
                                                   width: 209.0,
                                                   height: 200.0,
                                                   fit: BoxFit.contain,
@@ -998,7 +1002,7 @@ class _SignupWidgetState extends State<SignupWidget> {
                                                               0.0, 0.0),
                                                   color: FlutterFlowTheme.of(
                                                           context)
-                                                      .secondaryText,
+                                                      .success,
                                                   textStyle:
                                                       FlutterFlowTheme.of(
                                                               context)
@@ -1008,7 +1012,9 @@ class _SignupWidgetState extends State<SignupWidget> {
                                                                 FlutterFlowTheme.of(
                                                                         context)
                                                                     .titleSmallFamily,
-                                                            color: Colors.white,
+                                                            color: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .primaryBackground,
                                                             letterSpacing: 0.0,
                                                             useGoogleFonts: GoogleFonts
                                                                     .asMap()

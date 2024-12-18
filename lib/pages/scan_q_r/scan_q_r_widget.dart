@@ -1,3 +1,4 @@
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -188,7 +189,7 @@ class _ScanQRWidgetState extends State<ScanQRWidget> {
                                                                     0.0),
                                                         child: FFButtonWidget(
                                                           onPressed: () async {
-                                                            _model.scanningqr =
+                                                            _model.scannedAccount =
                                                                 await FlutterBarcodeScanner
                                                                     .scanBarcode(
                                                               '#C62828', // scanning line color
@@ -196,6 +197,22 @@ class _ScanQRWidgetState extends State<ScanQRWidget> {
                                                               true, // whether to show the flash icon
                                                               ScanMode.QR,
                                                             );
+
+                                                            var transactionsRecordReference =
+                                                                TransactionsRecord
+                                                                    .collection
+                                                                    .doc();
+                                                            await transactionsRecordReference
+                                                                .set(
+                                                                    createTransactionsRecordData());
+                                                            _model.sendCash =
+                                                                TransactionsRecord
+                                                                    .getDocumentFromData(
+                                                                        createTransactionsRecordData(),
+                                                                        transactionsRecordReference);
+
+                                                            context.pushNamed(
+                                                                'SendBalance');
 
                                                             safeSetState(() {});
                                                           },
@@ -220,7 +237,7 @@ class _ScanQRWidgetState extends State<ScanQRWidget> {
                                                                         0.0),
                                                             color: FlutterFlowTheme
                                                                     .of(context)
-                                                                .secondaryText,
+                                                                .success,
                                                             textStyle:
                                                                 FlutterFlowTheme.of(
                                                                         context)
@@ -231,7 +248,7 @@ class _ScanQRWidgetState extends State<ScanQRWidget> {
                                                                               .titleSmallFamily,
                                                                       color: FlutterFlowTheme.of(
                                                                               context)
-                                                                          .primaryBackground,
+                                                                          .primaryText,
                                                                       letterSpacing:
                                                                           0.0,
                                                                       useGoogleFonts: GoogleFonts
@@ -294,7 +311,7 @@ class _ScanQRWidgetState extends State<ScanQRWidget> {
                                                                             0.0),
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .secondaryText,
+                                                                    .primary,
                                                                 textStyle: FlutterFlowTheme.of(
                                                                         context)
                                                                     .titleSmall
@@ -304,7 +321,7 @@ class _ScanQRWidgetState extends State<ScanQRWidget> {
                                                                               .titleSmallFamily,
                                                                       color: FlutterFlowTheme.of(
                                                                               context)
-                                                                          .primaryBackground,
+                                                                          .primaryText,
                                                                       letterSpacing:
                                                                           0.0,
                                                                       useGoogleFonts: GoogleFonts

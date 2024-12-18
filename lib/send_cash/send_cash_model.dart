@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'send_balance_widget.dart' show SendBalanceWidget;
+import 'send_cash_widget.dart' show SendCashWidget;
 import 'package:flutter/material.dart';
 
-class SendBalanceModel extends FlutterFlowModel<SendBalanceWidget> {
+class SendCashModel extends FlutterFlowModel<SendCashWidget> {
   @override
   void initState(BuildContext context) {}
 

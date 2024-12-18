@@ -30,3 +30,4 @@ export '/profile_user/profile_user_widget.dart' show ProfileUserWidget;
 export '/all_transactions/all_transactions_widget.dart'
     show AllTransactionsWidget;
 export '/send_balance/send_balance_widget.dart' show SendBalanceWidget;
+export '/send_cash/send_cash_widget.dart' show SendCashWidget;

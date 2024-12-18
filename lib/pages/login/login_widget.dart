@@ -89,7 +89,10 @@ class _LoginWidgetState extends State<LoginWidget> {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(8.0),
                                 child: Image.asset(
-                                  'assets/images/dark.png',
+                                  Theme.of(context).brightness ==
+                                          Brightness.dark
+                                      ? 'assets/images/Untitled_design_(1).png'
+                                      : 'assets/images/dark.png',
                                   width: 150.0,
                                   height: 50.0,
                                   fit: BoxFit.cover,
@@ -358,8 +361,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                                       iconPadding:
                                           const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryText,
+                                      color:
+                                          FlutterFlowTheme.of(context).success,
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(
