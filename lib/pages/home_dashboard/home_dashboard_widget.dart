@@ -125,39 +125,44 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                           Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 16.0, 0.0),
-                            child: badges.Badge(
-                              badgeContent: Text(
-                                '1',
-                                style: FlutterFlowTheme.of(context)
-                                    .titleSmall
-                                    .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .titleSmallFamily,
-                                      color: Colors.white,
-                                      letterSpacing: 0.0,
-                                      useGoogleFonts: GoogleFonts.asMap()
-                                          .containsKey(
-                                              FlutterFlowTheme.of(context)
-                                                  .titleSmallFamily),
-                                    ),
-                              ),
-                              showBadge: true,
-                              shape: badges.BadgeShape.circle,
-                              badgeColor: FlutterFlowTheme.of(context).primary,
-                              elevation: 4.0,
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  8.0, 8.0, 8.0, 8.0),
-                              position: badges.BadgePosition.topEnd(),
-                              animationType: badges.BadgeAnimationType.scale,
-                              toAnimate: true,
-                              child: Padding(
+                            child: AuthUserStreamWidget(
+                              builder: (context) => badges.Badge(
+                                badgeContent: Text(
+                                  '1',
+                                  style: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .override(
+                                        fontFamily: FlutterFlowTheme.of(context)
+                                            .titleSmallFamily,
+                                        color: Colors.white,
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .titleSmallFamily),
+                                      ),
+                                ),
+                                showBadge: valueOrDefault(
+                                        currentUserDocument?.notification, 0) !=
+                                    0,
+                                shape: badges.BadgeShape.circle,
+                                badgeColor:
+                                    FlutterFlowTheme.of(context).primary,
+                                elevation: 4.0,
                                 padding: const EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 8.0, 0.0),
-                                child: Icon(
-                                  Icons.notifications_rounded,
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryText,
-                                  size: 32.0,
+                                    8.0, 8.0, 8.0, 8.0),
+                                position: badges.BadgePosition.topEnd(),
+                                animationType: badges.BadgeAnimationType.scale,
+                                toAnimate: true,
+                                child: Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 8.0, 0.0),
+                                  child: Icon(
+                                    Icons.notifications_rounded,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
+                                    size: 32.0,
+                                  ),
                                 ),
                               ),
                             ),
@@ -182,6 +187,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
               primary: false,
               child: Column(
                 mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
@@ -217,7 +223,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                       child: Container(
                                         decoration: BoxDecoration(
                                           color: FlutterFlowTheme.of(context)
-                                              .primaryBackground,
+                                              .secondaryBackground,
                                           borderRadius:
                                               BorderRadius.circular(12.0),
                                         ),
@@ -522,20 +528,24 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                           width: 1.0,
                                         ),
                                       ),
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(4.0),
-                                        child: Icon(
-                                          Icons.trending_up_rounded,
-                                          color: FlutterFlowTheme.of(context)
-                                              .secondaryText,
-                                          size: 32.0,
+                                      child: Align(
+                                        alignment:
+                                            const AlignmentDirectional(0.0, 0.0),
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(4.0),
+                                          child: FaIcon(
+                                            FontAwesomeIcons.ship,
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryText,
+                                            size: 24.0,
+                                          ),
                                         ),
                                       ),
                                     ),
                                   ),
                                 ),
                                 Text(
-                                  'Send',
+                                  'Maritine',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -590,20 +600,23 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                         width: 1.0,
                                       ),
                                     ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(4.0),
-                                      child: Icon(
-                                        Icons.trending_down_rounded,
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryText,
-                                        size: 32.0,
+                                    child: Align(
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(4.0),
+                                        child: FaIcon(
+                                          FontAwesomeIcons.award,
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryText,
+                                          size: 24.0,
+                                        ),
                                       ),
                                     ),
                                   ),
                                 ),
                               ),
                               Text(
-                                'Recieve',
+                                'Academy',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -663,14 +676,14 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                         Icons.add_card_rounded,
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryText,
-                                        size: 32.0,
+                                        size: 24.0,
                                       ),
                                     ),
                                   ),
                                 ),
                               ),
                               Text(
-                                'Add',
+                                'Finance',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -730,7 +743,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                         Icons.real_estate_agent,
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryText,
-                                        size: 32.0,
+                                        size: 24.0,
                                       ),
                                     ),
                                   ),
@@ -818,7 +831,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                             FontAwesomeIcons.bowlingBall,
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryText,
-                                            size: 32.0,
+                                            size: 24.0,
                                           ),
                                         ),
                                       ),
@@ -894,7 +907,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                           Icons.games_outlined,
                                           color: FlutterFlowTheme.of(context)
                                               .secondaryText,
-                                          size: 32.0,
+                                          size: 24.0,
                                         ),
                                       ),
                                     ),
@@ -960,7 +973,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                         Icons.person_3,
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryText,
-                                        size: 32.0,
+                                        size: 24.0,
                                       ),
                                     ),
                                   ),
@@ -1025,7 +1038,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                         Icons.grid_view_rounded,
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryText,
-                                        size: 32.0,
+                                        size: 24.0,
                                       ),
                                     ),
                                   ),
@@ -1198,7 +1211,7 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                           ),
                           Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
-                                16.0, 0.0, 16.0, 0.0),
+                                20.0, 0.0, 20.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -1228,6 +1241,8 @@ class _HomeDashboardWidgetState extends State<HomeDashboardWidget> {
                                       .override(
                                         fontFamily: FlutterFlowTheme.of(context)
                                             .bodyMediumFamily,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primary,
                                         letterSpacing: 0.0,
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
