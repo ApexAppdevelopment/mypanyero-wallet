@@ -70,34 +70,6 @@ class _ScanQRWidgetState extends State<ScanQRWidget> {
                             children: [
                               Stack(
                                 children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 1.0),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Image.asset(
-                                          'assets/images/Ellipse_66_(1).png',
-                                          width:
-                                              MediaQuery.sizeOf(context).width *
-                                                  0.5,
-                                          height: 244.0,
-                                          fit: BoxFit.cover,
-                                        ),
-                                        Image.asset(
-                                          'assets/images/Ellipse_69.png',
-                                          width:
-                                              MediaQuery.sizeOf(context).width *
-                                                  0.5,
-                                          height: 244.0,
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ],
-                                    ),
-                                  ),
                                   Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         20.0, 0.0, 20.0, 0.0),
@@ -115,7 +87,7 @@ class _ScanQRWidgetState extends State<ScanQRWidget> {
                                               Icons.share,
                                               color:
                                                   FlutterFlowTheme.of(context)
-                                                      .primaryText,
+                                                      .secondaryText,
                                               size: 24.0,
                                             ),
                                           ),
@@ -248,7 +220,7 @@ class _ScanQRWidgetState extends State<ScanQRWidget> {
                                                                               .titleSmallFamily,
                                                                       color: FlutterFlowTheme.of(
                                                                               context)
-                                                                          .primaryText,
+                                                                          .primaryBackground,
                                                                       letterSpacing:
                                                                           0.0,
                                                                       useGoogleFonts: GoogleFonts
@@ -311,7 +283,7 @@ class _ScanQRWidgetState extends State<ScanQRWidget> {
                                                                             0.0),
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .primary,
+                                                                    .success,
                                                                 textStyle: FlutterFlowTheme.of(
                                                                         context)
                                                                     .titleSmall
@@ -321,7 +293,7 @@ class _ScanQRWidgetState extends State<ScanQRWidget> {
                                                                               .titleSmallFamily,
                                                                       color: FlutterFlowTheme.of(
                                                                               context)
-                                                                          .primaryText,
+                                                                          .primaryBackground,
                                                                       letterSpacing:
                                                                           0.0,
                                                                       useGoogleFonts: GoogleFonts

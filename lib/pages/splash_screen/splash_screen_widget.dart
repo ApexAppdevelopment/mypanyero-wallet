@@ -46,7 +46,7 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryText,
+        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         body: Align(
           alignment: const AlignmentDirectional(0.0, 0.0),
           child: SingleChildScrollView(
@@ -58,7 +58,7 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget> {
                   width: MediaQuery.sizeOf(context).width * 1.0,
                   height: MediaQuery.sizeOf(context).height * 1.0,
                   decoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).secondaryText,
+                    color: FlutterFlowTheme.of(context).backgroundComponents,
                   ),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,

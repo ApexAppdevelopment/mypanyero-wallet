@@ -31,3 +31,5 @@ export '/all_transactions/all_transactions_widget.dart'
     show AllTransactionsWidget;
 export '/send_balance/send_balance_widget.dart' show SendBalanceWidget;
 export '/send_cash/send_cash_widget.dart' show SendCashWidget;
+export '/forgot_password/forgot_password_widget.dart' show ForgotPasswordWidget;
+export '/main_home/main_home_widget.dart' show MainHomeWidget;
