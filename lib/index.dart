@@ -1,5 +1,4 @@
 // Export pages
-export '/pages/splash_screen/splash_screen_widget.dart' show SplashScreenWidget;
 export '/pages/signup/signup_widget.dart' show SignupWidget;
 export '/pages/category_page/category_page_widget.dart' show CategoryPageWidget;
 export '/pages/scan_q_r/scan_q_r_widget.dart' show ScanQRWidget;
@@ -18,7 +17,6 @@ export '/transfer_responsive/transfer_responsive_widget.dart'
     show TransferResponsiveWidget;
 export '/pages/home_dashboard/home_dashboard_widget.dart'
     show HomeDashboardWidget;
-export '/pages/onboarding/onboarding_widget.dart' show OnboardingWidget;
 export '/pages/login/login_widget.dart' show LoginWidget;
 export '/home26_list_features/home26_list_features_widget.dart'
     show Home26ListFeaturesWidget;
@@ -26,10 +24,11 @@ export '/lottodraw/lottodraw_widget.dart' show LottodrawWidget;
 export '/ticket/ticket_widget.dart' show TicketWidget;
 export '/list06_user_search/list06_user_search_widget.dart'
     show List06UserSearchWidget;
-export '/profile_user/profile_user_widget.dart' show ProfileUserWidget;
+export '/pages/profile_user/profile_user_widget.dart' show ProfileUserWidget;
 export '/all_transactions/all_transactions_widget.dart'
     show AllTransactionsWidget;
-export '/send_balance/send_balance_widget.dart' show SendBalanceWidget;
 export '/send_cash/send_cash_widget.dart' show SendCashWidget;
 export '/forgot_password/forgot_password_widget.dart' show ForgotPasswordWidget;
-export '/main_home/main_home_widget.dart' show MainHomeWidget;
+export '/pages/onboarding1/onboarding1_widget.dart' show Onboarding1Widget;
+export '/pages/onboarding2/onboarding2_widget.dart' show Onboarding2Widget;
+export '/pages/onboarding3/onboarding3_widget.dart' show Onboarding3Widget;

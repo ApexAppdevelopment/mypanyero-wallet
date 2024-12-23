@@ -11,7 +11,7 @@ const _kPrivateApiFunctionName = 'ffPrivateApiCall';
 /// Start EmilioChatLLM Group Code
 
 class EmilioChatLLMGroup {
-  static String getBaseUrl() => 'https://api.together.xyz/v1';
+  static String getBaseUrl() => 'https://api.together.xyz/v1/';
   static Map<String, String> headers = {
     'Content-Type': 'application/json',
   };
@@ -60,11 +60,11 @@ class SendFullPromptCall {
     "top_k": 50,
     "repetition_penalty": 1,
     "stop": ["<|eot_id|>","<|eom_id|>"],
-    "stream": true
+    "stream": false
   }''';
     return ApiManager.instance.makeApiCall(
       callName: 'Send Full Prompt',
-      apiUrl: '$baseUrl/chat/completions',
+      apiUrl: '${baseUrl}chat/completions',
       callType: ApiCallType.POST,
       headers: {
         'Content-Type': 'application/json',
@@ -98,26 +98,6 @@ class SendFullPromptCall {
 }
 
 /// End EmilioChatLLM Group Code
-
-class LottoCall {
-  static Future<ApiCallResponse> call() async {
-    return ApiManager.instance.makeApiCall(
-      callName: 'Lotto',
-      apiUrl: 'https://www.pcso.gov.ph/searchlottoresult.aspx?draw=',
-      callType: ApiCallType.GET,
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      params: {},
-      returnBody: true,
-      encodeBodyUtf8: false,
-      decodeUtf8: false,
-      cache: false,
-      isStreamingApi: false,
-      alwaysAllowBody: false,
-    );
-  }
-}
 
 class ApiPagingParams {
   int nextPageNumber = 0;

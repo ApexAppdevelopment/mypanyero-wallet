@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+
 import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
@@ -75,18 +76,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const NavBarPage() : const SplashScreenWidget(),
+          appStateNotifier.loggedIn ? const NavBarPage() : const Onboarding1Widget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? const NavBarPage() : const SplashScreenWidget(),
-        ),
-        FFRoute(
-          name: 'SplashScreen',
-          path: '/splashScreen',
-          builder: (context, params) => const SplashScreenWidget(),
+              appStateNotifier.loggedIn ? const NavBarPage() : const Onboarding1Widget(),
         ),
         FFRoute(
           name: 'Signup',
@@ -180,11 +176,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               : const HomeDashboardWidget(),
         ),
         FFRoute(
-          name: 'Onboarding',
-          path: '/onboarding',
-          builder: (context, params) => const OnboardingWidget(),
-        ),
-        FFRoute(
           name: 'Login',
           path: '/login',
           builder: (context, params) => const LoginWidget(),
@@ -222,14 +213,20 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const AllTransactionsWidget(),
         ),
         FFRoute(
-          name: 'SendBalance',
-          path: '/sendBalance',
-          builder: (context, params) => const SendBalanceWidget(),
-        ),
-        FFRoute(
           name: 'SendCash',
           path: '/sendCash',
-          builder: (context, params) => const SendCashWidget(),
+          builder: (context, params) => SendCashWidget(
+            phone: params.getParam(
+              'phone',
+              ParamType.DocumentReference,
+              isList: false,
+              collectionNamePath: ['users'],
+            ),
+            amountController: params.getParam(
+              'amountController',
+              ParamType.JSON,
+            ),
+          ),
         ),
         FFRoute(
           name: 'ForgotPassword',
@@ -237,9 +234,19 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const ForgotPasswordWidget(),
         ),
         FFRoute(
-          name: 'MainHome',
-          path: '/mainHome',
-          builder: (context, params) => const MainHomeWidget(),
+          name: 'Onboarding1',
+          path: '/onboarding1',
+          builder: (context, params) => const Onboarding1Widget(),
+        ),
+        FFRoute(
+          name: 'Onboarding2',
+          path: '/onboarding2',
+          builder: (context, params) => const Onboarding2Widget(),
+        ),
+        FFRoute(
+          name: 'Onboarding3',
+          path: '/onboarding3',
+          builder: (context, params) => const Onboarding3Widget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],
@@ -411,7 +418,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.uri.toString());
-            return '/splashScreen';
+            return '/onboarding1';
           }
           return null;
         },

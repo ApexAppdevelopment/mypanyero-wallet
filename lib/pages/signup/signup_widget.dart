@@ -1,8 +1,9 @@
-import '/auth/firebase_auth/auth_util.dart';
-import '/backend/backend.dart';
+import '/auth/supabase_auth/auth_util.dart';
+import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/random_data_util.dart' as random_data;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'signup_model.dart';
@@ -983,27 +984,50 @@ class _SignupWidgetState extends State<SignupWidget> {
                                                       return;
                                                     }
 
-                                                    await UsersRecord.collection
-                                                        .doc(user.uid)
-                                                        .update(
-                                                            createUsersRecordData(
-                                                          phoneNumber: _model
-                                                              .sponsorMobileNumberTextController
-                                                              .text,
-                                                          sponsorphone: _model
-                                                              .sponsorMobileNumberTextController
-                                                              .text,
-                                                          photoUrl:
-                                                              'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/home-alligned-services-app-pmoowx/assets/or8azqiuge1e/Screenshot_2024-12-05_at_9.17.02_PM.png',
-                                                          waletbalance: 000,
-                                                          tokenbalance: 0,
-                                                          status: 'pending',
-                                                          notification: 0,
-                                                        ));
+                                                    _model.users =
+                                                        await UsersTable()
+                                                            .insert({
+                                                      'display_name': _model
+                                                          .textFieldSignupFullNameTextController
+                                                          .text,
+                                                      'photo_url':
+                                                          'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/home-alligned-services-app-pmoowx/assets/or8azqiuge1e/Screenshot_2024-12-05_at_9.17.02_PM.png',
+                                                      'uid': random_data
+                                                          .randomInteger(
+                                                              1000000000,
+                                                              9000000000)
+                                                          .toString(),
+                                                      'created_time':
+                                                          supaSerialize<
+                                                                  DateTime>(
+                                                              getCurrentTimestamp),
+                                                      'phone_number': _model
+                                                          .textFieldSignupMobileNumberTextController
+                                                          .text,
+                                                      'walletbalance': 0,
+                                                      'tokenbalance': 0,
+                                                      'usertype': 'user',
+                                                      'status': '',
+                                                      'qrcodeimage':
+                                                          'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/home-alligned-services-app-pmoowx/assets/plr8sqatm8x7/URL_QR_Code.png',
+                                                      'sponsorphone': _model
+                                                          .sponsorMobileNumberTextController
+                                                          .text,
+                                                      'notification': 0,
+                                                      'email': _model
+                                                          .textFieldSignupEmailTextController
+                                                          .text,
+                                                    });
+                                                    await Future.delayed(
+                                                        const Duration(
+                                                            milliseconds:
+                                                                2000));
 
                                                     context.pushNamedAuth(
                                                         'HomeDashboard',
                                                         context.mounted);
+
+                                                    safeSetState(() {});
                                                   },
                                                   text: 'Signup',
                                                   options: FFButtonOptions(
@@ -1019,7 +1043,7 @@ class _SignupWidgetState extends State<SignupWidget> {
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
                                                             context)
-                                                        .success,
+                                                        .tertiary,
                                                     textStyle: FlutterFlowTheme
                                                             .of(context)
                                                         .titleSmall
@@ -1030,7 +1054,7 @@ class _SignupWidgetState extends State<SignupWidget> {
                                                                   .titleSmallFamily,
                                                           color: FlutterFlowTheme
                                                                   .of(context)
-                                                              .primaryBackground,
+                                                              .white,
                                                           letterSpacing: 0.0,
                                                           useGoogleFonts: GoogleFonts
                                                                   .asMap()
@@ -1074,6 +1098,8 @@ class _SignupWidgetState extends State<SignupWidget> {
                                                                   fontFamily: FlutterFlowTheme.of(
                                                                           context)
                                                                       .labelMediumFamily,
+                                                                  fontSize:
+                                                                      14.0,
                                                                   letterSpacing:
                                                                       0.0,
                                                                   useGoogleFonts: GoogleFonts
@@ -1110,7 +1136,7 @@ class _SignupWidgetState extends State<SignupWidget> {
                                                                   color: const Color(
                                                                       0xFF04B974),
                                                                   fontSize:
-                                                                      12.0,
+                                                                      16.0,
                                                                   letterSpacing:
                                                                       0.0,
                                                                   useGoogleFonts: GoogleFonts

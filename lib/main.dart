@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
-import 'auth/firebase_auth/firebase_user_provider.dart';
-import 'auth/firebase_auth/auth_util.dart';
 
+import 'auth/supabase_auth/supabase_user_provider.dart';
+import 'auth/supabase_auth/auth_util.dart';
+
+import '/backend/supabase/supabase.dart';
 import 'backend/firebase/firebase_config.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
@@ -19,6 +21,8 @@ void main() async {
   usePathUrlStrategy();
 
   await initFirebase();
+
+  await SupaFlow.initialize();
 
   await FlutterFlowTheme.initialize();
 
@@ -52,15 +56,13 @@ class _MyAppState extends State<MyApp> {
 
   late Stream<BaseAuthUser> userStream;
 
-  final authUserSub = authenticatedUserStream.listen((_) {});
-
   @override
   void initState() {
     super.initState();
 
     _appStateNotifier = AppStateNotifier.instance;
     _router = createRouter(_appStateNotifier);
-    userStream = panyeroFirebaseUserStream()
+    userStream = panyeroSupabaseUserStream()
       ..listen((user) {
         _appStateNotifier.update(user);
       });
@@ -69,13 +71,6 @@ class _MyAppState extends State<MyApp> {
       const Duration(milliseconds: 2000),
       () => _appStateNotifier.stopShowingSplashImage(),
     );
-  }
-
-  @override
-  void dispose() {
-    authUserSub.cancel();
-
-    super.dispose();
   }
 
   void setLocale(String language) {

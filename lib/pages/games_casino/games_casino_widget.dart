@@ -52,7 +52,7 @@ class _GamesCasinoWidgetState extends State<GamesCasinoWidget>
           backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           automaticallyImplyLeading: false,
           title: Text(
-            'Panyero Casino Games',
+            'Panyero Games',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: FlutterFlowTheme.of(context).headlineMediumFamily,
                   letterSpacing: 0.0,
@@ -96,12 +96,12 @@ class _GamesCasinoWidgetState extends State<GamesCasinoWidget>
                             labelColor:
                                 FlutterFlowTheme.of(context).primaryText,
                             unselectedLabelColor:
-                                FlutterFlowTheme.of(context).secondaryText,
+                                FlutterFlowTheme.of(context).primaryBackground,
                             backgroundColor: FlutterFlowTheme.of(context)
                                 .secondaryBackground,
                             unselectedBackgroundColor:
-                                FlutterFlowTheme.of(context).alternate,
-                            borderColor: FlutterFlowTheme.of(context).alternate,
+                                FlutterFlowTheme.of(context).primary,
+                            borderColor: FlutterFlowTheme.of(context).primary,
                             borderWidth: 2.0,
                             borderRadius: 12.0,
                             elevation: 0.0,

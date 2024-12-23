@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'scan_q_r_widget.dart' show ScanQRWidget;
+import 'onboarding1_widget.dart' show Onboarding1Widget;
 import 'package:flutter/material.dart';
 
-class ScanQRModel extends FlutterFlowModel<ScanQRWidget> {
+class Onboarding1Model extends FlutterFlowModel<Onboarding1Widget> {
   @override
   void initState(BuildContext context) {}
 

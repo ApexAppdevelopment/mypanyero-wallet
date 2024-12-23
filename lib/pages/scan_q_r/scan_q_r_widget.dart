@@ -1,9 +1,7 @@
-import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'scan_q_r_model.dart';
 export 'scan_q_r_model.dart';
@@ -160,33 +158,9 @@ class _ScanQRWidgetState extends State<ScanQRWidget> {
                                                                     0.0,
                                                                     0.0),
                                                         child: FFButtonWidget(
-                                                          onPressed: () async {
-                                                            _model.scannedAccount =
-                                                                await FlutterBarcodeScanner
-                                                                    .scanBarcode(
-                                                              '#C62828', // scanning line color
-                                                              'Cancel', // cancel button text
-                                                              true, // whether to show the flash icon
-                                                              ScanMode.QR,
-                                                            );
-
-                                                            var transactionsRecordReference =
-                                                                TransactionsRecord
-                                                                    .collection
-                                                                    .doc();
-                                                            await transactionsRecordReference
-                                                                .set(
-                                                                    createTransactionsRecordData());
-                                                            _model.sendCash =
-                                                                TransactionsRecord
-                                                                    .getDocumentFromData(
-                                                                        createTransactionsRecordData(),
-                                                                        transactionsRecordReference);
-
-                                                            context.pushNamed(
-                                                                'SendBalance');
-
-                                                            safeSetState(() {});
+                                                          onPressed: () {
+                                                            print(
+                                                                'Button-form-seller pressed ...');
                                                           },
                                                           text: 'Scan QR',
                                                           options:

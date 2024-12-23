@@ -77,6 +77,11 @@ abstract class FlutterFlowTheme {
   late Color textColor;
   late Color primaryBtnText;
   late Color lineColor;
+  late Color richBlackFOGRA39;
+  late Color blue;
+  late Color turquoise;
+  late Color cultured;
+  late Color cerise;
 
   @Deprecated('Use displaySmallFamily instead')
   String get title1Family => displaySmallFamily;
@@ -164,22 +169,22 @@ class LightModeTheme extends FlutterFlowTheme {
   @Deprecated('Use tertiary instead')
   Color get tertiaryColor => tertiary;
 
-  late Color primary = const Color(0xFF04A24C);
-  late Color secondary = const Color(0xFF249689);
-  late Color tertiary = const Color(0xFFFFA077);
-  late Color alternate = const Color(0xFFF3F7FD);
-  late Color primaryText = const Color(0xFF0D0C12);
-  late Color secondaryText = const Color(0xFF3B454D);
+  late Color primary = const Color(0xFFA04C2A);
+  late Color secondary = const Color(0xFF6495ED);
+  late Color tertiary = const Color(0xFF32CD32);
+  late Color alternate = const Color(0xFF800080);
+  late Color primaryText = const Color(0xFF333333);
+  late Color secondaryText = const Color(0xFF666666);
   late Color primaryBackground = const Color(0xFFFFFFFF);
-  late Color secondaryBackground = const Color(0xFFF4F4EB);
-  late Color accent1 = const Color(0xFF616161);
-  late Color accent2 = const Color(0xFF757575);
-  late Color accent3 = const Color(0xFFE0E0E0);
-  late Color accent4 = const Color(0xFFEEEEEE);
-  late Color success = const Color(0xFF04A24C);
-  late Color warning = const Color(0xFFFCDC0C);
-  late Color error = const Color(0xFFE21C3D);
-  late Color info = const Color(0xFF1C4494);
+  late Color secondaryBackground = const Color(0xFFF0F0F0);
+  late Color accent1 = const Color(0xFFFFD700);
+  late Color accent2 = const Color(0xFFFFA07A);
+  late Color accent3 = const Color(0xFF87CEEB);
+  late Color accent4 = const Color(0xFF9370DB);
+  late Color success = const Color(0xFF008000);
+  late Color warning = const Color(0xFFFF8C00);
+  late Color error = const Color(0xFFFF0000);
+  late Color info = const Color(0xFF87CEEB);
 
   late Color customColor3 = const Color(0xFFDF3F3F);
   late Color customColor4 = const Color(0xFF090F13);
@@ -195,6 +200,11 @@ class LightModeTheme extends FlutterFlowTheme {
   late Color textColor = const Color(0xFF1E2429);
   late Color primaryBtnText = const Color(0xFFFFFFFF);
   late Color lineColor = const Color(0xFFE0E3E7);
+  late Color richBlackFOGRA39 = const Color(0xFF070707);
+  late Color blue = const Color(0xFF3A28DE);
+  late Color turquoise = const Color(0xFF34D1BF);
+  late Color cultured = const Color(0xFFEFEFEF);
+  late Color cerise = const Color(0xFFD1345B);
 }
 
 abstract class Typography {
@@ -235,16 +245,16 @@ class MobileTypography extends Typography {
 
   final FlutterFlowTheme theme;
 
-  String get displayLargeFamily => 'Roboto';
+  String get displayLargeFamily => 'Open Sans';
   TextStyle get displayLarge => GoogleFonts.getFont(
-        'Roboto',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 57.0,
       );
-  String get displayMediumFamily => 'Roboto';
+  String get displayMediumFamily => 'Open Sans';
   TextStyle get displayMedium => GoogleFonts.getFont(
-        'Roboto',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 45.0,
@@ -256,9 +266,9 @@ class MobileTypography extends Typography {
         fontWeight: FontWeight.w500,
         fontSize: 34.0,
       );
-  String get headlineLargeFamily => 'Roboto';
+  String get headlineLargeFamily => 'Open Sans';
   TextStyle get headlineLarge => GoogleFonts.getFont(
-        'Roboto',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 32.0,
@@ -277,9 +287,9 @@ class MobileTypography extends Typography {
         fontWeight: FontWeight.w500,
         fontSize: 20.0,
       );
-  String get titleLargeFamily => 'Roboto';
+  String get titleLargeFamily => 'Open Sans';
   TextStyle get titleLarge => GoogleFonts.getFont(
-        'Roboto',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 22.0,
@@ -298,30 +308,30 @@ class MobileTypography extends Typography {
         fontWeight: FontWeight.normal,
         fontSize: 16.0,
       );
-  String get labelLargeFamily => 'Roboto';
+  String get labelLargeFamily => 'Open Sans';
   TextStyle get labelLarge => GoogleFonts.getFont(
-        'Roboto',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 14.0,
       );
-  String get labelMediumFamily => 'Roboto';
+  String get labelMediumFamily => 'Open Sans';
   TextStyle get labelMedium => GoogleFonts.getFont(
-        'Roboto',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 12.0,
       );
-  String get labelSmallFamily => 'Roboto';
+  String get labelSmallFamily => 'Open Sans';
   TextStyle get labelSmall => GoogleFonts.getFont(
-        'Roboto',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 11.0,
       );
-  String get bodyLargeFamily => 'Roboto';
+  String get bodyLargeFamily => 'Open Sans';
   TextStyle get bodyLarge => GoogleFonts.getFont(
-        'Roboto',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 16.0,
@@ -347,16 +357,16 @@ class TabletTypography extends Typography {
 
   final FlutterFlowTheme theme;
 
-  String get displayLargeFamily => 'Roboto';
+  String get displayLargeFamily => 'Open Sans';
   TextStyle get displayLarge => GoogleFonts.getFont(
-        'Roboto',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 57.0,
       );
-  String get displayMediumFamily => 'Roboto';
+  String get displayMediumFamily => 'Open Sans';
   TextStyle get displayMedium => GoogleFonts.getFont(
-        'Roboto',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 45.0,
@@ -368,9 +378,9 @@ class TabletTypography extends Typography {
         fontWeight: FontWeight.w500,
         fontSize: 34.0,
       );
-  String get headlineLargeFamily => 'Roboto';
+  String get headlineLargeFamily => 'Open Sans';
   TextStyle get headlineLarge => GoogleFonts.getFont(
-        'Roboto',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 32.0,
@@ -389,9 +399,9 @@ class TabletTypography extends Typography {
         fontWeight: FontWeight.w500,
         fontSize: 20.0,
       );
-  String get titleLargeFamily => 'Roboto';
+  String get titleLargeFamily => 'Open Sans';
   TextStyle get titleLarge => GoogleFonts.getFont(
-        'Roboto',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 22.0,
@@ -410,30 +420,30 @@ class TabletTypography extends Typography {
         fontWeight: FontWeight.normal,
         fontSize: 16.0,
       );
-  String get labelLargeFamily => 'Roboto';
+  String get labelLargeFamily => 'Open Sans';
   TextStyle get labelLarge => GoogleFonts.getFont(
-        'Roboto',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 14.0,
       );
-  String get labelMediumFamily => 'Roboto';
+  String get labelMediumFamily => 'Open Sans';
   TextStyle get labelMedium => GoogleFonts.getFont(
-        'Roboto',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 12.0,
       );
-  String get labelSmallFamily => 'Roboto';
+  String get labelSmallFamily => 'Open Sans';
   TextStyle get labelSmall => GoogleFonts.getFont(
-        'Roboto',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 11.0,
       );
-  String get bodyLargeFamily => 'Roboto';
+  String get bodyLargeFamily => 'Open Sans';
   TextStyle get bodyLarge => GoogleFonts.getFont(
-        'Roboto',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 16.0,
@@ -459,16 +469,16 @@ class DesktopTypography extends Typography {
 
   final FlutterFlowTheme theme;
 
-  String get displayLargeFamily => 'Roboto';
+  String get displayLargeFamily => 'Open Sans';
   TextStyle get displayLarge => GoogleFonts.getFont(
-        'Roboto',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 57.0,
       );
-  String get displayMediumFamily => 'Roboto';
+  String get displayMediumFamily => 'Open Sans';
   TextStyle get displayMedium => GoogleFonts.getFont(
-        'Roboto',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 45.0,
@@ -480,9 +490,9 @@ class DesktopTypography extends Typography {
         fontWeight: FontWeight.w500,
         fontSize: 34.0,
       );
-  String get headlineLargeFamily => 'Roboto';
+  String get headlineLargeFamily => 'Open Sans';
   TextStyle get headlineLarge => GoogleFonts.getFont(
-        'Roboto',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 32.0,
@@ -501,9 +511,9 @@ class DesktopTypography extends Typography {
         fontWeight: FontWeight.w500,
         fontSize: 20.0,
       );
-  String get titleLargeFamily => 'Roboto';
+  String get titleLargeFamily => 'Open Sans';
   TextStyle get titleLarge => GoogleFonts.getFont(
-        'Roboto',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 22.0,
@@ -522,30 +532,30 @@ class DesktopTypography extends Typography {
         fontWeight: FontWeight.normal,
         fontSize: 16.0,
       );
-  String get labelLargeFamily => 'Roboto';
+  String get labelLargeFamily => 'Open Sans';
   TextStyle get labelLarge => GoogleFonts.getFont(
-        'Roboto',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 14.0,
       );
-  String get labelMediumFamily => 'Roboto';
+  String get labelMediumFamily => 'Open Sans';
   TextStyle get labelMedium => GoogleFonts.getFont(
-        'Roboto',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 12.0,
       );
-  String get labelSmallFamily => 'Roboto';
+  String get labelSmallFamily => 'Open Sans';
   TextStyle get labelSmall => GoogleFonts.getFont(
-        'Roboto',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 11.0,
       );
-  String get bodyLargeFamily => 'Roboto';
+  String get bodyLargeFamily => 'Open Sans';
   TextStyle get bodyLarge => GoogleFonts.getFont(
-        'Roboto',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 16.0,
@@ -574,22 +584,22 @@ class DarkModeTheme extends FlutterFlowTheme {
   @Deprecated('Use tertiary instead')
   Color get tertiaryColor => tertiary;
 
-  late Color primary = const Color(0xFF04A24C);
-  late Color secondary = const Color(0xFF249689);
-  late Color tertiary = const Color(0xFFFFA077);
-  late Color alternate = const Color(0xFF262D34);
+  late Color primary = const Color(0xFFA04C2A);
+  late Color secondary = const Color(0xFF4169E1);
+  late Color tertiary = const Color(0xFF228B22);
+  late Color alternate = const Color(0xFF4B0082);
   late Color primaryText = const Color(0xFFFFFFFF);
-  late Color secondaryText = const Color(0xFFD6DEE6);
-  late Color primaryBackground = const Color(0xFF1A1F24);
-  late Color secondaryBackground = const Color(0xFF111417);
-  late Color accent1 = const Color(0xFFEEEEEE);
-  late Color accent2 = const Color(0xFFE0E0E0);
-  late Color accent3 = const Color(0xFF757575);
-  late Color accent4 = const Color(0xFF616161);
-  late Color success = const Color(0xFF04A24C);
-  late Color warning = const Color(0xFFFCDC0C);
-  late Color error = const Color(0xFFE21C3D);
-  late Color info = const Color(0xFF1C4494);
+  late Color secondaryText = const Color(0xFFCCCCCC);
+  late Color primaryBackground = const Color(0xFF1A1A1A);
+  late Color secondaryBackground = const Color(0xFF333333);
+  late Color accent1 = const Color(0xFFFFD700);
+  late Color accent2 = const Color(0xFFFF7F50);
+  late Color accent3 = const Color(0xFF4682B4);
+  late Color accent4 = const Color(0xFF8A2BE2);
+  late Color success = const Color(0xFF006400);
+  late Color warning = const Color(0xFFFFA500);
+  late Color error = const Color(0xFFB22222);
+  late Color info = const Color(0xFF4682B4);
 
   late Color customColor3 = const Color(0xFFDF3F3F);
   late Color customColor4 = const Color(0xFF090F13);
@@ -605,6 +615,11 @@ class DarkModeTheme extends FlutterFlowTheme {
   late Color textColor = const Color(0xFF1E2429);
   late Color primaryBtnText = const Color(0xFFFFFFFF);
   late Color lineColor = const Color(0xFF22282F);
+  late Color richBlackFOGRA39 = const Color(0xFF070707);
+  late Color blue = const Color(0xFF3A28DE);
+  late Color turquoise = const Color(0xFF34D1BF);
+  late Color cultured = const Color(0xFFEFEFEF);
+  late Color cerise = const Color(0xFFD1345B);
 }
 
 extension TextStyleHelper on TextStyle {
